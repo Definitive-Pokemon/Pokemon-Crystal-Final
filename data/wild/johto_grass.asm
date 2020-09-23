@@ -1277,7 +1277,7 @@ JohtoGrassWildMons:
 	db 4, EKANS
 	db 5, RATTATA
 	db 7, BELLSPROUT
-	db 6, HOPPIP
+	db 6, MAREEP
 	db 7, PIDGEY
 	db 7, HOPPIP
 	db 7, HOPPIP
@@ -1285,7 +1285,7 @@ JohtoGrassWildMons:
 	db 4, EKANS
 	db 5, RATTATA
 	db 7, BELLSPROUT
-	db 6, HOPPIP
+	db 6, MAREEP
 	db 7, PIDGEY
 	db 7, HOPPIP
 	db 7, HOPPIP
@@ -1295,7 +1295,7 @@ JohtoGrassWildMons:
 	db 7, BELLSPROUT
 	db 6, ZUBAT
 	db 7, HOOTHOOT
-	db 7, GASTLY
+	db 7, MAREEP
 	db 7, GASTLY
 
 	map_id ROUTE_33
@@ -1360,7 +1360,7 @@ JohtoGrassWildMons:
 	db 13, GROWLITHE
 	db 10, ABRA
 	db 12, JIGGLYPUFF
-	db 10, DITTO
+	db 10, VULPIX
 	db 12, YANMA
 	; day
 	db 12, SNUBBULL
@@ -1368,7 +1368,7 @@ JohtoGrassWildMons:
 	db 13, GROWLITHE
 	db 10, ABRA
 	db 12, JIGGLYPUFF
-	db 10, DITTO
+	db 10, VULPIX
 	db 12, YANMA
 	; nite
 	db 12, DROWZEE
@@ -1386,17 +1386,17 @@ JohtoGrassWildMons:
 	db 4, PIDGEY
 	db 5, BELLSPROUT
 	db 5, GROWLITHE
-	db 5, PIDGEY
-	db 6, PIDGEY
-	db 6, PIDGEY
+	db 5, VULPIX
+	db 6, VULPIX
+	db 6, VULPIX
 	; day
 	db 4, PIDGEY
 	db 4, PIDGEY
 	db 5, BELLSPROUT
 	db 5, GROWLITHE
-	db 5, PIDGEY
-	db 6, PIDGEY
-	db 6, PIDGEY
+	db 5, VULPIX
+	db 6, VULPIX
+	db 6, VULPIX
 	; nite
 	db 4, SPINARAK
 	db 4, HOOTHOOT
@@ -1412,18 +1412,18 @@ JohtoGrassWildMons:
 	db 13, LEDYBA
 	db 14, GROWLITHE
 	db 15, PIDGEY
-	db 16, GROWLITHE
+	db 16, VULPIX
 	db 15, PIDGEOTTO
-	db 15, LEDIAN
+	db 15, VULPIX
 	db 15, LEDIAN
 	; day
 	db 13, PIDGEY
 	db 14, GROWLITHE
 	db 15, PIDGEY
-	db 16, GROWLITHE
+	db 16, VULPIX
 	db 15, PIDGEOTTO
-	db 15, PIDGEY
-	db 15, PIDGEY
+	db 15, VULPIX
+	db 15, VULPIX
 	; nite
 	db 13, SPINARAK
 	db 14, STANTLER
@@ -1492,26 +1492,26 @@ JohtoGrassWildMons:
 	; morn
 	db 13, EKANS
 	db 14, SPEAROW
-	db 15, RATTATA
-	db 16, RATICATE
-	db 15, ARBOK
-	db 16, FEAROW
+	db 15, MAREEP
+	db 16, MANKEY
+	db 15, FLAAFFY
+	db 16, ARBOK
 	db 16, FEAROW
 	; day
 	db 13, EKANS
 	db 14, SPEAROW
-	db 15, RATTATA
-	db 16, RATICATE
-	db 15, ARBOK
-	db 16, FEAROW
+	db 15, MAREEP
+	db 16, MANKEY
+	db 15, FLAAFFY
+	db 16, ARBOK
 	db 16, FEAROW
 	; nite
 	db 13, RATTATA
 	db 14, ZUBAT
 	db 15, RATICATE
-	db 16, GOLBAT
+	db 16, MANKEY
 	db 15, MARILL
-	db 16, GOLBAT
+	db 16, MAREEP
 	db 16, GOLBAT
 
 	map_id ROUTE_43
@@ -1520,25 +1520,25 @@ JohtoGrassWildMons:
 	db 15, SENTRET
 	db 16, PIDGEOTTO
 	db 16, FARFETCH_D
-	db 15, FURRET
+	db 15, FLAAFFY
 	db 17, RATICATE
 	db 17, FURRET
-	db 17, FURRET
+	db 17, MAREEP
 	; day
 	db 15, SENTRET
 	db 16, PIDGEOTTO
 	db 16, FARFETCH_D
-	db 15, FURRET
+	db 15, FLAAFFY
 	db 17, RATICATE
-	db 17, FURRET
+	db 17, MAREEP
 	db 17, FURRET
 	; nite
-	db 15, VENONAT
+	db 15, FLAAFFY
 	db 16, NOCTOWL
 	db 16, RATICATE
 	db 17, VENONAT
 	db 17, RATICATE
-	db 17, VENOMOTH
+	db 17, MAREEP
 	db 17, VENOMOTH
 
 	map_id ROUTE_44
