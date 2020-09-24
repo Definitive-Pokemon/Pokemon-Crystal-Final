@@ -1517,25 +1517,25 @@ JohtoGrassWildMons:
 	map_id ROUTE_43
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 15, SENTRET
+	db 15, FLAAFFY
 	db 16, PIDGEOTTO
 	db 16, FARFETCH_D
-	db 15, FLAAFFY
+	db 15, MAREEP
+	db 17, GIRAFARIG
 	db 17, RATICATE
 	db 17, FURRET
-	db 17, MAREEP
 	; day
-	db 15, SENTRET
+	db 15, FLAAFFY
 	db 16, PIDGEOTTO
 	db 16, FARFETCH_D
-	db 15, FLAAFFY
+	db 15, MAREEP
+	db 17, GIRAFARIG
 	db 17, RATICATE
-	db 17, MAREEP
 	db 17, FURRET
 	; nite
 	db 15, FLAAFFY
 	db 16, NOCTOWL
-	db 16, RATICATE
+	db 16, GIRAFARIG
 	db 17, VENONAT
 	db 17, RATICATE
 	db 17, MAREEP
