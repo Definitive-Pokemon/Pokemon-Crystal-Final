@@ -143,7 +143,7 @@ INCLUDE "audio/music/postcredits.asm"
 
 SECTION "Custom Music", ROMX
 
-INCLUDE "audio/music/route47.asm"
+INCLUDE "audio/music/safarigate.asm"
 
 
 SECTION "Sound Effects", ROMX
