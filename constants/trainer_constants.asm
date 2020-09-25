@@ -535,10 +535,10 @@ KRIS EQU __trainer_class__
 	const WAI
 
 	trainerclass EXECUTIVEM ; 33
-	const EXECUTIVEM_1
-	const EXECUTIVEM_2
-	const EXECUTIVEM_3
-	const EXECUTIVEM_4
+	const ARCHER
+	const PROTON
+	const PETREL
+	const VEGA
 
 	trainerclass PSYCHIC_T ; 34
 	const NATHAN
@@ -607,8 +607,8 @@ KRIS EQU __trainer_class__
 	const QUENTIN
 
 	trainerclass EXECUTIVEF ; 37
-	const EXECUTIVEF_1
-	const EXECUTIVEF_2
+	const ARIANA
+	const ARIANA
 
 	trainerclass SAGE ; 38
 	const CHOW
