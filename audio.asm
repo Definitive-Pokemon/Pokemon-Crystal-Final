@@ -151,6 +151,8 @@ INCLUDE "audio/music/route47.asm"
 INCLUDE "audio/music/pokemonmart.asm"
 INCLUDE "audio/music/cianwoodcity.asm"
 INCLUDE "audio/music/ceruleancity.asm"
+INCLUDE "audio/music/route24.asm"
+INCLUDE "audio/music/cinnabarisland.asm"
 
 SECTION "Sound Effects", ROMX
 

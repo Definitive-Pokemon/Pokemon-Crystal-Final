@@ -115,6 +115,8 @@
 	const MUSIC_POKEMON_MART               ; 6c
 	const MUSIC_CIANWOOD_CITY             ; 6d
 	const MUSIC_CERULEAN_CITY             ; 6e
+	const MUSIC_ROUTE_24             ; 6f
+	const MUSIC_CINNABAR_ISLAND             ; 70
 
 ; GetMapMusic picks music for this value (see home/map.asm)
 MUSIC_MAHOGANY_MART EQU $64

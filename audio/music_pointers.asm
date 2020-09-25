@@ -114,3 +114,5 @@ Music:
 	dba Music_PokemonMart
 	dba Music_CianwoodCity
 	dba Music_CeruleanCity
+	dba Music_Route24
+	dba Music_CinnabarIsland
