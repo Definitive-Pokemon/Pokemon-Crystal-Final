@@ -144,6 +144,10 @@ INCLUDE "audio/music/postcredits.asm"
 SECTION "Custom Music", ROMX
 
 INCLUDE "audio/music/safarigate.asm"
+INCLUDE "audio/music/summoning.asm"
+INCLUDE "audio/music/lugiasong.asm"
+INCLUDE "audio/music/safarizone.asm"
+INCLUDE "audio/music/route47.asm"
 
 
 SECTION "Sound Effects", ROMX

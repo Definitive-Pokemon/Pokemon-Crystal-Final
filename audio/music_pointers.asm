@@ -107,3 +107,7 @@ Music:
 	dba Music_BattleTowerLobby
 	dba Music_MobileCenter
 	dba Music_SafariGate
+	dba Music_Summoning
+	dba Music_LugiaSong
+	dba Music_SafariZone
+	dba Music_Route47

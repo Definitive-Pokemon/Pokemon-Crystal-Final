@@ -108,6 +108,10 @@
 	const MUSIC_BATTLE_TOWER_LOBBY           ; 65
 	const MUSIC_MOBILE_CENTER                ; 66
 	const MUSIC_SAFARI_GATE                  ; 67
+	const MUSIC_SUMMONING                    ; 68
+	const MUSIC_LUGIA_SONG                    ; 69
+	const MUSIC_SAFARI_ZONE                    ; 6a
+	const MUSIC_ROUTE_47                    ; 6b
 
 ; GetMapMusic picks music for this value (see home/map.asm)
 MUSIC_MAHOGANY_MART EQU $64
