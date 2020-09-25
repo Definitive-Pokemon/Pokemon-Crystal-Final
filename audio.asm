@@ -148,7 +148,9 @@ INCLUDE "audio/music/summoning.asm"
 INCLUDE "audio/music/lugiasong.asm"
 INCLUDE "audio/music/safarizone.asm"
 INCLUDE "audio/music/route47.asm"
-
+INCLUDE "audio/music/pokemonmart.asm"
+INCLUDE "audio/music/cianwoodcity.asm"
+INCLUDE "audio/music/ceruleancity.asm"
 
 SECTION "Sound Effects", ROMX
 

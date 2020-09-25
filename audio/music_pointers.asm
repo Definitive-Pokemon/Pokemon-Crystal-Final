@@ -111,3 +111,6 @@ Music:
 	dba Music_LugiaSong
 	dba Music_SafariZone
 	dba Music_Route47
+	dba Music_PokemonMart
+	dba Music_CianwoodCity
+	dba Music_CeruleanCity

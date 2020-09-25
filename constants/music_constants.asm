@@ -112,6 +112,9 @@
 	const MUSIC_LUGIA_SONG                    ; 69
 	const MUSIC_SAFARI_ZONE                    ; 6a
 	const MUSIC_ROUTE_47                    ; 6b
+	const MUSIC_POKEMON_MART               ; 6c
+	const MUSIC_CIANWOOD_CITY             ; 6d
+	const MUSIC_CERULEAN_CITY             ; 6e
 
 ; GetMapMusic picks music for this value (see home/map.asm)
 MUSIC_MAHOGANY_MART EQU $64
