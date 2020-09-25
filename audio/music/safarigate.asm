@@ -1,10 +1,10 @@
-Music_SafariZoneGate:
-	musicheader 4, 1, Music_SafariZoneGate_Ch1
-	musicheader 1, 2, Music_SafariZoneGate_Ch2
-	musicheader 1, 3, Music_SafariZoneGate_Ch3
-	musicheader 1, 4, Music_SafariZoneGate_Ch4
+Music_SafariGate:
+	musicheader 4, 1, Music_SafariGate_Ch1
+	musicheader 1, 2, Music_SafariGate_Ch2
+	musicheader 1, 3, Music_SafariGate_Ch3
+	musicheader 1, 4, Music_SafariGate_Ch4
 
-Music_SafariZoneGate_Ch1:
+Music_SafariGate_Ch1:
 	tempo 164
 	volume $77
 	dutycycle 0
@@ -193,10 +193,10 @@ Music_SafariZoneGate_Ch1:
 	note __, 16
 	note __, 16
 	note __, 16
-	loopchannel 0, Music_SafariZoneGate_Ch1
+	loopchannel 0, Music_SafariGate_Ch1
 	endchannel
 
-Music_SafariZoneGate_Ch2:
+Music_SafariGate_Ch2:
 	dutycycle 3
 	vibrato $12, $25
 	tone $0001
@@ -401,16 +401,16 @@ Music_SafariZoneGate_Ch2:
 	intensity $86
 	octave 4
 	note C#, 4
-	callchannel Music_SafariZoneGate_Ch2_branch_1
+	callchannel Music_SafariGate_Ch2_branch_1
 	note C#, 3
 	intensity $86
 	note C#, 2
-	callchannel Music_SafariZoneGate_Ch2_branch_1
+	callchannel Music_SafariGate_Ch2_branch_1
 	note __, 1
-	loopchannel 0, Music_SafariZoneGate_Ch2
+	loopchannel 0, Music_SafariGate_Ch2
 	endchannel
 	
-Music_SafariZoneGate_Ch2_branch_1:
+Music_SafariGate_Ch2_branch_1:
 	intensity $82
 	note D_, 1
 	note C#, 2
@@ -436,12 +436,12 @@ Music_SafariZoneGate_Ch2_branch_1:
 	note E_, 2
 	endchannel
 
-Music_SafariZoneGate_Ch3:
+Music_SafariGate_Ch3:
 	notetype $c, $25
 	vibrato $12, $15
 	note __, 16
 	note __, 12
-Music_SafariZoneGate_Ch3_loop:
+Music_SafariGate_Ch3_loop:
 	octave 2
 	note E_, 1
 	octave 1
@@ -651,12 +651,12 @@ Music_SafariZoneGate_Ch3_loop:
 	
 	octave 5
 	note E_, 8
-	callchannel Music_SafariZoneGate_Ch3_branch_1
+	callchannel Music_SafariGate_Ch3_branch_1
 	note A_, 2
 	note __, 4
 	note E_, 2
 	note __, 2
-	callchannel Music_SafariZoneGate_Ch3_branch_1
+	callchannel Music_SafariGate_Ch3_branch_1
 	note A_, 10
 	notetype $c, $22
 	note A_, 4
@@ -664,10 +664,10 @@ Music_SafariZoneGate_Ch3_loop:
 	note A_, 4
 	intensity $25
 	note __, 16
-	loopchannel 0, Music_SafariZoneGate_Ch3_loop
+	loopchannel 0, Music_SafariGate_Ch3_loop
 	endchannel
 	
-Music_SafariZoneGate_Ch3_branch_1:
+Music_SafariGate_Ch3_branch_1:
 	note F#, 2
 	note E_, 2
 	note __, 2
@@ -697,27 +697,27 @@ Music_SafariZoneGate_Ch3_branch_1:
 	note __, 2
 	endchannel
 	
-Music_SafariZoneGate_Ch4:
+Music_SafariGate_Ch4:
 	togglenoise $3
 	notetype $c
 	note __, 16
-Music_SafariZoneGate_Ch4_loop_main:
+Music_SafariGate_Ch4_loop_main:
 	note __, 12
 	note C_, 1
 	note C_, 2
 	note C_, 1
 	note B_, 3
 	note C#, 1
-Music_SafariZoneGate_Ch4_loop_1:
+Music_SafariGate_Ch4_loop_1:
 	note D_, 1
 	note G_, 1
 	note G_, 1
 	note C#, 1
-	loopchannel 15, Music_SafariZoneGate_Ch4_loop_1
-Music_SafariZoneGate_Ch4_loop_2:
-	callchannel Music_SafariZoneGate_Ch4_branch_1
-	loopchannel 16, Music_SafariZoneGate_Ch4_loop_2
-Music_SafariZoneGate_Ch4_loop_3:
+	loopchannel 15, Music_SafariGate_Ch4_loop_1
+Music_SafariGate_Ch4_loop_2:
+	callchannel Music_SafariGate_Ch4_branch_1
+	loopchannel 16, Music_SafariGate_Ch4_loop_2
+Music_SafariGate_Ch4_loop_3:
 	note C_, 1
 	note G_, 1
 	note G_, 1
@@ -734,23 +734,23 @@ Music_SafariZoneGate_Ch4_loop_3:
 	note G_, 1
 	note G_, 1
 	note D_, 1
-	loopchannel 2, Music_SafariZoneGate_Ch4_loop_3
-Music_SafariZoneGate_Ch4_loop_4:
-	callchannel Music_SafariZoneGate_Ch4_branch_1
-	loopchannel 4, Music_SafariZoneGate_Ch4_loop_4
+	loopchannel 2, Music_SafariGate_Ch4_loop_3
+Music_SafariGate_Ch4_loop_4:
+	callchannel Music_SafariGate_Ch4_branch_1
+	loopchannel 4, Music_SafariGate_Ch4_loop_4
 	note B_, 3
 	note F#, 1
-Music_SafariZoneGate_Ch4_loop_5:
+Music_SafariGate_Ch4_loop_5:
 	note C#, 1
 	note G_, 1
 	note G_, 1
 	note F#, 1
-	loopchannel 15, Music_SafariZoneGate_Ch4_loop_5
+	loopchannel 15, Music_SafariGate_Ch4_loop_5
 	note B_, 16
-	loopchannel 0, Music_SafariZoneGate_Ch4_loop_main
+	loopchannel 0, Music_SafariGate_Ch4_loop_main
 	endchannel
 	
-Music_SafariZoneGate_Ch4_branch_1:
+Music_SafariGate_Ch4_branch_1:
 	note D_, 1
 	note G_, 1
 	note G_, 1
