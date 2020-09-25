@@ -607,8 +607,8 @@ KRIS EQU __trainer_class__
 	const QUENTIN
 
 	trainerclass EXECUTIVEF ; 37
-	const ARIANA
-	const ARIANA
+	const ARIANA1
+	const ARIANA2
 
 	trainerclass SAGE ; 38
 	const CHOW
