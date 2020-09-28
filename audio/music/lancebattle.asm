@@ -5,7 +5,7 @@ Music_LanceBattle:
 	channel 3, Music_LanceBattle_Ch3
 
 Music_LanceBattle_Ch1:
-	tempo 98
+	tempo 82
 	volume 7, 7
 	duty_cycle 3
 	pitch_offset 2
@@ -419,7 +419,7 @@ Music_LanceBattle_Ch2:
 	note F#, 16
 	volume_envelope 12, 4
 .loop1:
-	octave 1
+	octave 5
 	note D#, 4
 	note D_, 4
 	note C#, 4
