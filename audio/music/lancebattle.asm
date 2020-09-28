@@ -1,10 +1,10 @@
-Music_ChampionBattle:
+Music_LanceBattle:
 	channel_count 3
-	channel 1, Music_ChampionBattle_Ch1
-	channel 2, Music_ChampionBattle_Ch2
-	channel 3, Music_ChampionBattle_Ch3
+	channel 1, Music_LanceBattle_Ch1
+	channel 2, Music_LanceBattle_Ch2
+	channel 3, Music_LanceBattle_Ch3
 
-Music_ChampionBattle_Ch1:
+Music_LanceBattle_Ch1:
 	tempo 98
 	volume 7, 7
 	duty_cycle 3
@@ -295,7 +295,7 @@ Music_ChampionBattle_Ch1:
 	volume_envelope 11, 2
 	sound_ret
 
-Music_ChampionBattle_Ch2:
+Music_LanceBattle_Ch2:
 	duty_cycle 3
 	vibrato 8, 3, 6
 	pitch_offset 1
@@ -540,7 +540,7 @@ Music_ChampionBattle_Ch2:
 	volume_envelope 12, 5
 	sound_ret
 
-Music_ChampionBattle_Ch3:
+Music_LanceBattle_Ch3:
 	note_type 12, 1, 4
 .loop1:
 	octave 3
