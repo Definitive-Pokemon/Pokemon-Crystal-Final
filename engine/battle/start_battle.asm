@@ -93,7 +93,7 @@ PlayBattleMusic:
 
 	ld de, MUSIC_LANCE_BATTLE
 	cp CHAMPION
-	jr z, .done
+	jp z, .done
 
 	; They should have included EXECUTIVEM, EXECUTIVEF, and SCIENTIST too...
 	ld de, MUSIC_ROCKET_BATTLE
