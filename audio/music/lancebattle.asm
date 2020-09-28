@@ -5,12 +5,12 @@ Music_LanceBattle:
 	channel 3, Music_LanceBattle_Ch3
 
 Music_LanceBattle_Ch1:
-	tempo 98
+	tempo 89
 	volume 7, 7
 	duty_cycle 3
 	pitch_offset 2
 	vibrato 18, 1, 5
-	note_type 12, 9, 2
+	note_type 12, 11, 2
 	octave 2
 	note A#, 8
 	note A#, 8
@@ -541,7 +541,7 @@ Music_LanceBattle_Ch2:
 	sound_ret
 
 Music_LanceBattle_Ch3:
-	note_type 12, 1, -1
+	note_type 12, 1, 4
 .loop1:
 	octave 3
 	note D#, 1
