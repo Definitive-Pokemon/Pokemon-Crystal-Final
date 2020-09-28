@@ -5,7 +5,7 @@ Music_LanceBattle:
 	channel 3, Music_LanceBattle_Ch3
 
 Music_LanceBattle_Ch1:
-	tempo 147
+	tempo 122
 	volume 7, 7
 	duty_cycle 3
 	pitch_offset 2
