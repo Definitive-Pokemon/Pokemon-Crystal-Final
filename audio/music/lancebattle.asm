@@ -10,7 +10,7 @@ Music_LanceBattle_Ch1:
 	duty_cycle 3
 	pitch_offset 2
 	vibrato 18, 1, 5
-	note_type 12, 9, 3
+	note_type 11, 10, 3
 	octave 2
 	note A#, 8
 	note A#, 8
@@ -299,7 +299,7 @@ Music_LanceBattle_Ch2:
 	duty_cycle 3
 	vibrato 8, 3, 6
 	pitch_offset 1
-	note_type 12, 12, 2
+	note_type 11, 11, 3
 	octave 3
 	note D#, 8
 	note D#, 8
@@ -541,7 +541,7 @@ Music_LanceBattle_Ch2:
 	sound_ret
 
 Music_LanceBattle_Ch3:
-	note_type 12, 1, 4
+	note_type 11, 0, 3
 .loop1:
 	octave 3
 	note D#, 1
