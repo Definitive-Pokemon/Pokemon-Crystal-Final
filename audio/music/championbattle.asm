@@ -5,7 +5,7 @@ Music_ChampionBattle:
 	channel 3, Music_ChampionBattle_Ch3
 
 Music_ChampionBattle_Ch1:
-	tempo 98
+	tempo 89
 	volume 7, 7
 	duty_cycle 3
 	pitch_offset 2
