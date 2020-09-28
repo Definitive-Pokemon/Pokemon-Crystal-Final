@@ -117,7 +117,6 @@
 	const MUSIC_CERULEAN_CITY             ; 6e
 	const MUSIC_ROUTE_24             ; 6f
 	const MUSIC_CINNABAR_ISLAND             ; 70
-	const MUSIC_LANCE_BATTLE             ; 71
 
 ; GetMapMusic picks music for this value (see home/map.asm)
 MUSIC_MAHOGANY_MART EQU $64
