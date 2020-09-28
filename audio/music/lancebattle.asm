@@ -10,7 +10,7 @@ Music_LanceBattle_Ch1:
 	duty_cycle 3
 	pitch_offset 2
 	vibrato 18, 1, 5
-	note_type 12, 9, 2
+	note_type 12, 9, 3
 	octave 2
 	note A#, 8
 	note A#, 8
