@@ -5,10 +5,10 @@ Music_LanceBattle:
 	channel 3, Music_LanceBattle_Ch3
 
 Music_LanceBattle_Ch1:
-	tempo 122
+	tempo 98
 	volume 7, 7
 	duty_cycle 3
-	pitch_offset 2
+	pitch_offset 3
 	vibrato 18, 1, 5
 	note_type 12, 11, 2
 	octave 1
@@ -298,7 +298,7 @@ Music_LanceBattle_Ch1:
 Music_LanceBattle_Ch2:
 	duty_cycle 3
 	vibrato 8, 3, 6
-	pitch_offset 1
+	pitch_offset 2
 	note_type 12, 12, 2
 	octave 2
 	note D#, 8
