@@ -84,7 +84,7 @@ PlayBattleMusic:
 
 .kantowild
 	ld de, MUSIC_KANTO_WILD_BATTLE
-	jr .done
+	jp .done
 
 .trainermusic
 	ld de, MUSIC_CHAMPION_BATTLE
@@ -93,7 +93,7 @@ PlayBattleMusic:
 
 	ld de, MUSIC_LANCE_BATTLE
 	cp CHAMPION
-	jp z, .done
+	jr z, .done
 
 	; They should have included EXECUTIVEM, EXECUTIVEF, and SCIENTIST too...
 	ld de, MUSIC_ROCKET_BATTLE
