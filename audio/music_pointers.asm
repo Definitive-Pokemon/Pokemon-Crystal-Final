@@ -119,3 +119,4 @@ Music:
 	dba Music_RedBattle
 	dba Music_LugiaBattle
 	dba Music_HoOhBattle
+	dba Music_CelebiBattle

@@ -120,6 +120,7 @@
 	const MUSIC_RED_BATTLE             ; 71
 	const MUSIC_LUGIA_BATTLE             ; 72
 	const MUSIC_HOOH_BATTLE             ; 73
+	const MUSIC_CELEBI_BATTLE             ; 74
 
 ; GetMapMusic picks music for this value (see home/map.asm)
 MUSIC_MAHOGANY_MART EQU $64

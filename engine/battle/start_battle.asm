@@ -75,6 +75,11 @@ PlayBattleMusic:
 	ld de, MUSIC_HOOH_BATTLE
 	jp z, .done
 
+	ld a, [wBattleType]
+	cp BATTLETYPE_CELEBI
+	ld de, MUSIC_CELEBI_BATTLE
+	jp z, .done
+
 	; Are we fighting a trainer?
 	ld a, [wOtherTrainerClass]
 	and a

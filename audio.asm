@@ -156,6 +156,7 @@ INCLUDE "audio/music/cinnabarisland.asm"
 INCLUDE "audio/music/redbattle.asm"
 INCLUDE "audio/music/lugiabattle.asm"
 INCLUDE "audio/music/hoohbattle.asm"
+INCLUDE "audio/music/celebibattle.asm"
 
 SECTION "Sound Effects", ROMX
 
