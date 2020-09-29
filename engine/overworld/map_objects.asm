@@ -2770,6 +2770,9 @@ PRIORITY_NORM EQU $20
 PRIORITY_HIGH EQU $30
 
 InitSprites:
+	ld a, [wLinkMode]
+	cp LINK_NPC_TRADE
+	jr z, .skipRegularInit
 	call .DeterminePriorities
 	ld c, PRIORITY_HIGH
 	call .InitSpritesByPriority
@@ -2777,6 +2780,7 @@ InitSprites:
 	call .InitSpritesByPriority
 	ld c, PRIORITY_LOW
 	call .InitSpritesByPriority
+.skipRegularInit
 	ret
 
 .DeterminePriorities:

@@ -5,14 +5,14 @@ NPCTrade::
 	ld b, CHECK_FLAG
 	call TradeFlagAction
 	ld a, TRADE_DIALOG_AFTER
-	jr nz, .done
+	jp nz, .done
 
 	ld a, TRADE_DIALOG_INTRO
 	call PrintTradeText
 
 	call YesNoBox
 	ld a, TRADE_DIALOG_CANCEL
-	jr c, .done
+	jp c, .done
 
 ; Select givemon from party
 	ld b, PARTYMENUACTION_GIVE_MON
@@ -44,8 +44,15 @@ NPCTrade::
 	ld hl, TradedForText
 	call PrintText
 
-	call RestartMapMusic
-
+	ld a, LINK_NPC_TRADE
+	ld [wLinkMode], a
+	farcall EvolvePokemon
+	ld a, LINK_NULL
+	ld [wLinkMode], a
+	call ReturnToMapWithSpeechTextbox
+	; call RestartMapMusic
+	; ld a, $01
+	; ld [wPartyMenuScrollPosition], a ; use of unused variable to signal 
 	ld a, TRADE_DIALOG_COMPLETE
 
 .done

@@ -333,9 +333,15 @@ EvolveAfterBattle_MasterLoop:
 	pop de
 	pop bc
 	pop hl
-	ld a, [wLinkMode]
-	and a
-	ret nz
+	ld a, [wLinkMode] ; explicitely only directly return to map with NPC Trade evolution
+	cp LINK_TIMECAPSULE
+	ret z
+	cp LINK_TRADECENTER
+	ret z
+	cp LINK_COLOSSEUM
+	ret z
+	cp LINK_MOBILE
+	ret z
 	ld a, [wBattleMode]
 	and a
 	ret nz
