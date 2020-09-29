@@ -89,10 +89,6 @@ KRIS EQU __trainer_class__
 
 	trainerclass CHAMPION ; 10
 	const LANCE
-<<<<<<< HEAD
-	const LANCE2
-=======
->>>>>>> parent of 242107e79... Add Elite Four Rematches (Will only for now)
 
 	trainerclass BROCK ; 11
 	const BROCK1
