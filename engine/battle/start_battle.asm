@@ -126,6 +126,9 @@ PlayBattleMusic:
 	ld de, MUSIC_KANTO_GYM_LEADER_BATTLE
 	farcall IsKantoGymLeader
 	jr c, .done
+	ld a, [wOtherTrainerClass]
+	cp KOGA
+	jr c, .done
 
 	; IsGymLeader also counts CHAMPION, RED, and the Kanto gym leaders
 	; but they have been taken care of before this
