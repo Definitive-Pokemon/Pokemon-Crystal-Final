@@ -99,7 +99,7 @@ PlayBattleMusic:
 
 .kantowild
 	ld de, MUSIC_KANTO_WILD_BATTLE
-	jp .done
+	jr .done
 
 .trainermusic
 	ld de, MUSIC_CHAMPION_BATTLE
@@ -125,15 +125,6 @@ PlayBattleMusic:
 
 	ld de, MUSIC_KANTO_GYM_LEADER_BATTLE
 	farcall IsKantoGymLeader
-	jr c, .done
-	ld a, [wOtherTrainerClass]
-	cp WILL
-	jr c, .done
-	cp BRUNO
-	jr c, .done
-	cp KAREN
-	jr c, .done
-	cp KOGA
 	jr c, .done
 
 	; IsGymLeader also counts CHAMPION, RED, and the Kanto gym leaders

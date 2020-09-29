@@ -49,6 +49,8 @@ KogaScript_Battle:
 	waitbutton
 	closetext
 	winlosstext KogaScript_KogaBeatenText, 0
+	checkevent EVENT_BEAT_BLUE
+	iftrue KogaScript_Rematch
 	loadtrainer KOGA, KOGA1
 	startbattle
 	reloadmapafterbattle
@@ -69,6 +71,23 @@ KogaScript_AfterBattle:
 	writetext KogaScript_KogaDefeatText
 	waitbutton
 	closetext
+	end
+
+KogaScript_Rematch
+	loadtrainer KOGA, KOGA2
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_ELITE_4_KOGA
+	opentext
+	writetext KogaScript_KogaDefeatText
+	waitbutton
+	closetext
+	playsound SFX_ENTER_DOOR
+	changeblock 4, 2, $16 ; open door
+	reloadmappart
+	closetext
+	setevent EVENT_KOGAS_ROOM_EXIT_OPEN
+	waitsfx
 	end
 
 KogasRoom_EnterMovement:
