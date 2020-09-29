@@ -116,4 +116,6 @@ Music:
 	dba Music_CeruleanCity
 	dba Music_Route24
 	dba Music_CinnabarIsland
-	dba Music_LanceBattle
+	dba Music_RedBattle
+	dba Music_LugiaBattle
+	dba Music_HoOhBattle

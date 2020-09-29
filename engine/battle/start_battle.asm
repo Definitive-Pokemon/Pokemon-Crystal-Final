@@ -65,6 +65,16 @@ PlayBattleMusic:
 	cp BATTLETYPE_ROAMING
 	jp z, .done
 
+	ld a, [wBattleType]
+	cp BATTLETYPE_LUGIA
+	ld de, MUSIC_LUGIA_BATTLE
+	jp z, .done
+
+	ld a, [wBattleType]
+	cp BATTLETYPE_HOOH
+	ld de, MUSIC_HOOH_BATTLE
+	jp z, .done
+
 	; Are we fighting a trainer?
 	ld a, [wOtherTrainerClass]
 	and a
@@ -88,11 +98,11 @@ PlayBattleMusic:
 
 .trainermusic
 	ld de, MUSIC_CHAMPION_BATTLE
-	cp RED
+	cp CHAMPION
 	jr z, .done
 
-	ld de, MUSIC_LANCE_BATTLE
-	cp CHAMPION
+	ld de, MUSIC_RED_BATTLE
+	cp RED
 	jr z, .done
 
 	; They should have included EXECUTIVEM, EXECUTIVEF, and SCIENTIST too...

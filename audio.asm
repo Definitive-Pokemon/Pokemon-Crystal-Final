@@ -153,7 +153,9 @@ INCLUDE "audio/music/cianwoodcity.asm"
 INCLUDE "audio/music/ceruleancity.asm"
 INCLUDE "audio/music/route24.asm"
 INCLUDE "audio/music/cinnabarisland.asm"
-INCLUDE "audio/music/lancebattle.asm"
+INCLUDE "audio/music/redbattle.asm"
+INCLUDE "audio/music/lugiabattle.asm"
+INCLUDE "audio/music/hoohbattle.asm"
 
 SECTION "Sound Effects", ROMX
 
