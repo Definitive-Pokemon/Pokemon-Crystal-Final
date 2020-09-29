@@ -129,11 +129,11 @@ PlayBattleMusic:
 	ld a, [wOtherTrainerClass]
 	cp WILL
 	jr c, .done
-	cp KOGA
-	jr c, .done
 	cp BRUNO
 	jr c, .done
 	cp KAREN
+	jr c, .done
+	cp KOGA
 	jr c, .done
 
 	; IsGymLeader also counts CHAMPION, RED, and the Kanto gym leaders
