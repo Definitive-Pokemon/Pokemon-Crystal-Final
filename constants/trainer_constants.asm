@@ -72,7 +72,6 @@ KRIS EQU __trainer_class__
 
 	trainerclass WILL ; b
 	const WILL1
-	const WILL2
 
 	trainerclass CAL ; c
 	const CAL1
@@ -81,19 +80,19 @@ KRIS EQU __trainer_class__
 
 	trainerclass BRUNO ; d
 	const BRUNO1
-	const BRUNO2
 
 	trainerclass KAREN ; e
 	const KAREN1
-	const KAREN2
 
 	trainerclass KOGA ; f
 	const KOGA1
-	const KOGA2
 
 	trainerclass CHAMPION ; 10
 	const LANCE
+<<<<<<< HEAD
 	const LANCE2
+=======
+>>>>>>> parent of 242107e79... Add Elite Four Rematches (Will only for now)
 
 	trainerclass BROCK ; 11
 	const BROCK1
