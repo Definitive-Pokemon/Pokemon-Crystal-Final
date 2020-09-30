@@ -256,7 +256,7 @@ SageLiFlashExplanationText:
 	line "act--a TM can be"
 	cont "used only once."
 
-	text "FLASH illuminates"
+	para "FLASH illuminates"
 	line "even the darkest"
 	cont "of all places."
 
