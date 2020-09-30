@@ -167,7 +167,7 @@ FalknerZephyrBadgeText:
 	done
 
 FalknerTMMudSlapText:
-	para "TM31 contains"
+	text "TM31 contains"
 	line "MUD-SLAP."
 
 	para "It reduces the"
