@@ -161,7 +161,7 @@ SproutTowerElderLecturesRivalText:
 	cont "trainer."
 
 	para "As promised, here"
-	line "is your HM."
+	line "is your TM."
 
 	para "But let me say"
 	line "this: You should"
@@ -302,7 +302,7 @@ SageTroyAfterBattleText:
 	done
 
 SageNealSeenText:
-	text "The ELDER's HM"
+	text "The ELDER's TM"
 	line "lights even pitch-"
 	cont "black darkness."
 	done

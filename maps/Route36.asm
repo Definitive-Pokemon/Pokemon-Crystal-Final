@@ -491,7 +491,7 @@ RockSmashGuyText2:
 
 UnusedReceivedTM08Text:
 	text "<PLAYER> received"
-	line "TM08."
+	line "HM06."
 	done
 
 RockSmashGuyText3:
