@@ -246,6 +246,16 @@ SageLiTakeThisFlashText:
 	done
 
 SageLiFlashExplanationText:
+	text "By using a TM, a"
+	line "#MON will"
+
+	para "instantly learn a"
+	line "new move."
+
+	para "Think before you"
+	line "act--a TM can be"
+	cont "used only once."
+
 	text "FLASH illuminates"
 	line "even the darkest"
 	cont "of all places."
