@@ -159,8 +159,8 @@ FalknerZephyrBadgeText:
 	para "It also enables"
 	line "#MON to use"
 
-	para "FLASH, if they"
-	line "have it, anytime."
+	para "ROCK SMASH, if"
+	line "learned, anytime."
 
 	para "Here--take this"
 	line "too."

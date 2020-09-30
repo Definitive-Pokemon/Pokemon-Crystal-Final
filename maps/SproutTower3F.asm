@@ -250,10 +250,10 @@ SageLiFlashExplanationText:
 	line "even the darkest"
 	cont "of all places."
 
-	para "I hope you learn "
-	line "and grow from "
+	para "You can give it"
+	line "to BELLSPROUT"
 
-	cont "your journey. "
+	cont "for example…"
 	done
 
 SageLiAfterBattleText:
