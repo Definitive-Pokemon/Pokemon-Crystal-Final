@@ -76,11 +76,15 @@ SageLiScript:
 	opentext
 	writetext SageLiTakeThisFlashText
 	promptbutton
-	verbosegiveitem HM_FLASH
+	verbosegiveitem TM_FLASH
+	iffalse .NoRoomForTM
 	setevent EVENT_GOT_HM05_FLASH
 	setevent EVENT_BEAT_SAGE_LI
 	writetext SageLiFlashExplanationText
 	waitbutton
+	closetext
+	end
+.NoRoomForTM:
 	closetext
 	end
 
@@ -238,7 +242,7 @@ SageLiTakeThisFlashText:
 	line "this move."
 
 	para "Take this FLASH"
-	line "HM."
+	line "TM."
 	done
 
 SageLiFlashExplanationText:
@@ -246,11 +250,10 @@ SageLiFlashExplanationText:
 	line "even the darkest"
 	cont "of all places."
 
-	para "But to use it out"
-	line "of battle, you"
+	para "I hope you learn "
+	line "and grow from "
 
-	para "need the BADGE"
-	line "from VIOLET's GYM."
+	cont "your journey. "
 	done
 
 SageLiAfterBattleText:
