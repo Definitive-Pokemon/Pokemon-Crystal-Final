@@ -15,10 +15,10 @@ CinnabarIslandBlue:
 	faceplayer
 	opentext
 	writetext CinnabarIslandBlueText
+	waitbutton
 	readvar VAR_BADGES
 	ifgreater 14, .Challenge
 	writetext CinnabarIslandBlueNoChallengeText
-	waitbutton
 	closetext
 	end
 
