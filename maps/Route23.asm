@@ -5,7 +5,11 @@ Route23_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 
 .FlyPoint:
+	ld de, ENGINE_EARTHBADGE
+	call CheckBadge
+	jr c, .nobadge
 	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+.nobadge
 	endcallback
 
 IndigoPlateauSign:
