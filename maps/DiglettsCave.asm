@@ -28,12 +28,12 @@ DiglettsCave_MapEvents:
 
 	def_warp_events
 	warp_event  3, 33, VERMILION_CITY, 10
-	warp_event  3,  3, DIGLETTS_CAVE, 5
-	warp_event 15,  5, ROUTE_2, 6
-	warp_event 13,  5, ROUTE_2, 5
+	warp_event  5, 31, DIGLETTS_CAVE, 5
+	warp_event 15,  5, ROUTE_2, 5
 	warp_event 17,  3, DIGLETTS_CAVE, 6
 	warp_event 17, 33, DIGLETTS_CAVE, 2
-	warp_event  5, 31, DIGLETTS_CAVE, 4
+	warp_event  3,  3, DIGLETTS_CAVE, 4
+	warp_event 13,  5, ROUTE_2, 6
 
 	def_coord_events
 
@@ -42,4 +42,4 @@ DiglettsCave_MapEvents:
 
 	def_object_events
 	object_event  3, 31, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DiglettsCavePokefanMScript, -1
-	object_event 13,  4, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DiglettBoulder, -1
+	object_event 13,  5, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DiglettBoulder, -1
