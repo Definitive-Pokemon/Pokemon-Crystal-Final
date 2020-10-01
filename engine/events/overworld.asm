@@ -281,9 +281,6 @@ FlashFunction:
 
 .CheckUseFlash:
 ; Flash
-	ld de, ENGINE_ZEPHYRBADGE
-	farcall CheckBadge
-	jr c, .nozephyrbadge
 	push hl
 	farcall SpecialAerodactylChamber
 	pop hl
@@ -301,9 +298,6 @@ FlashFunction:
 	ld a, $80
 	ret
 
-.nozephyrbadge
-	ld a, $80
-	ret
 
 UseFlash:
 	ld hl, Script_UseFlash
@@ -1320,6 +1314,10 @@ RockSmashFunction:
 	ret
 
 TryRockSmashFromMenu:
+	ld de, ENGINE_ZEPHYRBADGE
+	farcall CheckBadge
+	jr c, .nozephyrbadge
+
 	call GetFacingObject
 	jr c, .no_rock
 	ld a, d
@@ -1329,6 +1327,10 @@ TryRockSmashFromMenu:
 	ld hl, RockSmashFromMenuScript
 	call QueueScript
 	ld a, $81
+	ret
+
+.nozephyrbadge
+	ld a, $80
 	ret
 
 .no_rock
