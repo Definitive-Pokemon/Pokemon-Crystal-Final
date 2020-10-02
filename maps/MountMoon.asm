@@ -137,7 +137,7 @@ MountMoonSilverTextAfter:
 
 	para "…Listen, <PLAYER>."
 
-	para "Did you notice"
+	para "Did you see those"
 	line "SILPH employees"
 
 	para "in front of the"
@@ -154,11 +154,11 @@ MountMoonSilverTextAfter:
 	cont "a lesson."
 
 	para "If you feel like"
-	line "helping out, head to"
+	line "helping out, head"
 
-	para "the gate connecting"
-	line "ROUTE 5 and"
-	cont "SAFFRON CITY."
+	para "to the gate between"
+	line "connecting ROUTE 5"
+	cont "to SAFFRON CITY."
 	done
 
 MountMoonSilverTextLoss:
