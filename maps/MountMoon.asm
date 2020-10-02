@@ -153,11 +153,11 @@ MountMoonSilverTextAfter:
 	line "to teach them"
 	cont "a lesson."
 
-	para "If you want to help"
-	line "out, head to the"
+	para "If you feel like"
+	line "helping out, head to"
 
-	para "gate connecting"
-	line "CERULEAN and"
+	para "the gate connecting"
+	line "ROUTE 5 and"
 	cont "SAFFRON CITY."
 	done
 
