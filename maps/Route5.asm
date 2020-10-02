@@ -1,5 +1,6 @@
 	object_const_def
 	const ROUTE5_POKEFAN_M
+	const ROUTE5_SCIENTIST
 
 Route5_MapScripts:
 	def_scene_scripts
@@ -8,6 +9,12 @@ Route5_MapScripts:
 
 Route5PokefanMScript:
 	jumptextfaceplayer Route5PokefanMText
+
+Route5SilphEmployee1Script:
+	jumptextfaceplayer Route5SilphEmployeeText
+
+Route5SilphEmployee2Script:
+	jumptextfaceplayer Route5SilphEmployeeText	
 
 Route5UndergroundPathSign:
 	jumptext Route5UndergroundPathSignText
@@ -21,6 +28,17 @@ Route5PokefanMText:
 
 	para "at the POWER PLANT"
 	line "is solved."
+	done
+
+Route5SilphEmployeeText
+	text "Nobody is allowed to"
+	line "leave SAFFRON CITY,"
+
+	para "due to the execution"
+	line "of our grand project!"
+
+	para "SILPH CO. is about"
+	line "to break new ground!"
 	done
 
 Route5UndergroundPathSignText:
@@ -54,3 +72,6 @@ Route5_MapEvents:
 
 	def_object_events
 	object_event 17, 16, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route5PokefanMScript, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+	object_event 17, 16, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route5PokefanMScript, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+	object_event  8, 16, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route5SilphEmployee1Script, EVENT_BEAT_RIVAL_IN_MT_MOON
+	object_event  9, 16, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route5SilphEmployee2Script, EVENT_BEAT_RIVAL_IN_MT_MOON
