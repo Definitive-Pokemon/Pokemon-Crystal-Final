@@ -138,7 +138,7 @@ MountMoonSilverTextAfter:
 	para "…Listen, <PLAYER>."
 
 	para "Did you notice"
-	line "the SILPH employees"
+	line "SILPH employees"
 
 	para "in front of the"
 	line "gates to SAFFRON?"
@@ -146,18 +146,19 @@ MountMoonSilverTextAfter:
 	para "They seem to be"
 	line "up to no good."
 
-	para "People aren't allowed"
-	line "to enter or leave."
+	para "People can't enter"
+	line "or leave the city."
 
 	para "I was planning"
 	line "to teach them"
+	cont "a lesson."
 
-	para "a lesson."
-	line "If you want to"
+	para "If you want to help"
+	line "out, head to the"
 
-	para "help out, head to"
-	line "the gate connecting"
-	cont "CERULEAN and SAFFRON."
+	para "gate connecting"
+	line "CERULEAN and"
+	cont "SAFFRON CITY."
 	done
 
 MountMoonSilverTextLoss:
