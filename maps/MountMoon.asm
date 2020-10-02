@@ -154,11 +154,11 @@ MountMoonSilverTextAfter:
 	cont "a lesson."
 
 	para "If you feel like"
-	line "helping out, head"
+	line "helping out,"
 
-	para "to the gate between"
-	line "connecting ROUTE 5"
-	cont "to SAFFRON CITY."
+	para "head to the gate"
+	line "between ROUTE 5"
+	cont "and SAFFRON CITY."
 	done
 
 MountMoonSilverTextLoss:
