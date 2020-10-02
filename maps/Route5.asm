@@ -31,14 +31,17 @@ Route5PokefanMText:
 	done
 
 Route5SilphEmployeeText
-	text "Nobody is allowed to"
-	line "leave SAFFRON CITY,"
+	text "Nobody is allowed"
+	line "to leave SAFFRON,"
 
-	para "due to the execution"
-	line "of our grand project!"
+	para "due to upcoming"
+	line "finalization of our"
+	cont "grand project!"
 
 	para "SILPH CO. is about"
-	line "to break new ground!"
+	line "to release its"
+	cont "state-of-the-art"
+	line "# BALL!"
 	done
 
 Route5UndergroundPathSignText:
@@ -72,6 +75,5 @@ Route5_MapEvents:
 
 	def_object_events
 	object_event 17, 16, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route5PokefanMScript, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
-	object_event 17, 16, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route5PokefanMScript, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
-	object_event  8, 16, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route5SilphEmployee1Script, EVENT_BEAT_RIVAL_IN_MT_MOON
-	object_event  9, 16, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route5SilphEmployee2Script, EVENT_BEAT_RIVAL_IN_MT_MOON
+	object_event  8, 16, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route5SilphEmployee1Script, EVENT_BEAT_RIVAL_IN_MT_MOON
+	object_event  9, 16, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route5SilphEmployee2Script, EVENT_BEAT_RIVAL_IN_MT_MOON
