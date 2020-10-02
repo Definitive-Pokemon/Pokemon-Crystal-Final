@@ -137,11 +137,27 @@ MountMoonSilverTextAfter:
 
 	para "…Listen, <PLAYER>."
 
-	para "One of these days"
-	line "I'm going to prove"
+	para "Did you notice"
+	line "the SILPH employees"
 
-	para "how good I am by"
-	line "beating you."
+	para "in front of the"
+	line "gates to SAFFRON?"
+
+	para "They seem to be"
+	line "up to no good."
+
+	para "People aren't allowed"
+	line "to enter or leave."
+
+	para "I was planning"
+	line "to teach them"
+
+	para "a lesson."
+	line "If you want to"
+
+	para "help out, head to"
+	line "the gate connecting"
+	cont "CERULEAN and SAFFRON."
 	done
 
 MountMoonSilverTextLoss:
