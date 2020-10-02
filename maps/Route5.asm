@@ -32,16 +32,22 @@ Route5PokefanMText:
 
 Route5SilphEmployeeText
 	text "Nobody is allowed"
-	line "to leave SAFFRON,"
+	line "to leave or"
+	cont "enter SAFFRON."
 
-	para "due to upcoming"
-	line "finalization of our"
-	cont "grand project!"
+	para "SILPH CO. has"
+	line "finally completed"
+	cont "its grand project!"
 
-	para "SILPH CO. is about"
-	line "to release its"
-	cont "state-of-the-art"
-	line "# BALL!"
+	para "Troublemakers"
+	line "might interfere"
+
+	para "with the shipping"
+	line "process!"
+
+	para "Therefore, none"
+	line "are allowed to"
+	cont "trespass!"
 	done
 
 Route5UndergroundPathSignText:
