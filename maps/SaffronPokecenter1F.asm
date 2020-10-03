@@ -75,7 +75,8 @@ SaffronPokecenter1FTeacherText:
 	line "to worry about"
 
 	para "being stuck here"
-	line "for a little longer!"
+	line "for a little"
+	cont "longer!"
 	done
 
 SaffronPokecenter1FFisherText:
