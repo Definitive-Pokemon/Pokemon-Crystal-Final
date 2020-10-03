@@ -37,12 +37,14 @@ Route6SaffronGuardWelcomeText:
 	line "solved, employees"
 
 	para "from SILPH CO."
-	line "became active like"
-	cont "never before."
+	line "became active"
+
+	para "like I've never"
+	line "seen before."
 
 	para "It's as if they're"
 	line "planning something"
-	cont "big."
+	cont "big…"
 	done
 
 Route6SaffronGuardMagnetTrainText:

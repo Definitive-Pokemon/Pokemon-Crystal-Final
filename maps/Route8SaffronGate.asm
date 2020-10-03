@@ -31,9 +31,12 @@ Route8SaffronGateOfficerText:
 	done
 
 Route8SaffronGateOfficerWeirdText:
-	text "I think it's a bit"
-	line "too much, all this"
-	cont "blocking off gates."
+	text "I think this all is"
+	line "a tad too much."
+
+	para "It's as if SILPH"
+	line "has got something"
+	cont "to hide…"
 	done
 
 Route8SaffronGate_MapEvents:
