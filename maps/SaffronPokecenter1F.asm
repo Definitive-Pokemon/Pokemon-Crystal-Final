@@ -13,25 +13,30 @@ SaffronPokecenter1FNurseScript:
 	jumpstd PokecenterNurseScript
 
 SaffronPokecenter1FTeacherScript:
-	special Mobile_DummyReturnFalse
-	iftrue .mobile
-	jumptextfaceplayer SaffronPokecenter1FTeacherText
+	faceplayer
+	opentext
+	checkevent EVENT_CENTRAL_KANTO_ROCKET_BEATEN
+	iftrue .normal
+	writetext SaffronPokecenter1FTeacherText
+	waitbutton
+	closetext
+	end
 
-.mobile
-	jumptextfaceplayer SaffronPokecenter1FTeacherMobileText
+.normal
+	jumptextfaceplayer SaffronPokecenter1FTeacherBeatText
 
 SaffronPokecenter1FFisherScript:
 	faceplayer
 	opentext
-	checkevent EVENT_RETURNED_MACHINE_PART
-	iftrue .SolvedKantoPowerCrisis
+	checkevent EVENT_CENTRAL_KANTO_ROCKET_BEATEN
+	iftrue .Beat
 	writetext SaffronPokecenter1FFisherText
 	waitbutton
 	closetext
 	end
 
-.SolvedKantoPowerCrisis:
-	writetext SaffronPokecenter1FFisherReturnedMachinePartText
+.Beat:
+	writetext SaffronPokecenter1FFisherBeatRocketSaffronText
 	waitbutton
 	closetext
 	end
@@ -39,7 +44,7 @@ SaffronPokecenter1FFisherScript:
 SaffronPokecenter1FYoungsterScript:
 	jumptextfaceplayer SaffronPokecenter1FYoungsterText
 
-SaffronPokecenter1FTeacherText:
+SaffronPokecenter1FTeacherBeatText:
 	text "What are JOHTO's"
 	line "#MON CENTERS"
 	cont "like?"
@@ -55,7 +60,7 @@ SaffronPokecenter1FTeacherText:
 	cont "then!"
 	done
 
-SaffronPokecenter1FTeacherMobileText:
+SaffronPokecenter1FTeacherText:
 	text "What are JOHTO's"
 	line "#MON CENTERS"
 	cont "like?"
@@ -66,23 +71,23 @@ SaffronPokecenter1FTeacherMobileText:
 	para "link with people"
 	line "far away?"
 
-	para "Then I'll get my"
-	line "friend in JOHTO to"
+	para "Then I don't have"
+	line "to worry about"
 
-	para "catch a MARILL and"
-	line "trade it to me!"
+	para "being stuck here"
+	line "for a little longer!"
 	done
 
 SaffronPokecenter1FFisherText:
-	text "I just happened to"
-	line "come through ROCK"
+	text "I miss my hikes"
+	line "outside the city."
 
-	para "TUNNEL. There was"
-	line "some commotion at"
-	cont "the POWER PLANT."
+	para "With the recent"
+	line "blockade, we just"
+	cont "can't go anywhere."
 	done
 
-SaffronPokecenter1FFisherReturnedMachinePartText:
+SaffronPokecenter1FFisherBeatRocketSaffronText:
 	text "Caves collapse"
 	line "easily."
 

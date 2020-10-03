@@ -21,15 +21,15 @@ SaffronCity_MapScripts:
 SaffronCityLass1Script:
 	faceplayer
 	opentext
-	checkevent EVENT_RETURNED_MACHINE_PART
-	iftrue .ReturnedMachinePart
+	checkevent EVENT_CENTRAL_KANTO_ROCKET_BEATEN
+	iftrue .BeatRocketSaffron
 	writetext SaffronCityLass1Text
 	waitbutton
 	closetext
 	end
 
-.ReturnedMachinePart:
-	writetext SaffronCityLass1Text_ReturnedMachinePart
+.BeatRocketSaffron:
+	writetext SaffronCityLass1Text_BeatRocketSaffron
 	waitbutton
 	closetext
 	end
@@ -37,15 +37,15 @@ SaffronCityLass1Script:
 SaffronCityPokefanMScript:
 	faceplayer
 	opentext
-	checkevent EVENT_RETURNED_MACHINE_PART
-	iftrue .ReturnedMachinePart
+	checkevent EVENT_CENTRAL_KANTO_ROCKET_BEATEN
+	iftrue .BeatRocketSaffron
 	writetext SaffronCityPokefanMText
 	waitbutton
 	closetext
 	end
 
-.ReturnedMachinePart:
-	writetext SaffronCityPokefanMText_ReturnedMachinePart
+.BeatRocketSaffron:
+	writetext SaffronCityPokefanMText_BeatRocketSaffron
 	waitbutton
 	closetext
 	end
@@ -59,15 +59,15 @@ SaffronCityCooltrainerFScript:
 SaffronCityFisherScript:
 	faceplayer
 	opentext
-	checkevent EVENT_RETURNED_MACHINE_PART
-	iftrue .ReturnedMachinePart
+	checkevent EVENT_CENTRAL_KANTO_ROCKET_BEATEN
+	iftrue .BeatRocketSaffron
 	writetext SaffronCityFisherText
 	waitbutton
 	closetext
 	end
 
-.ReturnedMachinePart:
-	writetext SaffronCityFisherText_ReturnedMachinePart
+.BeatRocketSaffron:
+	writetext SaffronCityFisherText_BeatRocketSaffron
 	waitbutton
 	closetext
 	end
@@ -119,7 +119,7 @@ SaffronCityLass1Text:
 	line "It's confusing."
 	done
 
-SaffronCityLass1Text_ReturnedMachinePart:
+SaffronCityLass1Text_BeatRocketSaffron:
 	text "The COPYCAT girl"
 	line "looked unhappy."
 
@@ -132,12 +132,11 @@ SaffronCityPokefanMText:
 	text "You came out from"
 	line "JOHTO?"
 
-	para "You can zip back"
-	line "home if the MAGNET"
-	cont "TRAIN's running."
+	para "How did you even"
+	line "get into the city?"
 	done
 
-SaffronCityPokefanMText_ReturnedMachinePart:
+SaffronCityPokefanMText_BeatRocketSaffron:
 	text "You came out from"
 	line "JOHTO?"
 
@@ -176,14 +175,14 @@ SaffronCityCooltrainerFText:
 SaffronCityFisherText:
 	text "Chew… Chew…"
 
-	para "I hear there's big"
-	line "trouble brewing at"
-	cont "the POWER PLANT."
+	para "I hear SILPH. CO"
+	line "has some big plans"
+	cont "coming up."
 
 	para "Chew… Chew…"
 	done
 
-SaffronCityFisherText_ReturnedMachinePart:
+SaffronCityFisherText_BeatRocketSaffron:
 	text "Chew… Chew…"
 
 	para "I hear there was"
