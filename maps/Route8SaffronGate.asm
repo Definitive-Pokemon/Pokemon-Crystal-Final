@@ -31,8 +31,8 @@ Route8SaffronGateOfficerText:
 	done
 
 Route8SaffronGateOfficerWeirdText:
-	text "I think this all is"
-	line "a tad too much."
+	text "I think this all"
+	line "is a tad too much."
 
 	para "It's as if SILPH"
 	line "has got something"
