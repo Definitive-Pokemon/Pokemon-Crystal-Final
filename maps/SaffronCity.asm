@@ -251,11 +251,11 @@ SaffronCitySilph2Text:
 	line "the GYM LEADER"
 
 	para "has been put"
-	line "under surveillance"
+	line "under surveillance."
 
-	para "by SILPH CO."
-	line "in regards to"
-	cont "suspicious activity."
+	para "Why, you ask?"
+	line "That's none of"
+	cont "your business!"
 	done
 
 SaffronCitySignText:
@@ -336,5 +336,5 @@ SaffronCity_MapEvents:
 	object_event 15, 19, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronCityYoungster1Script, -1
 	object_event 35, 22, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityYoungster2Script, -1
 	object_event 19,  8, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronCityLass2Script, -1
-	object_event  8,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SaffronCitySilph1Script, EVENT_CENTRAL_KANTO_ROCKET_BEATEN
-	object_event 34,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SaffronCitySilph2Script, EVENT_CENTRAL_KANTO_ROCKET_BEATEN
+	object_event  8,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SaffronCitySilph1Script, EVENT_CENTRAL_KANTO_ROCKET_BEATEN
+	object_event 34,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SaffronCitySilph2Script, EVENT_CENTRAL_KANTO_ROCKET_BEATEN
