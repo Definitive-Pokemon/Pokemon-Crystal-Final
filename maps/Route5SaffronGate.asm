@@ -28,7 +28,7 @@ Route5SilverCameText:
 	cont "running through!"
 
 	para "Before you,"
-	line "the guards came
+	line "the guards came"
 	cont "through,"
 
 	para "chased by a bunch"
