@@ -7,7 +7,20 @@ Route8SaffronGate_MapScripts:
 	def_callbacks
 
 Route8SaffronGateOfficerScript:
-	jumptextfaceplayer Route8SaffronGateOfficerText
+	faceplayer
+	opentext
+	checkevent EVENT_CENTRAL_KANTO_ROCKET_BEATEN
+	iftrue .Normal
+	writetext Route8SaffronGateOfficerText
+	waitbutton
+	closetext
+	end
+
+.Normal:
+	writetext Route8SaffronGateOfficerWeirdText
+	waitbutton
+	closetext
+	end
 
 Route8SaffronGateOfficerText:
 	text "Have you been to"
@@ -15,6 +28,12 @@ Route8SaffronGateOfficerText:
 
 	para "There's a tall"
 	line "RADIO TOWER there."
+	done
+
+Route8SaffronGateOfficerWeirdText:
+	text "I think it's a bit"
+	line "too much, all this"
+	cont "blocking off gates."
 	done
 
 Route8SaffronGate_MapEvents:

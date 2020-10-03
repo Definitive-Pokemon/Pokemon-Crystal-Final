@@ -181,7 +181,7 @@ Route8SilphEmployee2Text:
 
 	para "These dusty grey"
 	line "cities are bad for"
-	cont "your health, I say."
+	cont "your health, lad."
 	done
 
 Route8LockedDoorText:
