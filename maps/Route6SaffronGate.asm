@@ -37,8 +37,8 @@ Route6SaffronGuardWelcomeText:
 	line "solved, employees"
 
 	para "from SILPH CO."
-	line "became active"
-	cont "like never before."
+	line "became active like"
+	cont "never before."
 
 	para "It's as if they're"
 	line "planning something"

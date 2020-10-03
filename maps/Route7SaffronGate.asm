@@ -38,8 +38,8 @@ Route7SaffronGuardPowerPlantText:
 	para "stealing their"
 	line "latest project."
 
-	para "I can't blame"
-	line "them, after what"
+	para "I can't blame them,"
+	line "after what"
 
 	para "happened three"
 	line "years ago."
@@ -55,7 +55,8 @@ Route7SaffronGuardPowerPlantText:
 	line "by a boy with a"
 	cont "red hat."
 
-	para "Miraculous, isn't it?"
+	para "Miraculous,"
+	line "isn't it?"
 	done
 
 Route7SaffronGuardSeriousText:

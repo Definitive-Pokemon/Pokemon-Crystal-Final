@@ -11,13 +11,13 @@ Route8SaffronGateOfficerScript:
 	opentext
 	checkevent EVENT_CENTRAL_KANTO_ROCKET_BEATEN
 	iftrue .Normal
-	writetext Route8SaffronGateOfficerText
+	writetext Route8SaffronGateOfficerWeirdText
 	waitbutton
 	closetext
 	end
 
 .Normal:
-	writetext Route8SaffronGateOfficerWeirdText
+	writetext Route8SaffronGateOfficerText
 	waitbutton
 	closetext
 	end
