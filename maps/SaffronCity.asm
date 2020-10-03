@@ -82,10 +82,10 @@ SaffronCityLass2Script:
 	jumptextfaceplayer SaffronCityLass2Text
 
 SaffronCitySilph1Script:
-	jumptext SaffronCitySilph1Text
+	jumptextfaceplayer SaffronCitySilph1Text
 
 SaffronCitySilph2Script:
-	jumptext SaffronCitySilph2Text
+	jumptextfaceplayer SaffronCitySilph2Text
 
 SaffronCitySign:
 	jumptext SaffronCitySignText
@@ -250,8 +250,8 @@ SaffronCitySilph2Text:
 	text "I'm sorry, but"
 	line "the GYM LEADER"
 
-	para "has been put"
-	line "under surveillance."
+	para "has been put under"
+	line "surveillance."
 
 	para "Why, you ask?"
 	line "That's none of"
