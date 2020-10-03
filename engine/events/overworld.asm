@@ -132,8 +132,8 @@ CutFunction:
 .CheckAble:
 	farcall RegionCheck
 	ld a, e
-	and a
-	jr nz, .kantoCheckAble
+	cp $01
+	jr z, .kantoCheckAble
 	ld de, ENGINE_HIVEBADGE
 	call CheckBadge
 	jr c, .nobadge
@@ -357,8 +357,8 @@ SurfFunction:
 .TrySurf:
 	farcall RegionCheck
 	ld a, e
-	and a
-	jr nz, .kantoCheckSurfAble
+	cp $01
+	jr z, .kantoCheckSurfAble
 	ld de, ENGINE_FOGBADGE
 	call CheckBadge
 	jr c, .nofogbadge
@@ -585,8 +585,8 @@ FlyFunction:
 ; Fly
 	farcall RegionCheck
 	ld a, e
-	and a
-	jr nz, .kantoCheckFlyAble
+	cp $01
+	jr z, .kantoCheckFlyAble
 	ld de, ENGINE_STORMBADGE
 	call CheckBadge
 	jr c, .nostormbadge
@@ -766,9 +766,15 @@ TryWaterfallOW::
 	ld d, WATERFALL
 	call CheckPartyMove
 	jr c, .failed
+	farcall RegionCheck
+	ld a, e
+	and a
+	jp nz, .kantoCheckOWWaterfallAble
 	ld de, ENGINE_RISINGBADGE
 	call CheckEngineFlag
 	jr c, .failed
+
+.continueTryOWWaterfall
 	call CheckMapCanWaterfall
 	jr c, .failed
 	ld a, BANK(Script_AskWaterfall)
@@ -776,6 +782,14 @@ TryWaterfallOW::
 	call CallScript
 	scf
 	ret
+
+.kantoCheckOWWaterfallAble
+	checkflag ENGINE_FLYPOINT_VERMILION
+	and a
+	jp z, .continueTryOWWaterfall
+	ld de, ENGINE_VOLCANOBADGE
+	jr c, .failed
+	jp .continueTryOWWaterfall
 
 .failed
 	ld a, BANK(Script_CantDoWaterfall)
@@ -1132,16 +1146,29 @@ TryStrengthOW:
 	call CheckPartyMove
 	jr c, .nope
 
+	farcall RegionCheck
+	ld a, e
+	and a
+	jr nz, .kantoCheckOWStrengthAble
 	ld de, ENGINE_PLAINBADGE
 	call CheckEngineFlag
 	jr c, .nope
 
+.tryContinueOWStrength
 	ld hl, wBikeFlags
 	bit BIKEFLAGS_STRENGTH_ACTIVE_F, [hl]
 	jr z, .already_using
 
 	ld a, 2
 	jr .done
+
+.kantoCheckOWStrengthAble
+	checkflag ENGINE_FLYPOINT_VERMILION
+	and a
+	jr z, .tryContinueOWStrength
+	ld de, ENGINE_VOLCANOBADGE
+	jr c, .nope
+	jr .tryContinueOWStrength
 
 .nope
 	ld a, 1
@@ -1499,12 +1526,31 @@ AskRockSmashScript:
 	callasm HasRockSmash
 	ifequal 1, .no
 
+	farcall RegionCheck
+	ld a, e
+	and a
+	jr nz, .kantoCheckOWRockSmashAble
+	ld de, ENGINE_ZEPHYRBADGE
+	farcall CheckBadge
+	jr c, .no
+
+.tryToOWRockSmash
 	opentext
 	writetext AskRockSmashText
 	yesorno
 	iftrue RockSmashScript
 	closetext
 	end
+
+.kantoCheckOWRockSmashAble
+	checkflag ENGINE_FLYPOINT_VERMILION
+	and a
+	jr z, .tryToOWRockSmash
+	ld de, ENGINE_BOULDERBADGE
+	farcall CheckBadge
+	jr c, .no
+	jr .tryToOWRockSmash
+
 .no
 	jumptext MaySmashText
 
@@ -1872,15 +1918,30 @@ TryCutOW::
 	call CheckPartyMove
 	jr c, .cant_cut
 
+	farcall RegionCheck
+	ld a, e
+	and a
+	jr nz, .kantoOWCheckAble
+
 	ld de, ENGINE_HIVEBADGE
 	call CheckEngineFlag
 	jr c, .cant_cut
 
+.tryOWCut
 	ld a, BANK(AskCutScript)
 	ld hl, AskCutScript
 	call CallScript
 	scf
 	ret
+
+.kantoOWCheckAble
+	checkflag ENGINE_FLYPOINT_VERMILION
+	and a
+	jr z, .tryOWCut
+	ld de, ENGINE_CASCADEBADGE
+	call CheckBadge
+	jr c, .cant_cut
+	jr .tryOWCut
 
 .cant_cut
 	ld a, BANK(CantCutScript)
