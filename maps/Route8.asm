@@ -67,10 +67,10 @@ TrainerSupernerdTom:
 	end
 
 Route8SilphEmployee1Script:
-	jumptextfaceplayer Route5SilphEmployee1Text
+	jumptextfaceplayer Route8SilphEmployee1Text
 
 Route8SilphEmployee2Script:
-	jumptextfaceplayer Route5SilphEmployee2Text	
+	jumptextfaceplayer Route8SilphEmployee2Text	
 
 Route8LockedDoor:
 	jumptext Route8LockedDoorText

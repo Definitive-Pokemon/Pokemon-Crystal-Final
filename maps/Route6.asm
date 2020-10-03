@@ -98,7 +98,7 @@ Route6SilphEmployeeText:
 	cont "SAFFRON CITY."
 
 	para "Better turn back"
-	line "while you still can!"
+	line "while you can!"
 	done
 
 Route6_MapEvents:

@@ -54,6 +54,7 @@ Route5SilphEmployee2Text:
 	text "Sorry, even kids"
 	line "will have to wait"
 	cont "a little while."
+	done
 
 Route5UndergroundPathSignText:
 	text "UNDERGROUND PATH"
