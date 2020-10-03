@@ -41,9 +41,8 @@ Route5SilverCameText:
 	para "stop people using"
 	line "these gates,"
 
-	para "but it should be"
-	line "okay to let some"
-	cont "kids through, right?"
+	para "but kids should"
+	line "be fine, right?"
 	done
 
 Route5SaffronGateOfficerText:
