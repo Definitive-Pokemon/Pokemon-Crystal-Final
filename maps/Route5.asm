@@ -11,10 +11,10 @@ Route5PokefanMScript:
 	jumptextfaceplayer Route5PokefanMText
 
 Route5SilphEmployee1Script:
-	jumptextfaceplayer Route5SilphEmployeeText
+	jumptextfaceplayer Route5SilphEmployee1Text
 
 Route5SilphEmployee2Script:
-	jumptextfaceplayer Route5SilphEmployeeText	
+	jumptextfaceplayer Route5SilphEmployee2Text	
 
 Route5UndergroundPathSign:
 	jumptext Route5UndergroundPathSignText
@@ -30,7 +30,7 @@ Route5PokefanMText:
 	line "is solved."
 	done
 
-Route5SilphEmployeeText
+Route5SilphEmployee1Text:
 	text "Nobody is allowed"
 	line "to leave or"
 	cont "enter SAFFRON."
@@ -49,6 +49,11 @@ Route5SilphEmployeeText
 	line "are allowed to"
 	cont "trespass!"
 	done
+
+Route5SilphEmployee2Text:
+	text "Sorry, even kids"
+	line "will have to wait"
+	cont "a little while."
 
 Route5UndergroundPathSignText:
 	text "UNDERGROUND PATH"
@@ -81,5 +86,5 @@ Route5_MapEvents:
 
 	def_object_events
 	object_event 17, 16, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route5PokefanMScript, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
-	object_event  8, 16, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route5SilphEmployee1Script, EVENT_BEAT_RIVAL_IN_MT_MOON
-	object_event  9, 16, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route5SilphEmployee2Script, EVENT_BEAT_RIVAL_IN_MT_MOON
+	object_event  8, 15, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route5SilphEmployee1Script, EVENT_BEAT_RIVAL_IN_MT_MOON
+	object_event  9, 15, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route5SilphEmployee2Script, EVENT_BEAT_RIVAL_IN_MT_MOON

@@ -66,6 +66,12 @@ TrainerSupernerdTom:
 	closetext
 	end
 
+Route8SilphEmployee1Script:
+	jumptextfaceplayer Route5SilphEmployee1Text
+
+Route8SilphEmployee2Script:
+	jumptextfaceplayer Route5SilphEmployee2Text	
+
 Route8LockedDoor:
 	jumptext Route8LockedDoorText
 
@@ -159,6 +165,25 @@ SupernerdTomAfterBattleText:
 	cont "battles."
 	done
 
+Route8SilphEmployee1Text:
+	text "No trespassing!"
+	line "SILPH CO. is in"
+	cont "the process of"
+
+	para "executing its"
+	line "latest project!"
+	done
+
+Route8SilphEmployee2Text:
+	text "Aren't you better"
+	line "playing outside"
+	cont "anyway?"
+
+	para "These dusty grey"
+	line "cities are bad for"
+	cont "your health, I say."
+	done
+
 Route8LockedDoorText:
 	text "It's locked…"
 	done
@@ -190,3 +215,5 @@ Route8_MapEvents:
 	object_event 23,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerSupernerdSam, -1
 	object_event 31, 12, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerSupernerdTom, -1
 	object_event 33,  5, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route8FruitTree, -1
+	object_event  5,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route8SilphEmployee1Script, EVENT_CENTRAL_KANTO_ROCKET_BEATEN
+	object_event  5,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route8SilphEmployee2Script, EVENT_CENTRAL_KANTO_ROCKET_BEATEN
