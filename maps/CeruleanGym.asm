@@ -297,8 +297,7 @@ MistyFightDoneText:
 
 MistyRematchIntroText:
 	text "So here you are…"
-	line "Don't make me"
-	cont "wait!"
+	line "Don't make me wait!"
 
 	para "I've heard a lot"
 	line "of good things"

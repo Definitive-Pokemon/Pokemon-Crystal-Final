@@ -299,8 +299,10 @@ JanineText_ApplyMyself:
 
 JanineRematchIntroText:
 	text "I can't use my"
-	line "ninja technique, but"
-	cont "I won't let you win!"
+	line "ninja technique,"
+
+	para "but I won't let"
+	line "you win!"
 	done
 
 JanineRematchOverText:

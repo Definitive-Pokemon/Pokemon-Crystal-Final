@@ -155,11 +155,12 @@ BlueRematchIntroText:
 	done
 
 BlueRematchOverText:
-	text "Just as I expected!"
-	line "No wonder you've"
+	text "Just as I ex-"
+	line "pected!"
 
-	para "become JOHTO's"
-	line "CHAMPION…"
+	para "No wonder you've"
+	line "become JOHTO's"
+	cont "CHAMPION…"
 	done
 
 ViridianGymGuideText:

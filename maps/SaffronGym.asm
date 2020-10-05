@@ -213,8 +213,9 @@ SabrinaRematchIntroText:
 
 SabrinaRematchOverText:
 	text "I know…"
-	line "You will battle me"
-	cont "again sometime."
+
+	para "You will battle me"
+	line "again sometime."
 	done
 
 MediumRebeccaSeenText:

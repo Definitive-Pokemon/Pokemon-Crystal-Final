@@ -201,8 +201,9 @@ ErikaAfterBattleText:
 
 ErikaRematchIntroText:
 	text "How are you?"
-	line "Good to see you"
-	cont "again!"
+	
+	para "Good to see you"
+	line "again!"
 
 	para "I'm kind of tired,"
 	line "but… let's ignore"

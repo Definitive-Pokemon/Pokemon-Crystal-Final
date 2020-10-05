@@ -140,16 +140,16 @@ BlaineFightDoneText:
 
 BlaineRematchIntroText:
 	text "Yo, kiddo!"
-	line "You ready for"
-	cont "another match?"
+
+	para "You ready for"
+	line "another match?"
 	done
 
 BlaineRematchOverText:
 	text "Waaah!"
 
-	para
-	line "You're still as"
-	cont "good as ever!"
+	para"You're still as"
+	line "good as ever!"
 	done
 
 SeafoamGymGuideWinText:
