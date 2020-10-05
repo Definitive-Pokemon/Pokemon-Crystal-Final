@@ -10,6 +10,8 @@ ViridianGym_MapScripts:
 ViridianGymBlueScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .Rematch
 	checkflag ENGINE_EARTHBADGE
 	iftrue .FightDone
 	writetext LeaderBlueBeforeText
@@ -34,6 +36,16 @@ ViridianGymBlueScript:
 	writetext LeaderBlueEpilogueText
 	waitbutton
 	closetext
+	end
+
+.Rematch:
+	writetext BlueRematchIntroText
+	waitbutton
+	closetext
+	winlosstext BlueRematchOverText, 0
+	loadtrainer BLUE, BLUE2
+	startbattle
+	reloadmapafterbattle
 	end
 
 ViridianGymGuideScript:
@@ -134,6 +146,20 @@ LeaderBlueEpilogueText:
 	para "You'd better not"
 	line "lose until I beat"
 	cont "you. Got it?"
+	done
+
+BlueRematchIntroText:
+	text "Good!"
+	line "Thanks for coming"
+	cont "to lose to me!"
+	done
+
+BlueRematchOverText:
+	text "Just as I expected!"
+	line "No wonder you've"
+
+	para "become JOHTO's"
+	line "CHAMPION…"
 	done
 
 ViridianGymGuideText:

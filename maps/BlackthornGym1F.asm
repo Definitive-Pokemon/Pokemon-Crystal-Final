@@ -302,11 +302,6 @@ ClairRematchIntroText:
 
 ClairRematchOverText:
 	text "Way to go."
-	line "… Now give it"
-	cont "your all!"
-
-	para "way to become"
-	line "the best TRAINER…"
 	done
 
 CooltrainermPaulSeenText:

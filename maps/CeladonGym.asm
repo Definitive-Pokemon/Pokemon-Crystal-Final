@@ -14,6 +14,8 @@ CeladonGym_MapScripts:
 CeladonGymErikaScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_BLUE
+	iftrue .Rematch
 	checkflag ENGINE_RAINBOWBADGE
 	iftrue .FightDone
 	writetext ErikaBeforeBattleText
@@ -45,6 +47,16 @@ CeladonGymErikaScript:
 	writetext ErikaAfterBattleText
 	waitbutton
 	closetext
+	end
+
+.Rematch:
+	writetext ErikaRematchIntroText
+	waitbutton
+	closetext
+	winlosstext ErikaRematchOverText, 0
+	loadtrainer ERIKA, ERIKA2
+	startbattle
+	reloadmapafterbattle
 	end
 
 TrainerLassMichelle:
@@ -185,6 +197,21 @@ ErikaAfterBattleText:
 
 	para "trainers spurs me"
 	line "to do better…"
+	done
+
+ErikaRematchIntroText:
+	text "How are you?"
+	line "Good to see you"
+	cont "again!"
+
+	para "I'm kind of tired,"
+	line "but… let's ignore"
+	done "that and battle!"
+	done
+
+ErikaRematchOverText:
+	text "You have grown"
+	line "even stronger…"
 	done
 
 LassMichelleSeenText:

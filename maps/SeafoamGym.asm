@@ -14,6 +14,8 @@ SeafoamGym_MapScripts:
 SeafoamGymBlaineScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_BLUE
+	iftrue .Rematch
 	checkflag ENGINE_VOLCANOBADGE
 	iftrue .FightDone
 	writetext BlaineIntroText
@@ -43,6 +45,16 @@ SeafoamGymBlaineScript:
 	closetext
 	end
 
+.Rematch:
+	writetext BlaineRematchIntroText
+	waitbutton
+	closetext
+	winlosstext BlaineRematchOverText, 0
+	loadtrainer BLAINE, BLAINE2
+	startbattle
+	reloadmapafterbattle
+	end
+
 SeafoamGymGuideScript:
 	faceplayer
 	opentext
@@ -59,6 +71,9 @@ SeafoamGymGuideScript:
 	waitbutton
 	closetext
 	end
+
+SeafoamBoulder:
+	jumpstd StrengthBoulderScript
 
 BlaineIntroText:
 	text "BLAINE: Waaah!"
@@ -123,6 +138,20 @@ BlaineFightDoneText:
 	line "Just you watch!"
 	done
 
+BlaineRematchIntroText:
+	text "Yo, kiddo!"
+	line "You ready for"
+	cont "another match?"
+	done
+
+BlaineRematchOverText:
+	text "Waaah!"
+
+	para
+	line "You're still as"
+	cont "good as ever!"
+	done
+
 SeafoamGymGuideWinText:
 	text "Yo!"
 
@@ -168,3 +197,6 @@ SeafoamGym_MapEvents:
 	def_object_events
 	object_event  5,  2, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SeafoamGymBlaineScript, -1
 	object_event  6,  5, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SeafoamGymGuideScript, EVENT_SEAFOAM_GYM_GYM_GUIDE
+	object_event  5,  3, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamBoulder, -1
+	object_event  3,  4, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamBoulder, -1
+	object_event  4,  4, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamBoulder, -1

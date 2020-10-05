@@ -59,6 +59,8 @@ CeruleanGym_MapScripts:
 CeruleanGymMistyScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_BLUE
+	iftrue .Rematch
 	checkflag ENGINE_CASCADEBADGE
 	iftrue .FightDone
 	writetext MistyIntroText
@@ -81,6 +83,16 @@ CeruleanGymMistyScript:
 	writetext MistyFightDoneText
 	waitbutton
 	closetext
+	end
+
+.Rematch:
+	writetext MistyRematchIntroText
+	waitbutton
+	closetext
+	winlosstext MistyRematchOverText, 0
+	loadtrainer MISTY, MISTY2
+	startbattle
+	reloadmapafterbattle
 	end
 
 TrainerSwimmerfDiana:
@@ -281,6 +293,29 @@ MistyFightDoneText:
 
 	para "I can battle some"
 	line "skilled trainers."
+	done
+
+MistyRematchIntroText:
+	text "So here you are…"
+	line "Don't make me"
+	cont "wait!"
+
+	para "I've heard a lot"
+	line "of good things"
+
+	para "about you since"
+	line "our last battle."
+
+	para "Let me test how"
+	line "good you are!"
+	done
+
+MistyRematchOverText:
+	text "Wow!"
+
+	para "You are getting"
+	line "stronger by the"
+	cont "battle!"
 	done
 
 SwimmerfDianaSeenText:

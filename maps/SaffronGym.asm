@@ -14,6 +14,8 @@ SaffronGym_MapScripts:
 SaffronGymSabrinaScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_BLUE
+	iftrue .Rematch
 	checkflag ENGINE_MARSHBADGE
 	iftrue .FightDone
 	writetext SabrinaIntroText
@@ -42,6 +44,16 @@ SaffronGymSabrinaScript:
 	writetext SabrinaFightDoneText
 	waitbutton
 	closetext
+	end
+
+.Rematch:
+	writetext SabrinaRematchIntroText
+	waitbutton
+	closetext
+	winlosstext SabrinaRematchOverText, 0
+	loadtrainer SABRINA, SABRINA2
+	startbattle
+	reloadmapafterbattle
 	end
 
 TrainerMediumRebecca:
@@ -191,6 +203,18 @@ SabrinaFightDoneText:
 
 	para "kind of psychic"
 	line "power…"
+	done
+
+SabrinaRematchIntroText:
+	text "I knew you'd come!"
+	line "I had a feeling."
+	cont "Bring it on!"
+	done
+
+SabrinaRematchOverText:
+	text "I know…"
+	line "You will battle me"
+	cont "again sometime."
 	done
 
 MediumRebeccaSeenText:

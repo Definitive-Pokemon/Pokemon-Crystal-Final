@@ -11,6 +11,8 @@ PewterGym_MapScripts:
 PewterGymBrockScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_BLUE
+	iftrue .Rematch
 	checkflag ENGINE_BOULDERBADGE
 	iftrue .FightDone
 	writetext BrockIntroText
@@ -36,6 +38,16 @@ PewterGymBrockScript:
 	writetext BrockFightDoneText
 	waitbutton
 	closetext
+	end
+
+.Rematch:
+	writetext BrockRematchIntroText
+	waitbutton
+	closetext
+	winlosstext BrockRematchOverText, 0
+	loadtrainer BROCK, BROCK2
+	startbattle
+	reloadmapafterbattle
 	end
 
 TrainerCamperJerry:
@@ -142,6 +154,19 @@ BrockFightDoneText:
 	line "I'm going to be-"
 	cont "come a lot strong-"
 	cont "er too."
+	done
+
+BrockRematchIntroText:
+	text "All right!"
+	line "Time to battle!"
+	done
+
+BrockRematchOverText:
+	text "I've lost again…"
+	line "You aren't"
+
+	para "adventuring around"
+	line "for nothing!"
 	done
 
 CamperJerrySeenText:

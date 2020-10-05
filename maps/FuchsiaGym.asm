@@ -17,6 +17,8 @@ FuchsiaGymJanineScript:
 	applymovement FUCHSIAGYM_JANINE, Movement_NinjaSpin
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_BLUE
+	iftrue .Rematch
 	writetext JanineText_DisappointYou
 	waitbutton
 	closetext
@@ -55,6 +57,16 @@ FuchsiaGymJanineScript:
 	writetext JanineText_ApplyMyself
 	waitbutton
 	closetext
+	end
+
+.Rematch:
+	writetext JanineRematchIntroText
+	waitbutton
+	closetext
+	winlosstext JanineRematchOverText, 0
+	loadtrainer JANINE, JANINE2
+	startbattle
+	reloadmapafterbattle
 	end
 
 LassAliceScript:
@@ -283,6 +295,17 @@ JanineText_ApplyMyself:
 	para "I want to become"
 	line "better than both"
 	cont "Father and you!"
+	done
+
+JanineRematchIntroText:
+	text "I can't use my"
+	line "ninja technique, but"
+	cont "I won't let you win!"
+	done
+
+JanineRematchOverText:
+	text "I lost today, but"
+	line "I'll win next time!"
 	done
 
 LassAliceBeforeText:
