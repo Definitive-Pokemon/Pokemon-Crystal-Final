@@ -101,9 +101,9 @@ PewterCityBugCatcherText:
 PewterCityGrampsText:
 	text "Gasp…"
 
-	para "Those are the three"
-	line "legendary bird #-"
-	cont "MON of Kanto!"
+	para "Those are the"
+	line "legendary bird"
+	cont "#MON of Kanto!"
 
 	para "They look so"
 	line "spectacular!"
