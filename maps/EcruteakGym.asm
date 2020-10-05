@@ -74,14 +74,10 @@ EcruteakGymMortyScript:
 	writetext MortyRematchIntroText
 	waitbutton
 	closetext
-	winlosstext MortyWinLossText, 0
+	winlosstext MortyRematchOverText, 0
 	loadtrainer MORTY, MORTY2
 	startbattle
 	reloadmapafterbattle
-	opentext
-	writetext MortyRematchOverText
-	waitbutton
-	closetext
 	end
 
 EcruteakGymActivateRockets:
@@ -302,7 +298,7 @@ MortyRematchOverText:
 	line "You may have"
 
 	para "something more"
-	line "than just strength."
+	line "than just power."
 	done
 
 SageJeffreySeenText:

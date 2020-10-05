@@ -59,14 +59,10 @@ VioletGymFalknerScript:
 	writetext FalknerRematchIntroText
 	waitbutton
 	closetext
-	winlosstext FalknerWinLossText, 0
+	winlosstext FalknerRematchOverText, 0
 	loadtrainer FALKNER, FALKNER2
 	startbattle
 	reloadmapafterbattle
-	opentext
-	writetext FalknerRematchOverText
-	waitbutton
-	closetext
 	end
 
 VioletGymActivateRockets:

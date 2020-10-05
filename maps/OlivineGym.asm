@@ -53,14 +53,10 @@ OlivineGymJasmineScript:
 	writetext JasmineRematchIntroText
 	waitbutton
 	closetext
-	winlosstext Jasmine_BetterTrainer, 0
+	winlosstext JasmineRematchOverText, 0
 	loadtrainer JASMINE, JASMINE2
 	startbattle
 	reloadmapafterbattle
-	opentext
-	writetext JasmineRematchOverText
-	waitbutton
-	closetext
 	end
 
 OlivineGymActivateRockets:

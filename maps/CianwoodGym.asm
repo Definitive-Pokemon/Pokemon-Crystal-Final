@@ -79,14 +79,10 @@ CianwoodGymChuckScript:
 	writetext ChuckRematchIntroText
 	waitbutton
 	closetext
-	winlosstext ChuckLossText, 0
+	winlosstext ChuckRematchOverText, 0
 	loadtrainer CHUCK, CHUCK2
 	startbattle
 	reloadmapafterbattle
-	opentext
-	writetext ChuckRematchOverText
-	waitbutton
-	closetext
 	end
 
 CianwoodGymActivateRockets:

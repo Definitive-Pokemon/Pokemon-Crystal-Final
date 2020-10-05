@@ -63,14 +63,10 @@ MahoganyGym_NoRoomForIcyWind:
 	writetext PryceRematchIntroText
 	waitbutton
 	closetext
-	winlosstext PryceText_Impressed, 0
+	winlosstext PryceRematchOverText, 0
 	loadtrainer PRYCE, PRYCE2
 	startbattle
 	reloadmapafterbattle
-	opentext
-	writetext PryceRematchOverText
-	waitbutton
-	closetext
 	end
 
 MahoganyGymActivateRockets:
