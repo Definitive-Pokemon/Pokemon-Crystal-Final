@@ -15,6 +15,8 @@ MahoganyGym_MapScripts:
 MahoganyGymPryceScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_BLUE
+	iftrue .Rematch
 	checkevent EVENT_BEAT_PRYCE
 	iftrue .FightDone
 	writetext PryceText_Intro
@@ -54,6 +56,20 @@ PryceScript_Defeat:
 	writetext PryceText_CherishYourPokemon
 	waitbutton
 MahoganyGym_NoRoomForIcyWind:
+	closetext
+	end
+
+.Rematch:
+	writetext PryceRematchIntroText
+	waitbutton
+	closetext
+	winlosstext PryceText_Impressed, 0
+	loadtrainer PRYCE, PRYCE2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext PryceRematchOverText
+	waitbutton
 	closetext
 	end
 
@@ -236,6 +252,20 @@ PryceText_CherishYourPokemon:
 
 	para "Cherish your time"
 	line "together!"
+	done
+
+PryceRematchIntroText:
+	text "Finally. No need"
+	line "for words."
+
+	para "A #MON battle"
+	line "is the way for us"
+	cont "to communicate."
+	done
+
+PryceRematchOverText:
+	text "Mmm…"
+	line "Impressive."
 	done
 
 BoarderRonaldSeenText:
