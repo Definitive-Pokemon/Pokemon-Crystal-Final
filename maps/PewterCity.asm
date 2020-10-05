@@ -147,18 +147,18 @@ PewterCityGrampsText_NoSilver:
 	line "of the legendary"
 	cont "bird #MON"
 
-	para "ARTICUNO, ZAP-"
-	line "DOS, and MOLTRES?"
+	para "ARTICUNO, ZAPDOS,"
+	line "DOS and MOLTRES?"
 
-	para "They are said to have"
-	line "roamed KANTO since"
-	cont "long ago."
+	para "They are said to"
+	line "have roamed KANTO"
+	cont "since long ago."
 
 	para "This SILVER WING"
-	line "is said to be con"
+	line "is said to be con-"
 
-	para "nected to the three"
-	line "legendary #MON."
+	para "nected to those"
+	line "#MON."
 
 	para "If you can show me"
 	line "all three of them,"
