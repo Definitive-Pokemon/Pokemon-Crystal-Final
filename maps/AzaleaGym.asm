@@ -15,6 +15,8 @@ AzaleaGym_MapScripts:
 AzaleaGymBugsyScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_BLUE
+	iftrue .Rematch	
 	checkevent EVENT_BEAT_BUGSY
 	iftrue .FightDone
 	writetext BugsyText_INeverLose
@@ -53,6 +55,20 @@ AzaleaGymBugsyScript:
 	writetext BugsyText_BugMonsAreDeep
 	waitbutton
 .NoRoomForFuryCutter:
+	closetext
+	end
+
+.Rematch:
+	writetext RematchIntroText
+	waitbutton
+	closetext
+	winlosstext BugsyWinLossText, 0
+	loadtrainer BUGSY, BUGSY2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext RematchOverText
+	waitbutton
 	closetext
 	end
 
@@ -228,6 +244,20 @@ BugsyText_BugMonsAreDeep:
 
 	para "Study your favor-"
 	line "ites thoroughly."
+	done
+
+RematchIntroText:
+	text "Good to see"
+	line "you again!"
+
+	para "Behold my bug"
+	line "research!"
+	done
+
+RematchOverText:
+	text "You must have"
+	line "studied a lot about"
+	cont "#MON!"
 	done
 
 BugCatcherBennySeenText:
