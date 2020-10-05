@@ -206,7 +206,7 @@ ErikaRematchIntroText:
 
 	para "I'm kind of tired,"
 	line "but… let's ignore"
-	done "that and battle!"
+	cont "that and battle!"
 	done
 
 ErikaRematchOverText:
