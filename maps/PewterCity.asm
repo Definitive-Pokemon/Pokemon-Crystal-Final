@@ -27,11 +27,11 @@ PewterCityGrampsScript:
 	checkevent EVENT_GOT_SILVER_WING
 	iftrue .GotSilverWing
 	setval ARTICUNO
-	iffalse .NoSilverForYou
 	special FindPartyMonThatSpecies
+	iffalse .NoSilverForYou
 	setval ZAPDOS
-	iffalse .NoSilverForYou
 	special FindPartyMonThatSpecies
+	iffalse .NoSilverForYou
 	setval MOLTRES
 	special FindPartyMonThatSpecies
 	iffalse .NoSilverForYou
