@@ -85,7 +85,7 @@ GoldenrodGymWhitneyScript:
 	writetext WhitneyRematchIntroText
 	waitbutton
 	closetext
-	winlosstext ShouldntBeSoSeriousText, 0
+	winlosstext WhitneyShouldntBeSoSeriousText, 0
 	loadtrainer WHITNEY, WHITNEY2
 	startbattle
 	reloadmapafterbattle

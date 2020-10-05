@@ -17,6 +17,8 @@ CianwoodGym_MapScripts:
 CianwoodGymChuckScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_BLUE
+	iftrue .Rematch
 	checkevent EVENT_BEAT_CHUCK
 	iftrue .FightDone
 	writetext ChuckIntroText1
@@ -70,6 +72,20 @@ CianwoodGymChuckScript:
 	writetext ChuckAfterText
 	waitbutton
 .BagFull:
+	closetext
+	end
+
+.Rematch:
+	writetext ChuckRematchIntroText
+	waitbutton
+	closetext
+	winlosstext ChuckLossText, 0
+	loadtrainer CHUCK, CHUCK2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext ChuckRematchOverText
+	waitbutton
 	closetext
 	end
 
@@ -236,6 +252,18 @@ ChuckAfterText:
 	para "From now on, I'm"
 	line "going to train 24"
 	cont "hours a day!"
+	done
+
+ChuckRematchIntroText:
+	text "There you are!"
+	line "Taste my 24-hour"
+	cont "training!
+	done
+
+ChuckRematchOverText:
+	text "Wahaha!"
+	line "A battle with you"
+	cont "is never boring!"
 	done
 
 BlackbeltYoshiSeenText:
