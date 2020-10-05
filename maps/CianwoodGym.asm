@@ -257,7 +257,7 @@ ChuckAfterText:
 ChuckRematchIntroText:
 	text "There you are!"
 	line "Taste my 24-hour"
-	cont "training!
+	cont "training!"
 	done
 
 ChuckRematchOverText:

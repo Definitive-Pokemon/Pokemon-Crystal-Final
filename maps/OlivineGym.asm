@@ -10,6 +10,8 @@ OlivineGym_MapScripts:
 OlivineGymJasmineScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_BLUE
+	iftrue .Rematch
 	checkevent EVENT_BEAT_JASMINE
 	iftrue .FightDone
 	writetext Jasmine_SteelTypeIntro
@@ -44,6 +46,20 @@ OlivineGymJasmineScript:
 	writetext Jasmine_GoodLuck
 	waitbutton
 .NoRoomForIronTail:
+	closetext
+	end
+
+.Rematch:
+	writetext JasmineRematchIntroText
+	waitbutton
+	closetext
+	winlosstext Jasmine_BetterTrainer, 0
+	loadtrainer JASMINE, JASMINE2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext JasmineRematchOverText
+	waitbutton
 	closetext
 	end
 
@@ -160,6 +176,16 @@ Jasmine_GoodLuck:
 	text "Um… I don't know"
 	line "how to say this,"
 	cont "but good luck…"
+	done
+
+JasmineRematchIntroText:
+	text "We're still here…"
+	line "Are you prepared?"
+	done
+
+JasmineRematchOverText:
+	text "True to your"
+	line " reputation…"
 	done
 
 OlivineGymGuideText:
