@@ -52,13 +52,6 @@ MahoganyGymPryceScript:
 	closetext
 	end
 
-PryceScript_Defeat:
-	writetext PryceText_CherishYourPokemon
-	waitbutton
-MahoganyGym_NoRoomForIcyWind:
-	closetext
-	end
-
 .Rematch:
 	writetext PryceRematchIntroText
 	waitbutton
@@ -67,6 +60,13 @@ MahoganyGym_NoRoomForIcyWind:
 	loadtrainer PRYCE, PRYCE2
 	startbattle
 	reloadmapafterbattle
+	end
+
+PryceScript_Defeat:
+	writetext PryceText_CherishYourPokemon
+	waitbutton
+MahoganyGym_NoRoomForIcyWind:
+	closetext
 	end
 
 MahoganyGymActivateRockets:
