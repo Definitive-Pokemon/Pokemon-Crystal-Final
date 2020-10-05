@@ -62,7 +62,7 @@ AzaleaGymBugsyScript:
 	writetext BugsyRematchIntroText
 	waitbutton
 	closetext
-	winlosstext BugsyWinLossText, 0
+	winlosstext BugsyText_ResearchIncomplete, 0
 	loadtrainer BUGSY, BUGSY2
 	startbattle
 	reloadmapafterbattle

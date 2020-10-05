@@ -24,6 +24,8 @@ EcruteakGym_MapScripts:
 EcruteakGymMortyScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_BLUE
+	iftrue .Rematch
 	checkevent EVENT_BEAT_MORTY
 	iftrue .FightDone
 	writetext MortyIntroText
@@ -65,6 +67,20 @@ EcruteakGymMortyScript:
 	writetext MortyFightDoneText
 	waitbutton
 .NoRoomForShadowBall:
+	closetext
+	end
+
+.Rematch:
+	writetext MortyRematchIntroText
+	waitbutton
+	closetext
+	winlosstext MortyWinLossText, 0
+	loadtrainer MORTY, MORTY2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext MortyRematchOverText
+	waitbutton
 	closetext
 	end
 
@@ -272,6 +288,21 @@ MortyFightDoneText:
 
 	para "I envy you for"
 	line "that…"
+	done
+
+MortyRematchIntroText:
+	text "I was just talking"
+	line "about you…"
+
+	para "Let's battle!"
+	done
+
+MortyRematchOverText:
+	text "I've lost again…"
+	line "You may have"
+
+	para "something more"
+	line "than just strength."
 	done
 
 SageJeffreySeenText:
