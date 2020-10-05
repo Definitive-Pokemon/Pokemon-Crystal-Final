@@ -49,7 +49,7 @@ VermilionGymSurgeScript:
 	waitbutton
 	closetext
 	winlosstext LtSurgeRematchOverText, 0
-	loadtrainer LTSURGE, LTSURGE2
+	loadtrainer LT_SURGE, LT_SURGE2
 	startbattle
 	reloadmapafterbattle
 	end
