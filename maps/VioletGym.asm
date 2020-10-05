@@ -12,6 +12,8 @@ VioletGym_MapScripts:
 VioletGymFalknerScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_BLUE
+	iftrue .Rematch
 	checkevent EVENT_BEAT_FALKNER
 	iftrue .FightDone
 	writetext FalknerIntroText
@@ -50,6 +52,20 @@ VioletGymFalknerScript:
 	writetext FalknerFightDoneText
 	waitbutton
 .NoRoomForMudSlap:
+	closetext
+	end
+
+.Rematch:
+	writetext RematchIntroText
+	waitbutton
+	closetext
+	winlosstext FalknerWinLossText, 0
+	loadtrainer FALKNER, FALKNER2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext RematchOverText
+	waitbutton
 	closetext
 	end
 
@@ -195,6 +211,23 @@ FalknerFightDoneText:
 
 	para "the greatest bird"
 	line "master!"
+	done
+
+RematchIntroText:
+	text "Hi! I've been"
+	line "waiting for you!"
+
+	para "It's a pleasure to"
+	line "be able to battle"
+	cont "you again!"
+	done
+
+RematchOverText:
+	text "Mmm…"
+	line "It's still a long"
+
+	para "way to become"
+	line "the best TRAINER…"
 	done
 
 BirdKeeperRodSeenText:
