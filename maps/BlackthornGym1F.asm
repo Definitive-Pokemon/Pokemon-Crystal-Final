@@ -29,6 +29,8 @@ BlackthornGym1F_MapScripts:
 BlackthornGymClairScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_BLUE
+	iftrue .Rematch
 	checkflag ENGINE_RISINGBADGE
 	iftrue .AlreadyGotBadge
 	checkevent EVENT_BEAT_CLAIR
@@ -88,6 +90,16 @@ BlackthornGymClairScript:
 	writetext BlackthornGymClairText_League
 	waitbutton
 	closetext
+	end
+
+.Rematch:
+	writetext ClairRematchIntroText
+	waitbutton
+	closetext
+	winlosstext ClairRematchOverText, 0
+	loadtrainer CLAIR, CLAIR2
+	startbattle
+	reloadmapafterbattle
 	end
 
 TrainerCooltrainermPaul:
@@ -281,6 +293,20 @@ BlackthornGymClairText_League:
 
 	para "Give it every-"
 	line "thing you've got."
+	done
+
+ClairRematchIntroText:
+	text "… You are here."
+	line "Now let's battle!"
+	done
+
+ClairRematchOverText:
+	text "Way to go."
+	line "… Now give it"
+	cont "your all!"
+
+	para "way to become"
+	line "the best TRAINER…"
 	done
 
 CooltrainermPaulSeenText:

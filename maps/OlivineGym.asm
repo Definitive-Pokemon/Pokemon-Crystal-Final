@@ -181,7 +181,7 @@ JasmineRematchIntroText:
 
 JasmineRematchOverText:
 	text "True to your"
-	line " reputation…"
+	line "reputation…"
 	done
 
 OlivineGymGuideText:

@@ -281,8 +281,8 @@ WhitneyGoodCryText:
 	done
 
 WhitneyRematchIntroText:
-	text "I never break"
-	line "my promises!"
+	text "You wanna fight"
+	line "me again, hm?"
 
 	para "Are you ready?"
 	done

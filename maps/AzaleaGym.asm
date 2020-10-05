@@ -252,8 +252,8 @@ BugsyRematchIntroText:
 
 BugsyRematchOverText:
 	text "You must have"
-	line "studied a lot about"
-	cont "#MON!"
+	line "studied a lot"
+	cont "about #MON!"
 	done
 
 BugCatcherBennySeenText:
