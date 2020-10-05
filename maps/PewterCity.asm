@@ -148,7 +148,7 @@ PewterCityGrampsText_NoSilver:
 	cont "bird #MON"
 
 	para "ARTICUNO, ZAPDOS,"
-	line "DOS and MOLTRES?"
+	line "and MOLTRES?"
 
 	para "They are said to"
 	line "have roamed KANTO"
