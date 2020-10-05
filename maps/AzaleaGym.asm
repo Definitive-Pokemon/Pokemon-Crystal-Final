@@ -59,7 +59,7 @@ AzaleaGymBugsyScript:
 	end
 
 .Rematch:
-	writetext RematchIntroText
+	writetext BugsyRematchIntroText
 	waitbutton
 	closetext
 	winlosstext BugsyWinLossText, 0
@@ -67,7 +67,7 @@ AzaleaGymBugsyScript:
 	startbattle
 	reloadmapafterbattle
 	opentext
-	writetext RematchOverText
+	writetext BugsyRematchOverText
 	waitbutton
 	closetext
 	end
@@ -246,7 +246,7 @@ BugsyText_BugMonsAreDeep:
 	line "ites thoroughly."
 	done
 
-RematchIntroText:
+BugsyRematchIntroText:
 	text "Good to see"
 	line "you again!"
 
@@ -254,7 +254,7 @@ RematchIntroText:
 	line "research!"
 	done
 
-RematchOverText:
+BugsyRematchOverText:
 	text "You must have"
 	line "studied a lot about"
 	cont "#MON!"

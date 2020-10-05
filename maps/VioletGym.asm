@@ -56,7 +56,7 @@ VioletGymFalknerScript:
 	end
 
 .Rematch:
-	writetext RematchIntroText
+	writetext FalknerRematchIntroText
 	waitbutton
 	closetext
 	winlosstext FalknerWinLossText, 0
@@ -64,7 +64,7 @@ VioletGymFalknerScript:
 	startbattle
 	reloadmapafterbattle
 	opentext
-	writetext RematchOverText
+	writetext FalknerRematchOverText
 	waitbutton
 	closetext
 	end
@@ -213,7 +213,7 @@ FalknerFightDoneText:
 	line "master!"
 	done
 
-RematchIntroText:
+FalknerRematchIntroText:
 	text "Hi! I've been"
 	line "waiting for you!"
 
@@ -222,7 +222,7 @@ RematchIntroText:
 	cont "you again!"
 	done
 
-RematchOverText:
+FalknerRematchOverText:
 	text "Mmm…"
 	line "It's still a long"
 
