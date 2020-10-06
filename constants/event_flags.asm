@@ -1456,7 +1456,10 @@
 	const EVENT_RADIO_TOWER_5F_ULTRA_BALL
 	const EVENT_DARK_CAVE_VIOLET_ENTRANCE_DIRE_HIT
 	const EVENT_BATTLE_TOWER_OUTSIDE_SAILOR
-; Unused: next 48 events
+; Custom event flags here
+	const EVENT_BEAT_E4_REMATCH
+
+; Unused: next 47 events
 
 	const_next 2048
 NUM_EVENTS EQU const_value ; 800
