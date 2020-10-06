@@ -130,8 +130,8 @@ OakIndigoText:
 	line "designed for trai-"
 	cont "ners from KANTO."
 
-	para "The ELITE FOUR"
-	line "and LANCE will be"
+	para "The ELITE FOUR and"
+	line "LANCE will be"
 
 	para "using much tougher"
 	line "#MON this time!"
