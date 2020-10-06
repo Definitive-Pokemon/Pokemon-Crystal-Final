@@ -135,7 +135,7 @@ LancesRoomLanceScript_Rematch
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
-	setevent EVENT_BEAT_CHAMPION_LANCE
+	setevent EVENT_BEAT_E4_REMATCH
 	opentext
 	writetext LanceBattleAfterText
 	waitbutton
