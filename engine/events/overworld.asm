@@ -527,10 +527,15 @@ TrySurfOW::
 	call CheckDirection
 	jr c, .quit
 
+	farcall RegionCheck
+	ld a, e
+	and a
+	jr nz, .kantoSurfOWCheckAble
 	ld de, ENGINE_FOGBADGE
 	call CheckEngineFlag
 	jr c, .quit
 
+.tryOWSurf
 	ld d, SURF
 	call CheckPartyMove
 	jr c, .quit
@@ -553,6 +558,15 @@ TrySurfOW::
 .quit
 	xor a
 	ret
+
+.kantoSurfOWCheckAble
+	checkflag ENGINE_FLYPOINT_VERMILION
+	and a
+	jr z, .quit
+	ld de, ENGINE_SOULBADGE
+	call CheckEngineFlag
+	jr c, .quit
+	jr .tryOWSurf
 
 AskSurfScript:
 	opentext
