@@ -1939,7 +1939,7 @@ TryCutOW::
 	and a
 	jr z, .tryOWCut
 	ld de, ENGINE_CASCADEBADGE
-	call CheckBadge
+	call CheckEngineFlag
 	jr c, .cant_cut
 	jr .tryOWCut
 
