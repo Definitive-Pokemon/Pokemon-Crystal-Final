@@ -132,8 +132,8 @@ CutFunction:
 .CheckAble:
 	farcall RegionCheck
 	ld a, e
-	cp $01
-	jr z, .kantoCheckAble
+	and a
+	jr nz, .kantoCheckAble
 	ld de, ENGINE_HIVEBADGE
 	call CheckBadge
 	jr c, .nobadge
@@ -357,8 +357,8 @@ SurfFunction:
 .TrySurf:
 	farcall RegionCheck
 	ld a, e
-	cp $01
-	jr z, .kantoCheckSurfAble
+	and a
+	jr nz, .kantoCheckSurfAble
 	ld de, ENGINE_FOGBADGE
 	call CheckBadge
 	jr c, .nofogbadge
@@ -585,8 +585,8 @@ FlyFunction:
 ; Fly
 	farcall RegionCheck
 	ld a, e
-	cp $01
-	jr z, .kantoCheckFlyAble
+	and a
+	jr nz, .kantoCheckFlyAble
 	ld de, ENGINE_STORMBADGE
 	call CheckBadge
 	jr c, .nostormbadge
