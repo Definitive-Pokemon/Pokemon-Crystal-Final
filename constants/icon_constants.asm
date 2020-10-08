@@ -250,7 +250,7 @@
 	const ICON_PUPITAR
 	const ICON_TYRANITAR
 	const ICON_LUGIA
-	const ICON_HO-OH
+	const ICON_HO_OH
 	const ICON_CELEBI
 	const ICON_EGG
 
