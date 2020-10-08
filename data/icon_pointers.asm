@@ -251,5 +251,5 @@ IconPointers:
 	dw PupitarIcon
 	dw TyranitarIcon
 	dw LugiaIcon
-	dw Ho-ohIcon
+	dw Ho_OhIcon
 	dw CelebiIcon
