@@ -122,7 +122,7 @@ MonMenuIcons:
 	db ICON_SEAKING        ; SEAKING
 	db ICON_STARYU      ; STARYU
 	db ICON_STARMIE      ; STARMIE
-	db ICON_MR__MIME  ; MR__MIME
+	db ICON_MR_MIME  ; MR_MIME
 	db ICON_SCYTHER         ; SCYTHER
 	db ICON_JYNX  ; JYNX
 	db ICON_ELECTABUZZ  ; ELECTABUZZ
@@ -252,3 +252,4 @@ MonMenuIcons:
 	db ICON_LUGIA       ; LUGIA
 	db ICON_HO_OH       ; HO_OH
 	db ICON_CELEBI  ; CELEBI
+	db ICON_EGG  ; EGG

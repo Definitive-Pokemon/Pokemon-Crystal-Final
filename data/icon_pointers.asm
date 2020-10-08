@@ -1,7 +1,6 @@
 IconPointers:
 ; entries correspond to_* constants
 	dw NullIcon
-	dw EggIcon
 	dw BulbasaurIcon
 	dw IvysaurIcon
 	dw VenusaurIcon
@@ -253,3 +252,4 @@ IconPointers:
 	dw LugiaIcon
 	dw Ho_OhIcon
 	dw CelebiIcon
+	dw EggIcon
