@@ -1879,9 +1879,16 @@ BattleCommand_EffectChance:
 	ld hl, wEnemyMoveStruct + MOVE_CHANCE
 .got_move_chance
 
-	; BUG: 1/256 chance to fail even for a 100% effect chance,
-	; since carry is not set if BattleRandom == [hl] == 255
-	call BattleRandom
+ld a, [wLinkMode]
+	cp LINK_COLOSSEUM
+	scf ; Force RNG to be called
+	jr z, .nofix ; Don't apply fix in link battles, for compatibility
+	ld a, [hl]
+	sub 100 percent
+	; If chance was 100%, RNG won't be called (carry not set)
+	; Thus chance will be subtracted from 0, guaranteeing a carry
+.nofix
+	call c, BattleRandom
 	cp [hl]
 	pop hl
 	ret c
@@ -2560,6 +2567,17 @@ DittoMetalPowder:
 .done
 	scf
 	rr c
+
+	ld a, HIGH(MAX_STAT_VALUE)
+	cp b
+	jr c, .cap
+	ret nz
+	ld a, LOW(MAX_STAT_VALUE)
+	cp c
+	ret nc
+
+.cap
+	ld bc, MAX_STAT_VALUE
 	ret
 
 BattleCommand_DamageStats:
@@ -2684,9 +2702,6 @@ TruncateHL_BC:
 	inc l
 
 .finish
-	ld a, [wLinkMode]
-	cp LINK_COLOSSEUM
-	jr z, .done
 ; If we go back to the loop point,
 ; it's the same as doing this exact
 ; same check twice.
@@ -2694,7 +2709,6 @@ TruncateHL_BC:
 	or b
 	jr nz, .loop
 
-.done
 	ld b, l
 	ret
 
@@ -2812,6 +2826,17 @@ SpeciesItemBoost:
 ; Double the stat
 	sla l
 	rl h
+
+	ld a, HIGH(MAX_STAT_VALUE)
+	cp h
+	jr c, .cap
+	ret nz
+	ld a, LOW(MAX_STAT_VALUE)
+	cp l
+	ret nc
+
+.cap
+	ld hl, MAX_STAT_VALUE
 	ret
 
 EnemyAttackDamage:
