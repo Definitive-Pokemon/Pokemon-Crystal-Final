@@ -3,7 +3,6 @@ Icons: ; used only for BANK(Icons)
 SECTION "Mon Icons 1", ROMX
 
 NullIcon:
-EggIcon:          INCBIN "gfx/icons/egg.2bpp"
 BulbasaurIcon          INCBIN "gfx/icons/bulbasaur.2bpp"
 IvysaurIcon          INCBIN "gfx/icons/ivysaur.2bpp"
 VenusaurIcon          INCBIN "gfx/icons/venusaur.2bpp"
@@ -258,3 +257,4 @@ TyranitarIcon          INCBIN "gfx/icons/tyranitar.2bpp"
 LugiaIcon          INCBIN "gfx/icons/lugia.2bpp"
 Ho-ohIcon          INCBIN "gfx/icons/ho_oh.2bpp"
 CelebiIcon          INCBIN "gfx/icons/celebi.2bpp"
+EggIcon:          INCBIN "gfx/icons/egg.2bpp"
