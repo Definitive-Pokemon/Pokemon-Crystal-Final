@@ -5,40 +5,11 @@ Route23_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 
 .FlyPoint:
-	ld de, ENGINE_EARTHBADGE
-	call CheckBadge
-	jr c, .nobadge
+	checkflag ENGINE_EARTHBADGE
+	iffalse .nobadge
 	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 .nobadge
 	endcallback
-
-CheckEngineFlag:
-; Check engine flag de
-; Return carry if flag is not set
-	ld b, CHECK_FLAG
-	farcall EngineFlagAction
-	ld a, c
-	and a
-	jr nz, .isset
-	scf
-	ret
-.isset
-	xor a
-	ret
-
-CheckBadge:
-; Check engine flag a (ENGINE_ZEPHYRBADGE thru ENGINE_EARTHBADGE)
-; Display "Badge required" text and return carry if the badge is not owned
-	call CheckEngineFlag
-	ret nc
-	ld hl, .BadgeRequiredText
-	call MenuTextboxBackup ; push text to queue
-	scf
-	ret
-
-.BadgeRequiredText:
-	text_far _BadgeRequiredText
-	text_end
 
 IndigoPlateauSign:
 	jumptext IndigoPlateauSignText
