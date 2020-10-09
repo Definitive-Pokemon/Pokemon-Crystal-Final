@@ -57,6 +57,9 @@ VioletGymFalknerScript:
 
 .Rematch:
 	writetext FalknerRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext FalknerRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext FalknerRematchOverText, 0
@@ -64,6 +67,11 @@ VioletGymFalknerScript:
 	startbattle
 	reloadmapafterbattle
 	end
+
+.NoBattle
+	writetext FalknerRematchNoBattleText
+	waitbutton
+	closetext	
 
 VioletGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -216,6 +224,14 @@ FalknerRematchIntroText:
 	para "It's a pleasure to"
 	line "be able to battle"
 	cont "you again!"
+	done
+
+FalknerRematchYesBattleText:
+	text "No time to lose!"
+	done
+
+FalknerRematchNoBattleText:
+	text "Oh well…"
 	done
 
 FalknerRematchOverText:
