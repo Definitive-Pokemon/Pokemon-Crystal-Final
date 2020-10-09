@@ -1,4 +1,4 @@
-Music_Route42: ; ee6c5
+Music_LakeOfRage: ; ee6c5
 	musicheader 4, 1, Music_LakeOfRage_Ch1
 	musicheader 1, 2, Music_LakeOfRage_Ch2
 	musicheader 1, 3, Music_LakeOfRage_Ch3

@@ -494,13 +494,13 @@ Music_Route12_branch_ec717: ; ec717
 ; ec720
 ; ============================================================================================================
 ; ============================================================================================================
-Music_Route12_Night: ; ec506
-	musicheader 4, 1, Music_Route12_Night_Ch1
-	musicheader 1, 2, Music_Route12_Night_Ch2
-	musicheader 1, 3, Music_Route12_Night_Ch3
-	musicheader 1, 4, Music_Route12_Night_Ch4
+Music_Route12Night: ; ec506
+	musicheader 4, 1, Music_Route12Night_Ch1
+	musicheader 1, 2, Music_Route12Night_Ch2
+	musicheader 1, 3, Music_Route12Night_Ch3
+	musicheader 1, 4, Music_Route12Night_Ch4
 
-Music_Route12_Night_Ch1:
+Music_Route12Night_Ch1:
 	tempo 154
 	dutycycle $2
 	vibrato $12, $24
@@ -525,7 +525,7 @@ Music_Route12_Ch1_loop: ; ec535
 	callchannel Music_Route12_branch_ec59b
 	loopchannel 0,Music_Route12_Ch1_loop
 
-Music_Route12_Night_Ch2:
+Music_Route12Night_Ch2:
 	dutycycle $2
 	vibrato $12, $24
 	notetype $c, $b8
@@ -540,11 +540,11 @@ Music_Route12_Ch2_loop: ; ec5e5
 	callchannel Music_Route12_Ch2_End
 	loopchannel 0, Music_Route12_Ch2_loop
 
-Music_Route12_Night_Ch3:
+Music_Route12Night_Ch3:
 	vibrato $12, $44
 	notetype $c, $13
 	callchannel Music_Route12_Ch3_Entry
 
-Music_Route12_Night_Ch4:
+Music_Route12Night_Ch4:
 	togglenoise $4
 	callchannel Music_Route12_Ch4_Entry

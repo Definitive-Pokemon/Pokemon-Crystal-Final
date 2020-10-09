@@ -810,30 +810,30 @@ Music_ViridianCity_branch_f434b: ; f434b
 ; ============================================================================================================
 ; ============================================================================================================
 
-Music_ViridianCity_Night:
-	musicheader 4, 1, Music_ViridianCity_Night_Ch1
-	musicheader 1, 2, Music_ViridianCity_Night_Ch2
-	musicheader 1, 3, Music_ViridianCity_Night_Ch3
-	musicheader 1, 4, Music_ViridianCity_Night_Ch4
+Music_ViridianCityNight:
+	musicheader 4, 1, Music_ViridianCityNight_Ch1
+	musicheader 1, 2, Music_ViridianCityNight_Ch2
+	musicheader 1, 3, Music_ViridianCityNight_Ch3
+	musicheader 1, 4, Music_ViridianCityNight_Ch4
 
-Music_ViridianCity_Night_Ch1:
+Music_ViridianCityNight_Ch1:
 	tempo 164
 	vibrato $12, $24
 	callchannel Music_ViridianCity_Ch1_Entry
 	endchannel
 
-Music_ViridianCity_Night_Ch2:
+Music_ViridianCityNight_Ch2:
 	dutycycle $2
 	vibrato $10, $36
 	callchannel Music_ViridianCity_Ch2_Entry
 	endchannel
 
-Music_ViridianCity_Night_Ch3: ; f421e
+Music_ViridianCityNight_Ch3: ; f421e
 	vibrato $12, $14
 	notetype $c, $12
 	stereopanning $ff
 	callchannel Music_ViridianCity_Ch3_Branch2
-Music_ViridianCity_Night_loop: ; f4246
+Music_ViridianCityNight_loop: ; f4246
 	intensity $12
 	callchannel Music_ViridianCity_branch_f42a2
 	octave 5
@@ -844,9 +844,9 @@ Music_ViridianCity_Night_loop: ; f4246
 	vibrato $18, $15
 	intensity $1A
 	callchannel Music_ViridianCity_Ch3_Branch1
-	loopchannel 0, Music_ViridianCity_Night_loop
+	loopchannel 0, Music_ViridianCityNight_loop
 
-Music_ViridianCity_Night_Ch4:
+Music_ViridianCityNight_Ch4:
 	togglenoise $9
 	notetype $c
 	callchannel Music_ViridianCity_branch_f431d

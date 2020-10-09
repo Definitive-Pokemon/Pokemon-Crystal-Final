@@ -507,21 +507,21 @@ endr
 ; ============================================================================================================
 ; ============================================================================================================
 
-Music_Route3_Night: ; ec2ca
-	musicheader 4, 1, Music_Route3_Night_Ch1
-	musicheader 1, 2, Music_Route3_Night_Ch2
-	musicheader 1, 3, Music_Route3_Night_Ch3
-	musicheader 1, 4, Music_Route3_Night_Ch4
+Music_Route3Night: ; ec2ca
+	musicheader 4, 1, Music_Route3Night_Ch1
+	musicheader 1, 2, Music_Route3Night_Ch2
+	musicheader 1, 3, Music_Route3Night_Ch3
+	musicheader 1, 4, Music_Route3Night_Ch4
 
-Music_Route3_Night_Ch1:
+Music_Route3Night_Ch1:
 	tempo 168
 	dutycycle $1
 	callchannel Music_Route3_Entry
 	endchannel
 
-Music_Route3_Night_Ch2:
+Music_Route3Night_Ch2:
 	callchannel Music_Route3_Ch2_Intro
-Music_Route3_Night_Ch2_loop:
+Music_Route3Night_Ch2_loop:
 	intensity $7d
 	callchannel Music_Route3_branch_ec443
 	note G_, 1
@@ -542,9 +542,9 @@ Music_Route3_Night_Ch2_loop:
 	note D_, 5
 	dutycycle $1
 	callchannel Music_Route3_Ch2_Part2
-	loopchannel 0, Music_Route3_Night_Ch2_loop
+	loopchannel 0, Music_Route3Night_Ch2_loop
 
-Music_Route3_Night_Ch3: ; ec45b
+Music_Route3Night_Ch3: ; ec45b
 	stereopanning $ff
 	vibrato $6, $3
 	notetype $c, $10
@@ -561,7 +561,7 @@ Music_Route3_Night_Ch3: ; ec45b
 	callchannel Music_Route3_branch_ec4bd
 	callchannel Music_Route3_branch_ec47f
 
-Music_Route3_Night_Ch4: ; ec4eb
+Music_Route3Night_Ch4: ; ec4eb
 	togglenoise $4
 	notetype $c
 	note __, 10

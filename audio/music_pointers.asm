@@ -120,7 +120,7 @@ Music:
 	dba Music_LugiaBattle
 	dba Music_HoOhBattle
 	dba Music_CelebiBattle
-	dba Music_NewbarkTownNight
+	dba Music_NewBarkTownNight
 	dba Music_CherrygroveCityNight
 	dba Music_VioletCityNight
 	dba Music_AzaleaTownNight

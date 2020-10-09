@@ -342,21 +342,21 @@ Music_CeladonCity_branch_f4510: ; f4510
 ; ============================================================================================================
 ; ============================================================================================================
 
-Music_CeladonCity_Night: ; f435b
-	musicheader 3, 1, Music_CeladonCity_Night_Ch1
+Music_CeladonCityNight: ; f435b
+	musicheader 3, 1, Music_CeladonCityNight_Ch1
 	musicheader 1, 2, Music_CeladonCity_Ch2
-	musicheader 1, 3, Music_CeladonCity_Night_Ch3
+	musicheader 1, 3, Music_CeladonCityNight_Ch3
 
-Music_CeladonCity_Night_Ch1: ; f4364
+Music_CeladonCityNight_Ch1: ; f4364
 	tempo 151 ;146
 	volume $77
 	tone $0001
 	dutycycle $1
 	callchannel Music_CeladonCity_branch_f436c
 
-Music_CeladonCity_Night_Ch3: ; f4492
+Music_CeladonCityNight_Ch3: ; f4492
 	vibrato $12, $24
-Music_CeladonCity_Night_branch_f4495: ; f4495
+Music_CeladonCityNight_branch_f4495: ; f4495
 	notetype $c, $24
 	octave 3
 	note A_, 2
@@ -365,13 +365,13 @@ Music_CeladonCity_Night_branch_f4495: ; f4495
 	note __, 2
 	note D_, 8
 	callchannel Music_CeladonCity_branch_f44fd
-Music_CeladonCity_Night_branch_f44a1: ; f44a1
+Music_CeladonCityNight_branch_f44a1: ; f44a1
 	octave 2
 	note A_, 2
 	note __, 2
 	octave 3
 	note D_, 4
-	loopchannel 3, Music_CeladonCity_Night_branch_f44a1
+	loopchannel 3, Music_CeladonCityNight_branch_f44a1
 	octave 2
 	note G_, 1
 	note __, 1
@@ -388,7 +388,7 @@ Music_CeladonCity_Night_branch_f44a1: ; f44a1
 	callchannel Music_CeladonCity_NewBranch2
 	callchannel Music_CeladonCity_branch_f4510
 	callchannel Music_CeladonCity_NewBranch3
-	loopchannel 0, Music_CeladonCity_Night_branch_f4495
+	loopchannel 0, Music_CeladonCityNight_branch_f4495
 ; f44fd
 
 Music_CeladonCity_NewBranch1:
