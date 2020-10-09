@@ -14,7 +14,7 @@ Music_Route12_branch_ec535: ; ec535
 	dutycycle $2
 	intensity $96
 	callchannel Music_Route12_branch_ec5b1
-	callchannel Music_Route12_branch_ec5bfa
+	callchannel Music_Route12_branch_ec5bf
 	callchannel Music_Route12_branch_ec5b1
 	note E_, 1
 	note __, 2

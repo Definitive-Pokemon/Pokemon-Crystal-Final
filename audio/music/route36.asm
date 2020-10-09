@@ -527,14 +527,14 @@ Music_Route36_branch_e9741: ; e9741
 	endchannel
 ; e974f
 
-Music_Music_Route36Night:
-	musicheader 4, 1, Music_Music_Route36Night_Ch1
-	musicheader 1, 2, Music_Music_Route36Night_Ch2
-	musicheader 1, 3, Music_Music_Route36Night_Ch3
-	musicheader 1, 4, Music_Music_Route36Night_Ch4
+Music_Route36Night:
+	musicheader 4, 1, Music_Route36Night_Ch1
+	musicheader 1, 2, Music_Route36Night_Ch2
+	musicheader 1, 3, Music_Route36Night_Ch3
+	musicheader 1, 4, Music_Route36Night_Ch4
 
 ; ============================================================================================================
-Music_Music_Route36Night_Ch1:
+Music_Route36Night_Ch1:
 	tempo 150
 	volume $77
 	dutycycle $2
@@ -559,7 +559,7 @@ Music_Music_Route36Night_Ch1:
 	loopchannel 0, Music_Route36_branch_e9517
 
 ; ============================================================================================================
-Music_Music_Route36Night_Ch2:
+Music_Route36Night_Ch2:
 	dutycycle $2
 	vibrato $10, $26
 	stereopanning $f0
@@ -586,7 +586,7 @@ Music_Music_Route36Night_Ch2:
 	loopchannel 0, Music_Route36_branch_e95ce
 
 ; ============================================================================================================
-Music_Music_Route36Night_Ch3:
+Music_Route36Night_Ch3:
 	notetype $c, $23
 	octave 3
 	note F_, 1
@@ -614,7 +614,7 @@ Music_Music_Route36Night_Ch3:
 	loopchannel 0, Music_Route36_branch_e9684
 	
 ; ============================================================================================================
-Music_Music_Route36Night_Ch4:
+Music_Route36Night_Ch4:
 	togglenoise $7
 	notetype $c
 	callchannel Music_Route36_branch_e9734
