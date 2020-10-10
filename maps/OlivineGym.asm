@@ -51,6 +51,9 @@ OlivineGymJasmineScript:
 
 .Rematch:
 	writetext JasmineRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext JasimeRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext JasmineRematchOverText, 0
@@ -58,6 +61,11 @@ OlivineGymJasmineScript:
 	startbattle
 	reloadmapafterbattle
 	end
+
+.NoBattle
+	writetext JasmineRematchNoBattleText
+	waitbutton
+	closetext
 
 OlivineGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -177,6 +185,15 @@ Jasmine_GoodLuck:
 JasmineRematchIntroText:
 	text "We're still here…"
 	line "Are you prepared?"
+	done
+
+JasmineRematchYesBattleText:
+	text "We've improved"
+	line "a lot… over time."
+	done
+
+JasmineRematchNoBattleText:
+	text "Oh… I understand…"
 	done
 
 JasmineRematchOverText:

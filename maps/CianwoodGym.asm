@@ -77,6 +77,9 @@ CianwoodGymChuckScript:
 
 .Rematch:
 	writetext ChuckRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext ChuckRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext ChuckRematchOverText, 0
@@ -84,6 +87,11 @@ CianwoodGymChuckScript:
 	startbattle
 	reloadmapafterbattle
 	end
+
+.NoBattle
+	writetext ChuckRematchNoBattleText
+	waitbutton
+	closetext	
 
 CianwoodGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -252,8 +260,21 @@ ChuckAfterText:
 
 ChuckRematchIntroText:
 	text "There you are!"
-	line "Taste my 24-hour"
-	cont "training!"
+	line "I just finished"
+	cont "training."
+
+	para "Do you want to"
+	line "battle again?"
+	done
+
+ChuckRematchYesBattleText:
+	text "Taste my 24-hour"
+	line "training!"
+	done
+
+ChuckRematchNoBattleText:
+	text "Noooooo!"
+	line "That's terrible!"
 	done
 
 ChuckRematchOverText:

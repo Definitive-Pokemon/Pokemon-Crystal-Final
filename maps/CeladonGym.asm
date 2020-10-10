@@ -51,6 +51,9 @@ CeladonGymErikaScript:
 
 .Rematch:
 	writetext ErikaRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext ErikaRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext ErikaRematchOverText, 0
@@ -58,6 +61,11 @@ CeladonGymErikaScript:
 	startbattle
 	reloadmapafterbattle
 	end
+
+.NoBattle
+	writetext ErikaRematchNoBattleText
+	waitbutton
+	closetext
 
 TrainerLassMichelle:
 	trainer LASS, MICHELLE, EVENT_BEAT_LASS_MICHELLE, LassMichelleSeenText, LassMichelleBeatenText, 0, .Script
@@ -206,8 +214,17 @@ ErikaRematchIntroText:
 	line "again!"
 
 	para "I'm kind of tired,"
-	line "but… let's ignore"
-	cont "that and battle!"
+	line "but… if you want,"
+	cont "we can battle."
+	done
+
+ErikaRematchYesBattleText:
+	text "Okay… Here we"
+	line "go…"
+	done
+
+ErikaRematchNoBattleText:
+	text "That's okay, too…"
 	done
 
 ErikaRematchOverText:

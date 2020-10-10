@@ -83,6 +83,9 @@ GoldenrodGymWhitneyScript:
 
 .Rematch:
 	writetext WhitneyRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext WhitneyRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext WhitneyRematchOverText, 0
@@ -90,6 +93,11 @@ GoldenrodGymWhitneyScript:
 	startbattle
 	reloadmapafterbattle
 	end
+
+.NoBattle
+	writetext WhitneyRematchNoBattleText
+	waitbutton
+	closetext	
 
 GoldenrodGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -283,8 +291,14 @@ WhitneyGoodCryText:
 WhitneyRematchIntroText:
 	text "You wanna fight"
 	line "me again, hm?"
+	done
 
-	para "Are you ready?"
+WhitneyRematchYesBattleText:
+	text "Are you ready?"
+	done
+
+WhitneyRematchNoBattleText:
+	text "Don't be so mean."
 	done
 
 WhitneyRematchOverText:

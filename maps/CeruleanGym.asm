@@ -87,6 +87,9 @@ CeruleanGymMistyScript:
 
 .Rematch:
 	writetext MistyRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext MistyRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext MistyRematchOverText, 0
@@ -94,6 +97,11 @@ CeruleanGymMistyScript:
 	startbattle
 	reloadmapafterbattle
 	end
+
+.NoBattle
+	writetext MistyRematchNoBattleText
+	waitbutton
+	closetext
 
 TrainerSwimmerfDiana:
 	trainer SWIMMERF, DIANA, EVENT_BEAT_SWIMMERF_DIANA, SwimmerfDianaSeenText, SwimmerfDianaBeatenText, 0, .Script
@@ -297,7 +305,6 @@ MistyFightDoneText:
 
 MistyRematchIntroText:
 	text "So here you are…"
-	line "Don't make me wait!"
 
 	para "I've heard a lot"
 	line "of good things"
@@ -307,6 +314,16 @@ MistyRematchIntroText:
 
 	para "Let me test how"
 	line "good you are!"
+	done
+
+MistyRematchYesBattleText:
+	text "OK!"
+	done
+
+MistyRematchNoBattleText:
+	text "Aw…"
+
+	para "That makes me sad…"
 	done
 
 MistyRematchOverText:

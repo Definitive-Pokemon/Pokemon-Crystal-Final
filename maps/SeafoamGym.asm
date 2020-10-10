@@ -47,6 +47,9 @@ SeafoamGymBlaineScript:
 
 .Rematch:
 	writetext BlaineRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext BlaineRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext BlaineRematchOverText, 0
@@ -54,6 +57,11 @@ SeafoamGymBlaineScript:
 	startbattle
 	reloadmapafterbattle
 	end
+
+.NoBattle
+	writetext BlaineRematchNoBattleText
+	waitbutton
+	closetext
 
 SeafoamGymGuideScript:
 	faceplayer
@@ -143,6 +151,15 @@ BlaineRematchIntroText:
 
 	para "You ready for"
 	line "another match?"
+	done
+
+BlaineRematchYesBattleText:
+	text "We can still do"
+	line "it!"
+	done
+
+BlaineRematchNoBattleText:
+	text "All righty, then!"
 	done
 
 BlaineRematchOverText:

@@ -42,6 +42,9 @@ PewterGymBrockScript:
 
 .Rematch:
 	writetext BrockRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext BrockRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext BrockRematchOverText, 0
@@ -49,6 +52,11 @@ PewterGymBrockScript:
 	startbattle
 	reloadmapafterbattle
 	end
+
+.NoBattle
+	writetext BrockRematchNoBattleText
+	waitbutton
+	closetext
 
 TrainerCamperJerry:
 	trainer CAMPER, JERRY, EVENT_BEAT_CAMPER_JERRY, CamperJerrySeenText, CamperJerryBeatenText, 0, .Script
@@ -157,8 +165,29 @@ BrockFightDoneText:
 	done
 
 BrockRematchIntroText:
+	text "What's up?"
+	line "You came just at"
+	cont "the right time!"
+
+	para "I'm free right now."
+	line "Want to battle me"
+	cont "again?"
+	done
+
+BrockRematchYesBattleText:
 	text "All right!"
-	line "Time to battle!"
+	line "Time to show our"
+	cont "prowess!"
+	done
+
+BrockRematchNoBattleText:
+	text "Is that so…"
+
+	para "Well, I suppose"
+	line "you must have a"
+
+	para "lot of things to"
+	line "do for yourself…"
 	done
 
 BrockRematchOverText:

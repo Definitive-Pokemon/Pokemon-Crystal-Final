@@ -61,6 +61,9 @@ FuchsiaGymJanineScript:
 
 .Rematch:
 	writetext JanineRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext JanineRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext JanineRematchOverText, 0
@@ -68,6 +71,11 @@ FuchsiaGymJanineScript:
 	startbattle
 	reloadmapafterbattle
 	end
+
+.NoBattle
+	writetext JanineRematchNoBattleText
+	waitbutton
+	closetext
 
 LassAliceScript:
 	checkevent EVENT_BEAT_LASS_ALICE
@@ -298,11 +306,21 @@ JanineText_ApplyMyself:
 	done
 
 JanineRematchIntroText:
+	text "Are you sure you"
+	line "want to battle me"
+	cont "again?"
+	done
+
+JanineRematchYesBattleText:
 	text "I can't use my"
 	line "ninja technique,"
 
 	para "but I won't let"
 	line "you win!"
+	done
+
+JanineRematchNoBattleText:
+	text "That's a pity."
 	done
 
 JanineRematchOverText:

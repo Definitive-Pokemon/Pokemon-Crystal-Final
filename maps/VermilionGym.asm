@@ -46,6 +46,9 @@ VermilionGymSurgeScript:
 
 .Rematch:
 	writetext LtSurgeRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext LtSurgeRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext LtSurgeRematchOverText, 0
@@ -53,6 +56,11 @@ VermilionGymSurgeScript:
 	startbattle
 	reloadmapafterbattle
 	end
+
+.NoBattle
+	writetext LtSurgeRematchNoBattleText
+	waitbutton
+	closetext
 
 TrainerGentlemanGregory:
 	trainer GENTLEMAN, GREGORY, EVENT_BEAT_GENTLEMAN_GREGORY, GentlemanGregorySeenText, GentlemanGregoryBeatenText, 0, .Script
@@ -174,6 +182,17 @@ LtSurgeFightDoneText:
 LtSurgeRematchIntroText:
 	text "Hey! Let's battle"
 	line "again!"
+	done
+
+LtSurgeRematchYesBattleText:
+	text "This is gonna be"
+	line "an electrifying"
+	cont "battle!"
+	done
+
+LtSurgeRematchNoBattleText:
+	text "Oh no! How disap-"
+	line "pointing!"
 	done
 
 LtSurgeRematchOverText:

@@ -94,6 +94,9 @@ BlackthornGymClairScript:
 
 .Rematch:
 	writetext ClairRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext ClairRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext ClairRematchOverText, 0
@@ -101,6 +104,11 @@ BlackthornGymClairScript:
 	startbattle
 	reloadmapafterbattle
 	end
+
+.NoBattle
+	writetext ClairRematchNoBattleText
+	waitbutton
+	closetext
 
 TrainerCooltrainermPaul:
 	trainer COOLTRAINERM, PAUL, EVENT_BEAT_COOLTRAINERM_PAUL, CooltrainermPaulSeenText, CooltrainermPaulBeatenText, 0, .Script
@@ -298,6 +306,15 @@ BlackthornGymClairText_League:
 ClairRematchIntroText:
 	text "… You are here."
 	line "Now let's battle!"
+	done
+
+ClairRematchYesBattleText:
+	text "Hahaha!"
+	line "Great!"
+	done
+
+ClairRematchNoBattleText:
+	text "What in the world?"
 	done
 
 ClairRematchOverText:

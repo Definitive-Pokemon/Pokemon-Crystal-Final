@@ -54,6 +54,9 @@ MahoganyGymPryceScript:
 
 .Rematch:
 	writetext PryceRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext PryceRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext PryceRematchOverText, 0
@@ -61,6 +64,11 @@ MahoganyGymPryceScript:
 	startbattle
 	reloadmapafterbattle
 	end
+
+.NoBattle
+	writetext PryceRematchNoBattleText
+	waitbutton
+	closetext
 
 PryceScript_Defeat:
 	writetext PryceText_CherishYourPokemon
@@ -251,12 +259,21 @@ PryceText_CherishYourPokemon:
 	done
 
 PryceRematchIntroText:
-	text "Finally. No need"
-	line "for words."
-
-	para "A #MON battle"
+	text "A #MON battle"
 	line "is the way for us"
 	cont "to communicate."
+
+	para "Don't you think"
+	line "so?"
+	done
+
+PryceRematchYesBattleText:
+	text "Finally. No need"
+	line "for words."
+	done
+
+PryceRematchNoBattleText:
+	text "That's OK, too."
 	done
 
 PryceRematchOverText:

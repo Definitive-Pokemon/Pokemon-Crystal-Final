@@ -60,6 +60,9 @@ AzaleaGymBugsyScript:
 
 .Rematch:
 	writetext BugsyRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext BugsyRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext BugsyRematchOverText, 0
@@ -67,6 +70,11 @@ AzaleaGymBugsyScript:
 	startbattle
 	reloadmapafterbattle
 	end
+
+.NoBattle
+	writetext BugsyRematchNoBattleText
+	waitbutton
+	closetext
 
 AzaleaGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -246,8 +254,16 @@ BugsyRematchIntroText:
 	text "Good to see"
 	line "you again!"
 
-	para "Behold my bug"
+	para "Care for a battle?"
+	done
+
+BugsyRematchYesBattleText:
+	text "Behold my bug"
 	line "research!"
+	done
+
+BugsyRematchNoBattleText:
+	text "Maybe next time!"
 	done
 
 BugsyRematchOverText:

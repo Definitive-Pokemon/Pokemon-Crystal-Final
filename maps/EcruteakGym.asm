@@ -72,6 +72,9 @@ EcruteakGymMortyScript:
 
 .Rematch:
 	writetext MortyRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext MortyRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext MortyRematchOverText, 0
@@ -79,6 +82,11 @@ EcruteakGymMortyScript:
 	startbattle
 	reloadmapafterbattle
 	end
+
+.NoBattle
+	writetext MortyRematchNoBattleText
+	waitbutton
+	closetext	
 
 EcruteakGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -290,7 +298,17 @@ MortyRematchIntroText:
 	text "I was just talking"
 	line "about you…"
 
-	para "Let's battle!"
+	para "Wanna battle?"
+	done
+
+MortyRematchYesBattleText:
+	text "Let's do it!"
+	done
+
+MortyRematchNoBattleText:
+	text "Oh…"
+
+	para "That's a shame…"
 	done
 
 MortyRematchOverText:

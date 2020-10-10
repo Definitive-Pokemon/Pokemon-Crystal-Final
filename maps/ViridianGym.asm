@@ -40,6 +40,9 @@ ViridianGymBlueScript:
 
 .Rematch:
 	writetext BlueRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext BlueRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext BlueRematchOverText, 0
@@ -47,6 +50,11 @@ ViridianGymBlueScript:
 	startbattle
 	reloadmapafterbattle
 	end
+
+.NoBattle
+	writetext BlueRematchNoBattleText
+	waitbutton
+	closetext
 
 ViridianGymGuideScript:
 	faceplayer
@@ -149,9 +157,24 @@ LeaderBlueEpilogueText:
 	done
 
 BlueRematchIntroText:
+	text "Hello. I'm doing"
+	line "peachy over here!"
+
+	para "You feel ready for"
+	line "another battle?"
+	done
+
+BlueRematchYesBattleText:
 	text "Good!"
-	line "Thanks for coming"
-	cont "to lose to me!"
+
+	para "Thanks for coming"
+	line "to lose to me!"
+	done
+
+BlueRematchNoBattleText:
+	text "Whatever. Sounds"
+	line "like you're pretty"
+	cont "busy yourself."
 	done
 
 BlueRematchOverText:

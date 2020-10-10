@@ -48,6 +48,9 @@ SaffronGymSabrinaScript:
 
 .Rematch:
 	writetext SabrinaRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext SabrinaRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext SabrinaRematchOverText, 0
@@ -55,6 +58,11 @@ SaffronGymSabrinaScript:
 	startbattle
 	reloadmapafterbattle
 	end
+
+.NoBattle
+	writetext SabrinaRematchNoBattleText
+	waitbutton
+	closetext
 
 TrainerMediumRebecca:
 	trainer MEDIUM, REBECCA, EVENT_BEAT_MEDIUM_REBECCA, MediumRebeccaSeenText, MediumRebeccaBeatenText, 0, .Script
@@ -208,7 +216,17 @@ SabrinaFightDoneText:
 SabrinaRematchIntroText:
 	text "I knew you'd come!"
 	line "I had a feeling."
-	cont "Bring it on!"
+
+	para "Do you feel the"
+	line "need to battle?"
+	done
+
+SabrinaRematchYesBattleText:
+	text "Are you ready?"
+	done
+
+SabrinaRematchNoBattleText:
+	text "I see…"
 	done
 
 SabrinaRematchOverText:
