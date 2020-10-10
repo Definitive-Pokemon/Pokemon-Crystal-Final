@@ -12,13 +12,33 @@ FuchsiaGym_MapScripts:
 	def_callbacks
 
 FuchsiaGymJanineScript:
-	checkflag ENGINE_SOULBADGE
-	iftrue .FightDone
-	applymovement FUCHSIAGYM_JANINE, Movement_NinjaSpin
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_BLUE
-	iftrue .Rematch
+	; Rematch script
+	iffalse .Regular
+	writetext JanineRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext JanineRematchYesBattleText
+	waitbutton
+	closetext
+	winlosstext JanineRematchOverText, 0
+	loadtrainer JANINE, JANINE2
+	startbattle
+	reloadmapafterbattle
+	end
+
+.NoBattle
+	writetext JanineRematchNoBattleText
+	waitbutton
+	closetext
+	end
+
+.Regular
+	checkflag ENGINE_SOULBADGE
+	iftrue .AfterBattle
+	applymovement FUCHSIAGYM_JANINE, Movement_NinjaSpin
 	writetext JanineText_DisappointYou
 	waitbutton
 	closetext
@@ -42,9 +62,7 @@ FuchsiaGymJanineScript:
 	waitsfx
 	setflag ENGINE_SOULBADGE
 	sjump .AfterBattle
-.FightDone:
-	faceplayer
-	opentext
+	
 .AfterBattle:
 	checkevent EVENT_GOT_TM06_TOXIC
 	iftrue .AfterTM
@@ -55,25 +73,6 @@ FuchsiaGymJanineScript:
 	setevent EVENT_GOT_TM06_TOXIC
 .AfterTM:
 	writetext JanineText_ApplyMyself
-	waitbutton
-	closetext
-	end
-
-.Rematch:
-	writetext JanineRematchIntroText
-	yesorno
-	iffalse .NoBattle
-	writetext JanineRematchYesBattleText
-	waitbutton
-	closetext
-	winlosstext JanineRematchOverText, 0
-	loadtrainer JANINE, JANINE2
-	startbattle
-	reloadmapafterbattle
-	end
-
-.NoBattle
-	writetext JanineRematchNoBattleText
 	waitbutton
 	closetext
 	end
