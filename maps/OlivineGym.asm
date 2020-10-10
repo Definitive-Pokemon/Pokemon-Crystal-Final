@@ -66,6 +66,7 @@ OlivineGymJasmineScript:
 	writetext JasmineRematchNoBattleText
 	waitbutton
 	closetext
+	end
 
 OlivineGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -188,8 +189,8 @@ JasmineRematchIntroText:
 	done
 
 JasmineRematchYesBattleText:
-	text "We've improved"
-	line "a lot… over time."
+	text "We've improved a"
+	line "lot… over time."
 	done
 
 JasmineRematchNoBattleText:

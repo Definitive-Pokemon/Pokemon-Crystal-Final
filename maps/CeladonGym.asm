@@ -66,6 +66,7 @@ CeladonGymErikaScript:
 	writetext ErikaRematchNoBattleText
 	waitbutton
 	closetext
+	end
 
 TrainerLassMichelle:
 	trainer LASS, MICHELLE, EVENT_BEAT_LASS_MICHELLE, LassMichelleSeenText, LassMichelleBeatenText, 0, .Script

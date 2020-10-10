@@ -75,6 +75,7 @@ AzaleaGymBugsyScript:
 	writetext BugsyRematchNoBattleText
 	waitbutton
 	closetext
+	end
 
 AzaleaGymActivateRockets:
 	ifequal 7, .RadioTowerRockets

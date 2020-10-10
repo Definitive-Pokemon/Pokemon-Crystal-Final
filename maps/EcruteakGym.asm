@@ -86,7 +86,8 @@ EcruteakGymMortyScript:
 .NoBattle
 	writetext MortyRematchNoBattleText
 	waitbutton
-	closetext	
+	closetext
+	end
 
 EcruteakGymActivateRockets:
 	ifequal 7, .RadioTowerRockets

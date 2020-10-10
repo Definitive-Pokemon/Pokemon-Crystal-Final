@@ -91,7 +91,8 @@ CianwoodGymChuckScript:
 .NoBattle
 	writetext ChuckRematchNoBattleText
 	waitbutton
-	closetext	
+	closetext
+	end
 
 CianwoodGymActivateRockets:
 	ifequal 7, .RadioTowerRockets

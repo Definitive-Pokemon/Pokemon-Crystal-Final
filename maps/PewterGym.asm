@@ -57,6 +57,7 @@ PewterGymBrockScript:
 	writetext BrockRematchNoBattleText
 	waitbutton
 	closetext
+	end
 
 TrainerCamperJerry:
 	trainer CAMPER, JERRY, EVENT_BEAT_CAMPER_JERRY, CamperJerrySeenText, CamperJerryBeatenText, 0, .Script
@@ -176,8 +177,9 @@ BrockRematchIntroText:
 
 BrockRematchYesBattleText:
 	text "All right!"
-	line "Time to show our"
-	cont "prowess!"
+
+	para "Time to show our"
+	line "prowess!"
 	done
 
 BrockRematchNoBattleText:

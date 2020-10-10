@@ -61,6 +61,7 @@ VermilionGymSurgeScript:
 	writetext LtSurgeRematchNoBattleText
 	waitbutton
 	closetext
+	end
 
 TrainerGentlemanGregory:
 	trainer GENTLEMAN, GREGORY, EVENT_BEAT_GENTLEMAN_GREGORY, GentlemanGregorySeenText, GentlemanGregoryBeatenText, 0, .Script

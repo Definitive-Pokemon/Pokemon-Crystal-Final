@@ -76,6 +76,7 @@ FuchsiaGymJanineScript:
 	writetext JanineRematchNoBattleText
 	waitbutton
 	closetext
+	end
 
 LassAliceScript:
 	checkevent EVENT_BEAT_LASS_ALICE

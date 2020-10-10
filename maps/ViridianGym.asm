@@ -55,6 +55,7 @@ ViridianGymBlueScript:
 	writetext BlueRematchNoBattleText
 	waitbutton
 	closetext
+	end
 
 ViridianGymGuideScript:
 	faceplayer

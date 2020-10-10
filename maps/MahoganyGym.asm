@@ -69,6 +69,7 @@ MahoganyGymPryceScript:
 	writetext PryceRematchNoBattleText
 	waitbutton
 	closetext
+	end
 
 PryceScript_Defeat:
 	writetext PryceText_CherishYourPokemon
@@ -259,9 +260,9 @@ PryceText_CherishYourPokemon:
 	done
 
 PryceRematchIntroText:
-	text "A #MON battle"
-	line "is the way for us"
-	cont "to communicate."
+	text "A #MON battle is"
+	line "the way for us to"
+	cont "communicate."
 
 	para "Don't you think"
 	line "so?"

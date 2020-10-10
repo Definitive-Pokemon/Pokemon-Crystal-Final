@@ -97,7 +97,8 @@ GoldenrodGymWhitneyScript:
 .NoBattle
 	writetext WhitneyRematchNoBattleText
 	waitbutton
-	closetext	
+	closetext
+	end
 
 GoldenrodGymActivateRockets:
 	ifequal 7, .RadioTowerRockets

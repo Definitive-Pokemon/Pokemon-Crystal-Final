@@ -62,6 +62,7 @@ SeafoamGymBlaineScript:
 	writetext BlaineRematchNoBattleText
 	waitbutton
 	closetext
+	end
 
 SeafoamGymGuideScript:
 	faceplayer

@@ -109,6 +109,7 @@ BlackthornGymClairScript:
 	writetext ClairRematchNoBattleText
 	waitbutton
 	closetext
+	end
 
 TrainerCooltrainermPaul:
 	trainer COOLTRAINERM, PAUL, EVENT_BEAT_COOLTRAINERM_PAUL, CooltrainermPaulSeenText, CooltrainermPaulBeatenText, 0, .Script

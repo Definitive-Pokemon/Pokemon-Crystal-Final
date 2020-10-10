@@ -63,6 +63,7 @@ SaffronGymSabrinaScript:
 	writetext SabrinaRematchNoBattleText
 	waitbutton
 	closetext
+	end
 
 TrainerMediumRebecca:
 	trainer MEDIUM, REBECCA, EVENT_BEAT_MEDIUM_REBECCA, MediumRebeccaSeenText, MediumRebeccaBeatenText, 0, .Script

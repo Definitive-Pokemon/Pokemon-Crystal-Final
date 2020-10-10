@@ -102,6 +102,7 @@ CeruleanGymMistyScript:
 	writetext MistyRematchNoBattleText
 	waitbutton
 	closetext
+	end
 
 TrainerSwimmerfDiana:
 	trainer SWIMMERF, DIANA, EVENT_BEAT_SWIMMERF_DIANA, SwimmerfDianaSeenText, SwimmerfDianaBeatenText, 0, .Script

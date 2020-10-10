@@ -71,7 +71,8 @@ VioletGymFalknerScript:
 .NoBattle
 	writetext FalknerRematchNoBattleText
 	waitbutton
-	closetext	
+	closetext
+	end
 
 VioletGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
