@@ -155,8 +155,7 @@ BlaineRematchIntroText:
 	done
 
 BlaineRematchYesBattleText:
-	text "We can still do"
-	line "it!"
+	text "We can still do it!"
 	done
 
 BlaineRematchNoBattleText:
