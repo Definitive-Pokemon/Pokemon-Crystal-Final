@@ -142,3 +142,4 @@ Music:
 	dba Music_Route36Night
 	dba Music_Route37Night
 	dba Music_LakeOfRageNight
+	dba Music_KantoWildBattleNight
