@@ -53,7 +53,7 @@ OlivineGymJasmineScript:
 	writetext JasmineRematchIntroText
 	yesorno
 	iffalse .NoBattle
-	writetext JasimeRematchYesBattleText
+	writetext JasmineRematchYesBattleText
 	waitbutton
 	closetext
 	winlosstext JasmineRematchOverText, 0
