@@ -39,16 +39,16 @@ FishGroups:
 .Ocean_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     TENTACOOL,  10
+	db 100 percent,     REMORAID,  10
 .Ocean_Good:
 	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     TENTACOOL,  20
+	db  70 percent,     REMORAID,  20
 	db  90 percent + 1, CHINCHOU,   20
 	db 100 percent,     time_group 2
 .Ocean_Super:
 	db  40 percent,     CHINCHOU,   40
 	db  70 percent,     time_group 3
-	db  90 percent + 1, TENTACRUEL, 40
+	db  90 percent + 1, OCTILLERY, 40
 	db 100 percent,     LANTURN,    40
 
 .Lake_Old:
