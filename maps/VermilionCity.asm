@@ -187,6 +187,30 @@ VermilionCityBadgeGuyTrainerText:
 
 	para "They won't be easy"
 	line "to defeat."
+
+	para "You may also have"
+	line "noticed the moves"
+
+	para "your #MON"
+	line "obtained from HMs"
+	cont "no longer work."
+
+	para "This is because"
+	line "your #MON are"
+
+	para "unfamiliar with"
+	line "the environment"
+	cont "in KANTO."
+
+	para "You will have to"
+	line "obtain the BADGES"
+
+	para "of the GYM LEADERS"
+	line "for your #MON"
+
+	para "to be able to use"
+	line "them in this"
+	cont "region."
 	done
 
 VermilionCityBadgeGuySomeBadgesText:
@@ -197,6 +221,12 @@ VermilionCityBadgeGuySomeBadgesText:
 	para "Don't you agree"
 	line "that the trainers"
 	cont "here are tough?"
+
+	para "Be sure to collect"
+	line "more to be able"
+
+	para "to use HMs in"
+	line "KANTO."
 	done
 
 VermilionCityBadgeGuyMostBadgesText:
