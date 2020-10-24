@@ -6,7 +6,7 @@
 	const POKEGEARCARD_RADIO ; 3
 NUM_POKEGEAR_CARDS EQU const_value
 
-PHONE_DISPLAY_HEIGHT EQU 4
+PHONE_DISPLAY_HEIGHT EQU 4 ; the amount of contacts shown in the pokegear phone menu
 
 ; PokegearJumptable.Jumptable indexes
 	const_def
@@ -800,13 +800,47 @@ PokegearPhone_Init:
 	ld hl, wJumptableIndex
 	inc [hl]
 	xor a
-	ld [wPokegearPhoneScrollPosition], a
+	inc a
+	ld [wPokegearPhoneScrollPosition], a ; ensure it starts at 1
+	dec a
 	ld [wPokegearPhoneCursorPosition], a
-	ld [wPokegearPhoneSelectedPerson], a
+	ld [wPartyMenuScrollPosition], a
+	call CountContactsAndInitNumberSelection
 	call InitPokegearTilemap
 	call ExitPokegearRadio_HandleMusic
 	ld hl, PokegearAskWhoCallText
 	call PrintText
+	ret
+
+CountContactsAndInitNumberSelection:
+	ld b, a
+	ld d, a
+	ld c, AMOUNT_OF_CONTACTS
+	ld e, $00
+	ld hl, wPhoneList
+
+.loop
+	inc b
+	call NextFlag
+	call CheckBitAInHL
+	ld d, a
+	jr z, .not_registered
+	; set the initial selected number to this first found number
+	ld a, e
+	and a
+	jr nz, .count
+	ld e, b ; current number as initial number
+.count
+	ld a, [wPartyMenuScrollPosition]
+	inc a
+	ld [wPartyMenuScrollPosition], a
+.not_registered
+	ld a, b
+	cp c
+	ld a, d
+	jr nz, .loop
+	ld a, e
+	ld [wPokegearPhoneSelectedPerson], a
 	ret
 
 PokegearPhone_Joypad:
@@ -856,19 +890,19 @@ PokegearPhone_Joypad:
 	ret
 
 .a
-	ld hl, wPhoneList
-	ld a, [wPokegearPhoneScrollPosition]
-	ld e, a
-	ld d, 0
-	add hl, de
-	ld a, [wPokegearPhoneCursorPosition]
-	ld e, a
-	ld d, 0
-	add hl, de
-	ld a, [hl]
+	;ld hl, wPhoneList
+	ld a, [wPartyMenuScrollPosition] ; retrieve current selected phone number
+	;call GetPhoneNumberFlagOffset
+	;ld d, 0
+	;add hl, de ; needs to reference flags here.
+	;ld a, [wPokegearPhoneCursorPosition]
+	;ld e, a
+	;ld d, 0
+	;add hl, de ; why twice???
+	;ld a, [hl]
+	ld a, [wPokegearPhoneSelectedPerson]
 	and a
 	ret z
-	ld [wPokegearPhoneSelectedPerson], a
 	hlcoord 1, 4
 	ld a, [wPokegearPhoneCursorPosition]
 	ld bc, SCREEN_WIDTH * 2
@@ -960,17 +994,29 @@ PokegearPhone_GetDPad:
 	ld hl, wPokegearPhoneCursorPosition
 	ld a, [hl]
 	and a
-	jr z, .scroll_page_up
-	dec [hl]
-	jr .done_joypad_same_page
+	jr z, .try_scroll_page_up
+	ld a, [wPartyMenuScrollPosition]
+	cp [hl] ; check if we exceed the amount of registered numbers
+	jr c, .dont_load_phone_number
+	dec [hl] ; cursor up
+	ld a, [wPokegearPhoneSelectedPerson] ; load previously selected number
+	call FindNumberAbove
+	ld [wPokegearPhoneSelectedPerson], a
+	jp .done_joypad_same_page
+	.dont_load_phone_number
+	dec [hl] ; cursor up
+	jp .done_joypad_same_page
 
-.scroll_page_up
-	ld hl, wPokegearPhoneScrollPosition
+.try_scroll_page_up
+	ld hl, wPokegearPhoneScrollPosition ; inc hl for optimization
 	ld a, [hl]
-	and a
+	cp $01 ; this makes sure the first phone number (invalid) is skipped
 	ret z
-	dec [hl]
-	jr .done_joypad_update_page
+	; a is a correct phonenumber already
+	call FindNumberAbove
+	ld [wPokegearPhoneSelectedPerson], a
+	ld [wPokegearPhoneScrollPosition], a
+	jp .done_joypad_update_page
 
 .down
 	ld hl, wPokegearPhoneCursorPosition
@@ -978,14 +1024,87 @@ PokegearPhone_GetDPad:
 	cp PHONE_DISPLAY_HEIGHT - 1
 	jr nc, .scroll_page_down
 	inc [hl]
-	jr .done_joypad_same_page
+	ld hl, wPhoneList
+	ld a, [wPokegearPhoneSelectedPerson]
+	and a 
+	jp z, .done_joypad_same_page
+	ld b, a ; store phone number for now
+	call GetPhoneNumberFlagOffset ; puts the flag byte in d
+	ld a, e ; put bit index in a
+	ld e, d
+	ld d, $00
+	add hl, de
+	ld d, b
+	ld e, a
+	call ReturnFirstNextNumber
+	ld [wPokegearPhoneSelectedPerson], a
+	jp .done_joypad_same_page
 
 .scroll_page_down
-	ld hl, wPokegearPhoneScrollPosition
-	ld a, [hl]
-	cp CONTACT_LIST_SIZE - PHONE_DISPLAY_HEIGHT
-	ret nc
-	inc [hl]
+	ld a, [wPokegearPhoneScrollPosition] ; orginal ld [hl]
+	cp AMOUNT_OF_CONTACTS - PHONE_DISPLAY_HEIGHT
+	ret z ; so when wPokegearPhoneScrollPosition == 34 stop, checking for more numbers is no use
+	; dynamic height and stop check required
+	; check the next four flags (unrolled) 
+	inc a ; check from the number after previous scroll position
+	ld b, a ; stores the possible phonenumber where the scrolled down screen starts
+	call GetPhoneNumberFlagOffset
+	ld d, e ; overwrite the flag pointer in d with bit-index e
+	ld e, a ; put flag pointer in e (d = a after GetPhoneNumberFlagOffset)
+	ld a, d ; a now contains bit index
+	ld d, $00 
+	ld hl, wPhoneList
+	add hl, de ; select the exact flag byte to start from
+	ld d, PHONE_DISPLAY_HEIGHT ; amount of numbers we need to find
+	ld e, AMOUNT_OF_CONTACTS ; for speed
+	; a mainly bit-index
+	; b current phonenumber
+	; c storage for a
+	; d numbers remaining to be found
+	.loop
+	ld c, a ; make sure bit-index is up to date
+	call CheckBitAInHL
+	jr z, .not_registered
+	dec d
+	ld a, d
+	cp PHONE_DISPLAY_HEIGHT - 1 ; (only on first decrement)
+	jr nz, .not_registered
+	; set the scroll
+	push bc
+	.not_registered
+	;now check if there still is a point in contuining
+	ld a, b
+	add a, d
+	cp e ; check if current_phonenumber + numbers to be found exceeds CONTACTS
+	jr c, .continue
+	pop de
+	ret
+	.continue
+	; clear a and check if d is zero, if so we know there are four numbers to fill the next view with.
+	xor a
+	cp d 
+	jr z, .done
+	inc b
+	ld a, c ; put bit-index back in a
+	call NextFlag
+	jr .loop
+
+.done
+	ld hl, wPhoneList
+	ld a, [wPokegearPhoneSelectedPerson]
+	ld b, a ; store phone number for now
+	call GetPhoneNumberFlagOffset ; puts the flag byte in d
+	ld a, e ; put bit index in a
+	ld e, d
+	ld d, $00 ;
+	add hl, de ; point to correct flag
+	ld d, b
+	ld e, a
+	call ReturnFirstNextNumber
+	ld [wPokegearPhoneSelectedPerson], a
+	pop bc
+	ld a, b
+	ld [wPokegearPhoneScrollPosition], a
 	jr .done_joypad_update_page
 
 .done_joypad_same_page
@@ -1000,6 +1119,41 @@ PokegearPhone_GetDPad:
 	ldh [hBGMapMode], a
 	call PokegearPhone_UpdateDisplayList
 	call WaitBGMap
+	ret
+
+; decreases phonenumber a, until a registered one is found or 00 on none found.
+FindNumberAbove:
+	ld hl, wPhoneList
+	cp $00
+	jr nz, .normal
+	ld a, AMOUNT_OF_CONTACTS - 1
+	.normal
+	ld b, a
+    call GetPhoneNumberFlagOffset
+	ld a, e
+	ld e, d
+	ld d, $00
+	add hl, de ; point to the correct flag
+	ld e, a ; put bit-index back
+	ld d, b
+	.loop
+	dec d
+	dec e
+	ld a, e
+	cp $FF ; I dunno how to otherwise say, loop from 7 -> 0
+	jr nz, .continue
+	; decrease flag byte
+	ld e, 7 ; set a back to highest buit
+	dec hl
+	ld a, e
+	.continue
+	; a = e here, thus a is the bit-index
+	call CheckBitAInHL
+	ld a, d ; load phonenumber back, flags are kept
+	ret nz ; return current phone number if bit was set
+	cp $01 ; check if the next number is phone number zero
+	jr nz, .loop
+	ld a, $00
 	ret
 
 PokegearPhone_UpdateCursor:
@@ -1017,6 +1171,31 @@ endr
 	ld [hl], "▶"
 	ret
 
+; increases a as bit index, rolling over at 8 and increasing hl pointer as necessary
+NextFlag:
+	inc a
+	cp 8
+	jr z, .advance_flag_byte
+	ret
+	.advance_flag_byte
+	xor a ; clear a, to point to the first bit
+	inc hl
+	ret
+
+; converts given phone number to in which flag its stored a -> a (uses d and e as temp)
+; e stores the bit index of the flag
+GetPhoneNumberFlagOffset:
+	ld d, -1
+	ld e, $08 ; amount of bits in byte
+	.loop
+	inc d
+	sub e
+	jr nc, .loop ; keep going until a is negative
+	add a, e ; restore the bit index
+	ld e, a
+	ld a, d
+	ret
+
 PokegearPhone_UpdateDisplayList:
 	hlcoord 1, 3
 	ld b, PHONE_DISPLAY_HEIGHT * 2 + 1
@@ -1031,16 +1210,36 @@ PokegearPhone_UpdateDisplayList:
 	inc hl
 	dec b
 	jr nz, .row
-	ld a, [wPokegearPhoneScrollPosition]
-	ld e, a
-	ld d, 0
 	ld hl, wPhoneList
-	add hl, de
 	xor a
 	ld [wPokegearPhoneLoadNameBuffer], a
+	ld a, [wPokegearPhoneScrollPosition]
+	ld b, a
+	call GetPhoneNumberFlagOffset
+	ld c, e
+	ld e, a
+	ld d, 0
+	add hl, de
+	ld e, c ; restore bit-index
+	ld d, b ; provide d with current phonenumber
+	ld a, c
+	call CheckBitAInHL
+	jr z, .no_numbers
+	ld a, b ; restore the first phonenumber
+	jr .skipfirst
+	.no_numbers
+	xor a
+	jr .skipfirst
 .loop
-	ld a, [hli]
+	; a starts as bit-index
+	; d  as the current tested phone number
+	; e swap for a
+	; ld a, [hli] original
+	call ReturnFirstNextNumber
+.skipfirst
+	; original code following, we made sure a contains the right phone number to load
 	push hl
+	push de ; store the values for loading the next number for the next iteration
 	push af
 	hlcoord 2, 4
 	ld a, [wPokegearPhoneLoadNameBuffer]
@@ -1051,6 +1250,7 @@ PokegearPhone_UpdateDisplayList:
 	pop af
 	ld b, a
 	call Function90380
+	pop de ; restore in the correct order
 	pop hl
 	ld a, [wPokegearPhoneLoadNameBuffer]
 	inc a
@@ -1060,18 +1260,55 @@ PokegearPhone_UpdateDisplayList:
 	call PokegearPhone_UpdateCursor
 	ret
 
+; find next registered phonenumber, hl must point to correct flag byte
+; a returns next number, d is the current phonenumber, e is the bit index
+ReturnFirstNextNumber:
+	; HL is flag byte pointer
+	; phone number in a from HL required and make sure counter is increased
+	; also do the NO_PHONE check + skip index here (or use call)??
+	; hl only serves as quick flag byte pointer
+	.loop
+	ld a, d
+	cp AMOUNT_OF_CONTACTS
+	jr z, .no_more_numbers
+	inc d
+	ld a, e
+	call NextFlag
+	ld e, a
+	call CheckBitAInHL
+	jr z, .loop
+	ld a, d
+	ret
+	.no_more_numbers
+	xor a
+	ret
+
 PokegearPhone_DeletePhoneNumber:
 	ld hl, wPhoneList
 	ld a, [wPokegearPhoneScrollPosition]
 	ld e, a
-	ld d, 0
-	add hl, de
 	ld a, [wPokegearPhoneCursorPosition]
-	ld e, a
+	add a, e
+	; can be optimised
+	call GetPhoneNumberFlagOffset
+	;d -> e & e -> a
+	ld a, e ; a is now bit-index
+	ld e, d
 	ld d, 0
 	add hl, de
-	ld [hl], 0
-	ld hl, wPhoneList
+	call ResBitAInHL
+	ld a, [wPokegearPhoneScrollPosition]
+	; insert code to either decrease scrolloffset or
+	cp $01
+	jr z, .continue
+	dec a ; decrease scroll offset to properly update contact menu
+	ld [wPokegearPhoneScrollPosition], a
+	.continue
+	ld a, [wPartyMenuScrollPosition]
+	dec a
+	ld [wPartyMenuScrollPosition], a
+	ret
+	; useless loop now since the numers dont have to be pushed down
 	ld c, CONTACT_LIST_SIZE
 .loop
 	ld a, [hli]
@@ -1086,16 +1323,11 @@ PokegearPhone_DeletePhoneNumber:
 	ret
 
 PokegearPhoneContactSubmenu:
-	ld hl, wPhoneList
 	ld a, [wPokegearPhoneScrollPosition]
 	ld e, a
-	ld d, 0
-	add hl, de
 	ld a, [wPokegearPhoneCursorPosition]
-	ld e, a
-	ld d, 0
-	add hl, de
-	ld c, [hl]
+	add a, e
+	ld c, a
 	farcall CheckCanDeletePhoneNumber
 	ld a, c
 	and a

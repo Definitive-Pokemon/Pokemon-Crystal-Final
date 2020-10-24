@@ -67,5 +67,8 @@
 	const_skip ; high PHONE_CONTACT_SCRIPT2_ADDR byte
 PHONE_CONTACT_SIZE EQU const_value
 
-; maximum number of pokegear contacts
+; original contact list max size, kept for legacy
 CONTACT_LIST_SIZE EQU 10
+
+; custom contact list size override (amount of bytes for the flag list)
+CONTACT_LIST_FLAG_NUMBER EQU 5

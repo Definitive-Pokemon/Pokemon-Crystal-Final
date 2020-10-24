@@ -1,9 +1,7 @@
 AddPhoneNumber::
 	call _CheckCellNum
 	jr c, .cant_add
-	call Phone_FindOpenSlot
-	jr nc, .cant_add
-	ld [hl], c
+	call SetBitAInHL
 	xor a
 	ret
 
@@ -14,8 +12,7 @@ AddPhoneNumber::
 DelCellNum::
 	call _CheckCellNum
 	jr nc, .not_in_list
-	xor a
-	ld [hl], a
+	call ResBitAInHL
 	ret
 
 .not_in_list
@@ -25,20 +22,42 @@ DelCellNum::
 CheckCellNum::
 	jp _CheckCellNum ; useless
 
+; Look up if requested phone number in c is registered
+; Carry on number found
+; Side effects: HL retains the address of the flag, a is the bit-index of the flag
 _CheckCellNum:
 	ld hl, wPhoneList
-	ld b, CONTACT_LIST_SIZE
+	ld a, c
+	push bc
+	ld c, 8
 .loop
-	ld a, [hli]
 	cp c
-	jr z, .got_it
-	dec b
+	jr c, .inspect_flags ; got_it
+	inc hl
+	ld b, a
+	ld a, c
+	add a, 8
+	cp (CONTACT_LIST_FLAG_NUMBER + 1) * 8
+	ld c, a
+	ld a, b
 	jr nz, .loop
+.not_found
+	pop bc
 	xor a
 	ret
 
+.inspect_flags
+	ld b, a
+	ld a, c
+	sub 8 ; incorrect?
+	ld c, a
+	ld a, b
+	sub a, c
+	call CheckBitAInHL
+	jr z, .not_found
+; fallthrough
 .got_it
-	dec hl
+	pop bc
 	scf
 	ret
 
@@ -125,8 +144,17 @@ CheckPhoneCall::
 	and a
 	jr nz, .no_call
 
-	call GetAvailableCallers
-	call ChooseRandomCaller
+	jp GetAvailableCallers
+	; originally went into ChooseRandomCaller, but removed (now the link is managed with jumps)
+	; this has been done to not disrupt the stack of build up phone numbers
+	.no_call
+	xor a
+	ret
+
+	.timecheck
+	farcall CheckReceiveCallTimer
+	ret
+ResumeCheckPhoneCall::
 	jr nc, .no_call
 
 	ld e, a
@@ -169,25 +197,41 @@ ChooseRandomCaller:
 
 ; Store the number of available callers in c.
 	ld c, a
-; Sample a random number between 0 and 31.
+; Sample a random number between 0 and 91.
 	call Random
 	ldh a, [hRandomAdd]
 	swap a
-	and $1f
+	and $5B ; originally 31
 ; Compute that number modulo the number of available callers.
 	call SimpleDivide
 ; Return the caller ID you just sampled.
+	; skewing needs to happen here.
 	ld c, a
 	ld b, 0
-	ld hl, wAvailableCallers
+	ld hl, sp+$00
 	add hl, bc
-	ld a, [hl]
+	ld a, [hl] ; retrieve randomly selected phone number
+	ld c, a ; store the selected phone number in c for now
+	; put stack pointer at where it started before GetAvailableCallers
+	ld a, [wNumAvailableCallers]
+	ld b, a
+	ld a, [wAvailableCallers + 1] ; check if there was an extra number
+	and a
+	jr z, .dont_correct
+	ld a, $01 ; add an extra number to keep the stack allignment correct
+	.dont_correct
+	add a, b
+	ld h, $00
+	ld l, a
+	add hl,sp
+	ld sp, hl
+	ld a, c ; make sure the phone number is in a to be returned
 	scf
-	ret
+	jp ResumeCheckPhoneCall
 
 .NothingToSample:
 	xor a
-	ret
+	jp ResumeCheckPhoneCall
 
 GetAvailableCallers:
 	farcall CheckTime
@@ -198,12 +242,30 @@ GetAvailableCallers:
 	xor a
 	call ByteFill
 	ld de, wPhoneList
-	ld a, CONTACT_LIST_SIZE
+	ld a, 2 ; flag is incremented early
+	ld [wAvailableCallers], a ; flag bit storage
+	ld a, 3 ; skip  first 3 numbers, those can never be called normally
 
 .loop
-	ld [wPhoneListIndex], a
+	ld [wPhoneListIndex], a ; set the phone number we are checing if it can call us.
+	ld a, [wAvailableCallers]
+	cp 7
+	jr nz, .increment
+	ld c, -1 ; reset flag bit position
+	; update flag destination offset
+	ld a, [wAvailableCallers + CONTACT_LIST_SIZE]
+	inc a
+	ld [wAvailableCallers + CONTACT_LIST_SIZE], a
+	inc de ; select next byte
+	ld a, c
+	.increment
+	inc a
+	ld [wAvailableCallers], a ; store flag bit
+	ld c, a
 	ld a, [de]
-	and a
+	ld b, a
+	ld a, c
+	call CheckBitAInB ; check if flag is even set
 	jr z, .not_good_for_call
 	ld hl, PhoneContacts + PHONE_CONTACT_SCRIPT2_TIME
 	ld bc, PHONE_CONTACT_SIZE
@@ -220,22 +282,37 @@ GetAvailableCallers:
 	ld a, [wMapNumber]
 	cp [hl]
 	jr z, .not_good_for_call
-.different_map
+.different_map ; ups the found number counter and pushes the phone number
 	ld a, [wNumAvailableCallers]
-	ld c, a
-	ld b, $0
 	inc a
 	ld [wNumAvailableCallers], a
-	ld hl, wAvailableCallers
-	add hl, bc
-	ld a, [de]
-	ld [hl], a
-.not_good_for_call
-	inc de
+	; check if wAvailableCallers + 1 is not 00, then put number into c and push both
+	ld hl,  wAvailableCallers + 1
+	ld a, [hl]
+	and a
+	jr nz, .push_numbers
 	ld a, [wPhoneListIndex]
-	dec a
+	ld [hl], a
+	jr .not_good_for_call
+	.push_numbers
+	ld b, a
+	ld a, [wPhoneListIndex]
+	ld c, a
+	ld a, $00
+	ld [hl], a
+	push bc
+.not_good_for_call
+	ld a, [wPhoneListIndex]
+	inc a 
+	cp AMOUNT_OF_CONTACTS - 1 ; zero indexing fix
 	jr nz, .loop
-	ret
+	ld a, [wAvailableCallers + 1]
+	and a
+	jr z, .done
+	ld b, a
+	push bc
+	.done
+	jp ChooseRandomCaller
 
 CheckSpecialPhoneCall::
 	ld a, [wSpecialPhoneCallID]
@@ -659,6 +736,176 @@ GetCallerName:
 	ld d, [hl]
 	pop hl
 	call PlaceString
+	ret
+
+; Generic 'set bit' opcode call, for dynamic flag setting
+; performs set a, [hl] (a is zero indexed) no flags set
+SetBitAInHL:
+	and a
+	jr z, .first
+	cp 1
+	jr z, .second
+	cp 2
+	jr z, .third
+	cp 3
+	jr z, .fourth
+	cp 4
+	jr z, .fifth
+	cp 5
+	jr z, .sixth
+	cp 6
+	jr z, .seventh
+	.eighth
+	set 7, [hl]
+	ret	
+	.first
+	set 0, [hl]
+	ret
+	.second
+	set 1, [hl]
+	ret
+	.third
+	set 2, [hl]
+	ret
+	.fourth
+	set 3, [hl]
+	ret
+	.fifth
+	set 4, [hl]
+	ret
+	.sixth
+	set 5, [hl]
+	ret
+	.seventh
+	set 6, [hl]
+	ret
+
+; Generic 'res bit' opcode call, for dynamic flag clearing
+; performs res a, [hl] (a is zero indexed) no flags set
+ResBitAInHL:
+	and a
+	jr z, .first
+	cp 1
+	jr z, .second
+	cp 2
+	jr z, .third
+	cp 3
+	jr z, .fourth
+	cp 4
+	jr z, .fifth
+	cp 5
+	jr z, .sixth
+	cp 6
+	jr z, .seventh
+	.eighth
+	res 7, [hl]
+	ret	
+	.first
+	res 0, [hl]
+	ret
+	.second
+	res 1, [hl]
+	ret
+	.third
+	res 2, [hl]
+	ret
+	.fourth
+	res 3, [hl]
+	ret
+	.fifth
+	res 4, [hl]
+	ret
+	.sixth
+	res 5, [hl]
+	ret
+	.seventh
+	res 6, [hl]
+	ret
+
+; Generic 'bit' opcode call, for dynamic flag checking
+; performs bit a, [hl] (a is zero indexed) and returns Z on no bit and NZ on set bit, as the real opcode.
+CheckBitAInHL::
+	and a
+	jr z, .first
+	cp 1
+	jr z, .second
+	cp 2
+	jr z, .third
+	cp 3
+	jr z, .fourth
+	cp 4
+	jr z, .fifth
+	cp 5
+	jr z, .sixth
+	cp 6
+	jr z, .seventh
+	.eighth
+	bit 7, [hl]
+	ret	
+	.first
+	bit 0, [hl]
+	ret
+	.second
+	bit 1, [hl]
+	ret
+	.third
+	bit 2, [hl]
+	ret
+	.fourth
+	bit 3, [hl]
+	ret
+	.fifth
+	bit 4, [hl]
+	ret
+	.sixth
+	bit 5, [hl]
+	ret
+	.seventh
+	bit 6, [hl]
+	ret
+
+
+; Generic 'bit' opcode call, for dynamic flag checking
+; performs bit a, b (a is zero indexed) and returns Z on no bit and NZ on set bit, as the real opcode.
+CheckBitAInB:
+	and a
+	jr nz, .not_first
+	.first
+	bit 0, b
+	ret
+	.not_first
+	cp 1
+	jr z, .second
+	cp 2
+	jr z, .third
+	cp 3
+	jr z, .fourth
+	cp 4
+	jr z, .fifth
+	cp 5
+	jr z, .sixth
+	cp 6
+	jr z, .seventh
+	.eighth
+	bit 7, b
+	ret
+	.second
+	bit 1, b
+	ret
+	.third
+	bit 2, b
+	ret
+	.fourth
+	bit 3, b
+	ret
+	.fifth
+	bit 4, b
+	ret
+	.sixth
+	bit 5, b
+	ret
+	.seventh
+	bit 6, b
 	ret
 
 INCLUDE "data/phone/non_trainer_names.asm"
