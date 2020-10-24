@@ -25,3 +25,4 @@ ENDM
 	night_music MUSIC_ROUTE_37,    MUSIC_ROUTE_37_NIGHT
 	night_music MUSIC_LAKE_OF_RAGE,    MUSIC_LAKE_OF_RAGE_NIGHT
 	db -1 ; end
+	

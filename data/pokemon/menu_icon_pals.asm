@@ -258,3 +258,4 @@ MonMenuIconPals:
 	icon_pals RED,    RED    ; 252
 	icon_pals RED,    BLUE   ; EGG
 	icon_pals RED,    RED    ; 254
+	

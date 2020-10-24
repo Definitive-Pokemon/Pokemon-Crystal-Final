@@ -73,7 +73,7 @@ WillScript_AfterBattle:
 	closetext
 	end
 
-WillScript_Rematch
+WillScript_Rematch:
 	loadtrainer WILL, WILL2
 	startbattle
 	reloadmapafterbattle

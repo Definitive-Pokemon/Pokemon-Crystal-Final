@@ -110,7 +110,7 @@ CinnabarIslandBlueText:
 	cont "me want to battle."
 	done
 
-CinnabarIslandBlueChallengeText
+CinnabarIslandBlueChallengeText:
 	text "If you want to"
 	line "battle me, come to"
 	cont "the VIRIDIAN GYM."
@@ -119,7 +119,7 @@ CinnabarIslandBlueChallengeText
 	line "then."
 	done
 
-CinnabarIslandBlueNoChallengeText
+CinnabarIslandBlueNoChallengeText:
 	text "If you want to"
 	line "battle me, show me"
 	cont "more KANTO BADGES."

@@ -130,7 +130,7 @@ LancesRoomLanceScript:
 	warpfacing UP, HALL_OF_FAME, 4, 13
 	end
 
-LancesRoomLanceScript_Rematch
+LancesRoomLanceScript_Rematch:
 	loadtrainer CHAMPION, LANCE2
 	startbattle
 	dontrestartmapmusic
