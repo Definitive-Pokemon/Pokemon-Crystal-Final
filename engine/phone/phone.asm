@@ -193,45 +193,125 @@ ChooseRandomCaller:
 ; If no one is available to call, don't return anything.
 	ld a, [wNumAvailableCallers]
 	and a
-	jr z, .NothingToSample
-
+	jr nz, .next_check
+	xor a ; no numbers and thus return without carry
+	jp ResumeCheckPhoneCall
+	.next_check
+	dec a
+	jr nz, .sample ; if the count (a) is 1 return that number instantly
+	pop bc
+	ld a, b
+	scf
+	jp ResumeCheckPhoneCall
+	.sample
+	inc a ; fix a to original count
 ; Store the number of available callers in c.
 	ld c, a
-; Sample a random number between 0 and 91.
+; Skewing the ratio towards swarms
+    ; a = current phone number
+	; b = temp
+	; c = counter for amount of numbers left to check
+	; de = push registers for skewing phone numbers
+	; hl = pointer to stack content (phone number)
+	ld hl, sp+$00
+	bit 0, c ; check for uneven
+	jr z, .skip_initial
+	pop de
+	dec c
+	ld a, d ; check if first number already is a Swarm phone number
+	cp PHONE_BUG_CATCHER_ARNIE
+	jr z, .add_initial_skew
+	cp PHONE_FISHER_RALPH
+	jr z, .add_initial_skew
+	cp PHONE_HIKER_ANTHONY
+	jr nz, .dont_initial_skew
+	.add_initial_skew
+	; pushing code
+	ld e, d
+	push de
+	push de ; push twice, for a total of four of the number
+	ld a, [wNumAvailableCallers]
+	add a, 3
+	ld [wNumAvailableCallers], a
+	ld d, 0 ; unset d, because we are now even
+	.dont_initial_skew
+	inc hl
+	inc hl ; correct hl for the uneven numbers
+	.skip_initial
+	ld e, 0
+	.loop
+	ld a, [hl]
+	cp PHONE_BUG_CATCHER_ARNIE
+	jr z, .add_skew
+	cp PHONE_FISHER_RALPH
+	jr z, .add_skew
+	cp PHONE_HIKER_ANTHONY
+	jr nz, .dont_skew
+	.add_skew
+	ld b, a
+	xor a
+	cp d
+	jr z, .push_even
+	.push_uneven
+	ld e, b
+	push de
+	ld d, e
+	push de
+	ld d, a ; a was still zero from comparing
+	jr .add_skew_count
+	.push_even
+	ld d, b
+	ld e, b
+	push de
+	.add_skew_count
+	ld a, [wNumAvailableCallers]
+	add a, 3
+	ld [wNumAvailableCallers], a
+	.dont_skew
+	inc hl
+	dec c
+	jr nz, .loop ; keep going until all the non-skewed entries have been checked.
+	; c is zero after
+	xor a
+	cp d ; correct if there are any phone numbers left to be pushed
+	jr z, .generate_random
+	ld e, a
+	push de
+	.generate_random
+; Sample a random number between 0 and 63.
 	call Random
 	ldh a, [hRandomAdd]
 	swap a
-	and $5B ; originally 31
+	and $3f ; originally 31 (0x1f), but expanded to account for all numbers
 ; Compute that number modulo the number of available callers.
+	ld c, a
+	ld a, [wNumAvailableCallers]
+	ld d, a
+	ld a, c ; restore sampled number
+	ld c, d ; make sure available contacts is in c for a mod c
 	call SimpleDivide
 ; Return the caller ID you just sampled.
-	; skewing needs to happen here.
 	ld c, a
 	ld b, 0
 	ld hl, sp+$00
 	add hl, bc
 	ld a, [hl] ; retrieve randomly selected phone number
 	ld c, a ; store the selected phone number in c for now
-	; put stack pointer at where it started before GetAvailableCallers
-	ld a, [wNumAvailableCallers]
-	ld b, a
-	ld a, [wAvailableCallers + 1] ; check if there was an extra number
-	and a
+; Put stack pointer at where it started before GetAvailableCallers
+	ld a, d
+	bit 0, d ; check if there was an extra number
 	jr z, .dont_correct
-	ld a, $01 ; add an extra number to keep the stack allignment correct
+	add a, $01
 	.dont_correct
-	add a, b
 	ld h, $00
 	ld l, a
 	add hl,sp
-	ld sp, hl
+	ld sp, hl ; something makes stuff go on the wrong offset here
 	ld a, c ; make sure the phone number is in a to be returned
+; End of random number selection, set carry and jump back
 	scf
 	jp ResumeCheckPhoneCall
 
-.NothingToSample:
-	xor a
-	jp ResumeCheckPhoneCall
 
 GetAvailableCallers:
 	farcall CheckTime
@@ -242,22 +322,18 @@ GetAvailableCallers:
 	xor a
 	call ByteFill
 	ld de, wPhoneList
-	ld a, 2 ; flag is incremented early
+	ld a, 4 ; flag is incremented early
 	ld [wAvailableCallers], a ; flag bit storage
-	ld a, 3 ; skip  first 3 numbers, those can never be called normally
+	ld a, 5 ; skip  first 5 numbers, those can never be called normally
 
 .loop
-	ld [wPhoneListIndex], a ; set the phone number we are checing if it can call us.
+	ld [wPhoneListIndex], a ; set the phone number we are checking if it can call us.
 	ld a, [wAvailableCallers]
 	cp 7
 	jr nz, .increment
-	ld c, -1 ; reset flag bit position
+	ld a, -1 ; reset flag bit position
 	; update flag destination offset
-	ld a, [wAvailableCallers + CONTACT_LIST_SIZE]
-	inc a
-	ld [wAvailableCallers + CONTACT_LIST_SIZE], a
-	inc de ; select next byte
-	ld a, c
+	inc de ; select next flag byte
 	.increment
 	inc a
 	ld [wAvailableCallers], a ; store flag bit
@@ -291,14 +367,16 @@ GetAvailableCallers:
 	ld a, [hl]
 	and a
 	jr nz, .push_numbers
+	; Put current number in the backup
 	ld a, [wPhoneListIndex]
 	ld [hl], a
 	jr .not_good_for_call
 	.push_numbers
+	; Put current Number in b and load backup to c for push
 	ld b, a
 	ld a, [wPhoneListIndex]
 	ld c, a
-	ld a, $00
+	xor a
 	ld [hl], a
 	push bc
 .not_good_for_call

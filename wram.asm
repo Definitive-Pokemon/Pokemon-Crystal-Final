@@ -1962,7 +1962,6 @@ wPhoneListIndex:: db ; repurposed to hold current number, instead of registered 
 wNumAvailableCallers:: db
 wAvailableCallers:: ds CONTACT_LIST_SIZE ; first offset is flag bit
 ; second offset is temporary phonenumber
-; using last offset here as a temporary flag index
 
 NEXTU
 ; phone caller contact
