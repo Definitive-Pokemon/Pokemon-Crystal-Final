@@ -577,11 +577,17 @@ WrongNumber:
 Script_ReceivePhoneCall:
 	refreshscreen
 	callasm RingTwice_StartCall
+	iftrue .decline_call
 	memcall wCallerContact + PHONE_CONTACT_SCRIPT2_BANK
 	waitbutton
 	callasm HangUp
 	closetext
 	callasm InitCallReceiveDelay
+	end
+
+.decline_call
+	callasm HangUp
+	closetext
 	end
 
 Script_SpecialBillCall::
@@ -603,6 +609,12 @@ LoadElmCallScript:
 
 RingTwice_StartCall:
 	call .Ring
+	ld a, [wCurInput]
+    bit B_BUTTON_F, a
+	jr z, .dont_cancel
+	ld [wScriptVar], a
+	ret
+	.dont_cancel
 	call .Ring
 	farcall StubbedTrainerRankings_PhoneCalls
 	ret
