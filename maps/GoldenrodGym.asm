@@ -21,11 +21,11 @@ GoldenrodGym_MapScripts:
 
 GoldenrodGymWhitneyScript:
 	faceplayer
-	opentext
 	checkevent EVENT_BEAT_BLUE
 	iftrue .Rematch
 	checkevent EVENT_BEAT_WHITNEY
 	iftrue .FightDone
+	opentext
 	writetext WhitneyBeforeText
 	waitbutton
 	closetext
