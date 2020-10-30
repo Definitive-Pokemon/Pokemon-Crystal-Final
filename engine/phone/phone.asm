@@ -725,7 +725,7 @@ HangUp_Wait20Frames:
 	jr Phone_Wait20Frames
 
 Phone_Wait20Frames:
-	ld c, 20
+	ld c, 10
 	call DelayFrames
 	farcall PhoneRing_CopyTilemapAtOnce
 	ret
