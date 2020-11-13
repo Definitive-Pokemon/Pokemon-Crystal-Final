@@ -32,7 +32,7 @@ _CheckCellNum:
 	ld c, 8
 .loop
 	cp c
-	jr c, .inspect_flags ; got_it
+	jr c, .inspect_flags
 	inc hl
 	ld b, a
 	ld a, c
@@ -43,20 +43,17 @@ _CheckCellNum:
 	jr nz, .loop
 .not_found
 	pop bc
-	xor a
 	ret
 
 .inspect_flags
 	ld b, a
 	ld a, c
-	sub 8 ; incorrect?
+	sub 8
 	ld c, a
 	ld a, b
 	sub a, c
 	call CheckBitAInHL
 	jr z, .not_found
-; fallthrough
-.got_it
 	pop bc
 	scf
 	ret
