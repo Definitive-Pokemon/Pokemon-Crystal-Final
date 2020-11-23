@@ -1045,3 +1045,11 @@ BetaBlank_Blocks:
 
 GoldenrodDeptStoreRoof_Blocks:
 	INCBIN "maps/GoldenrodDeptStoreRoof.blk"
+
+SECTION "Map Blocks 4", ROMX
+
+RedRockIsle_Blocks:
+	INCBIN "maps/RedRockIsle.blk"
+
+ScarletCity_Blocks:
+	INCBIN "maps/ScarletCity.blk"
