@@ -37,9 +37,11 @@ Landmarks:
 	landmark  38,  62, LighthouseName
 	landmark  28,  56, BattleTowerName
 	landmark  28,  64, Route40Name
-	landmark  28,  92, WhirlIslandsName
-	landmark  28, 100, Route41Name
-	landmark  20, 100, CianwoodCityName
+	landmark  28,  80, RedRockIsleName
+	landmark  20,  84, ScarletCityName
+	landmark  20,  96, Route41Name
+	landmark  20, 100, WhirlIslandsName
+	landmark  12, 100, CianwoodCityName
 	landmark  92,  44, Route42Name
 	landmark  84,  44, MtMortarName
 	landmark 108,  44, MahoganyTownName

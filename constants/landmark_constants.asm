@@ -33,22 +33,24 @@
 	const LANDMARK_LIGHTHOUSE        ; 1c
 	const LANDMARK_BATTLE_TOWER      ; 1d
 	const LANDMARK_ROUTE_40          ; 1e
-	const LANDMARK_WHIRL_ISLANDS     ; 1f
-	const LANDMARK_ROUTE_41          ; 20
-	const LANDMARK_CIANWOOD_CITY     ; 21
-	const LANDMARK_ROUTE_42          ; 22
-	const LANDMARK_MT_MORTAR         ; 23
-	const LANDMARK_MAHOGANY_TOWN     ; 24
-	const LANDMARK_ROUTE_43          ; 25
-	const LANDMARK_LAKE_OF_RAGE      ; 26
-	const LANDMARK_ROUTE_44          ; 27
-	const LANDMARK_ICE_PATH          ; 28
-	const LANDMARK_BLACKTHORN_CITY   ; 29
-	const LANDMARK_DRAGONS_DEN       ; 2a
-	const LANDMARK_ROUTE_45          ; 2b
-	const LANDMARK_DARK_CAVE         ; 2c
-	const LANDMARK_ROUTE_46          ; 2d
-	const LANDMARK_SILVER_CAVE       ; 2e
+	const LANDMARK_RED_ROCK_ISLE          ; 1f
+	const LANDMARK_SCARLET_CITY          ; 20
+	const LANDMARK_WHIRL_ISLANDS     ; 21
+	const LANDMARK_ROUTE_41          ; 22
+	const LANDMARK_CIANWOOD_CITY     ; 23
+	const LANDMARK_ROUTE_42          ; 24
+	const LANDMARK_MT_MORTAR         ; 25
+	const LANDMARK_MAHOGANY_TOWN     ; 26
+	const LANDMARK_ROUTE_43          ; 27
+	const LANDMARK_LAKE_OF_RAGE      ; 28
+	const LANDMARK_ROUTE_44          ; 29
+	const LANDMARK_ICE_PATH          ; 2a
+	const LANDMARK_BLACKTHORN_CITY   ; 2b
+	const LANDMARK_DRAGONS_DEN       ; 2c
+	const LANDMARK_ROUTE_45          ; 2d
+	const LANDMARK_DARK_CAVE         ; 2e
+	const LANDMARK_ROUTE_46          ; 2f
+	const LANDMARK_SILVER_CAVE       ; 30
 
 KANTO_LANDMARK EQU const_value
 	const LANDMARK_PALLET_TOWN       ; 2f
