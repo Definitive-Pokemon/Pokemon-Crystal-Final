@@ -104,9 +104,6 @@ OlivineGymSign:
 OlivineLighthouseSign:
 	jumptext OlivineLighthouseSignText
 
-OlivineCityBattleTowerSign:
-	jumptext OlivineCityBattleTowerSignText
-
 OlivineCityPokecenterSign:
 	jumpstd PokecenterSignScript
 
@@ -274,16 +271,6 @@ OlivineLighthouseSignText:
 	text "OLIVINE LIGHTHOUSE"
 	line "Also known as the"
 	cont "GLITTER LIGHTHOUSE"
-	done
-
-OlivineCityBattleTowerSignText:
-	text "BATTLE TOWER AHEAD"
-	line "Opening Now!"
-	done
-
-OlivineCityBattleTowerSignText_NotYetOpen:
-; unused; originally shown when the Battle Tower was closed
-	text "BATTLE TOWER AHEAD"
 	done
 
 OlivineCity_MapEvents:
