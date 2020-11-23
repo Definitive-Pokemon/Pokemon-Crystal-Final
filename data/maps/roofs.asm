@@ -36,7 +36,6 @@ MapGroupRoofs:
 	db ROOF_NEW_BARK  ; 24 (New Bark)
 	db -1             ; 25
 	db ROOF_NEW_BARK  ; 26 (Cherrygrove)
-	db ROOF_NEW_BARK  ; 27 (Red Rock)
 
 Roofs:
 ; entries correspond to ROOF_* constants
