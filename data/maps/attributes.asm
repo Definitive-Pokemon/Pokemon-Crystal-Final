@@ -201,11 +201,19 @@ ENDM
 	connection east, Route38, ROUTE_38, 0
 
 	map_attributes Route40, ROUTE_40, $35, SOUTH | EAST
-	connection south, Route41, ROUTE_41, -15
+	connection south, RedRockIsle, RED_ROCK_ISLE, 0
 	connection east, OlivineCity, OLIVINE_CITY, -9
 
+	map_attributes RedRockIsle, RED_ROCK_ISLE, $35, NORTH | WEST
+	connection north, Route40, ROUTE_40, 0
+	connection west, ScarletCity, SCARLET_CITY, 9
+
+	map_attributes ScarletCity, SCARLET_CITY, $05, SOUTH | EAST
+	connection south, Route41, ROUTE_41, -14
+	connection east, RedRockIsle, RED_ROCK_ISLE, -9
+
 	map_attributes Route41, ROUTE_41, $35, NORTH | WEST
-	connection north, Route40, ROUTE_40, 15
+	connection north, ScarletCity, SCARLET_CITY, 14
 	connection west, CianwoodCity, CIANWOOD_CITY, 0
 
 	map_attributes Route42, ROUTE_42, $05, WEST | EAST
