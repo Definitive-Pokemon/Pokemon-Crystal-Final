@@ -298,7 +298,6 @@ OlivineCity_MapEvents:
 	bg_event 20, 24, BGEVENT_READ, OlivineCityPortSign
 	bg_event  7, 11, BGEVENT_READ, OlivineGymSign
 	bg_event 30, 28, BGEVENT_READ, OlivineLighthouseSign
-	bg_event  3, 23, BGEVENT_READ, OlivineCityBattleTowerSign
 	bg_event 14, 21, BGEVENT_READ, OlivineCityPokecenterSign
 	bg_event 20, 17, BGEVENT_READ, OlivineCityMartSign
 
