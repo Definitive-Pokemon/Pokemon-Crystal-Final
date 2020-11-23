@@ -3503,27 +3503,27 @@ KimonoGirlGroup:
 
 	; KIMONO_GIRL (2)
 	db "NAOKO@", TRAINERTYPE_NORMAL
-	db 38, FLAREON
+	db 22, FLAREON
 	db -1 ; end
 
 	; KIMONO_GIRL (3)
 	db "SAYO@", TRAINERTYPE_NORMAL
-	db 38, ESPEON
+	db 22, ESPEON
 	db -1 ; end
 
 	; KIMONO_GIRL (4)
 	db "ZUKI@", TRAINERTYPE_NORMAL
-	db 38, UMBREON
+	db 22, UMBREON
 	db -1 ; end
 
 	; KIMONO_GIRL (5)
 	db "KUNI@", TRAINERTYPE_NORMAL
-	db 38, VAPOREON
+	db 22, VAPOREON
 	db -1 ; end
 
 	; KIMONO_GIRL (6)
 	db "MIKI@", TRAINERTYPE_NORMAL
-	db 38, JOLTEON
+	db 22, JOLTEON
 	db -1 ; end
 
 TwinsGroup:
