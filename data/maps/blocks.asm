@@ -67,9 +67,6 @@ ViridianPokecenter2FBeta_Blocks:
 SaffronPokecenter2FBeta_Blocks:
 	INCBIN "maps/Pokecenter2F.blk"
 
-Route41_Blocks:
-	INCBIN "maps/Route41.blk"
-
 Route33_Blocks:
 	INCBIN "maps/Route33.blk"
 
@@ -1053,3 +1050,6 @@ RedRockIsle_Blocks:
 
 ScarletCity_Blocks:
 	INCBIN "maps/ScarletCity.blk"
+
+Route41_Blocks:
+	INCBIN "maps/Route41.blk"
