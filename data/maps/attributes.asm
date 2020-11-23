@@ -209,11 +209,11 @@ ENDM
 	connection west, ScarletCity, SCARLET_CITY, 9
 
 	map_attributes ScarletCity, SCARLET_CITY, $05, SOUTH | EAST
-	connection south, Route41, ROUTE_41, -14
+	connection south, Route41, ROUTE_41, -13
 	connection east, RedRockIsle, RED_ROCK_ISLE, -9
 
 	map_attributes Route41, ROUTE_41, $35, NORTH | WEST
-	connection north, ScarletCity, SCARLET_CITY, 14
+	connection north, ScarletCity, SCARLET_CITY, 13
 	connection west, CianwoodCity, CIANWOOD_CITY, 0
 
 	map_attributes Route42, ROUTE_42, $05, WEST | EAST
