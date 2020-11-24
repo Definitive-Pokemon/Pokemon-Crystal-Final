@@ -1053,3 +1053,6 @@ ScarletCity_Blocks:
 
 Route41_Blocks:
 	INCBIN "maps/Route41.blk"
+
+RedRockOutlook_Blocks:
+	INCBIN "maps/RedRockOutlook.blk"
