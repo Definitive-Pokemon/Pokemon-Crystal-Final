@@ -236,7 +236,6 @@ INCLUDE "maps/BattleTowerBattleRoom.asm"
 INCLUDE "maps/BattleTowerElevator.asm"
 INCLUDE "maps/BattleTowerHallway.asm"
 INCLUDE "maps/Route40BattleTowerGate.asm"
-INCLUDE "maps/BattleTowerOutside.asm"
 
 
 SECTION "Map Scripts 13", ROMX
@@ -487,3 +486,4 @@ INCLUDE "maps/RedRockIsle.asm"
 INCLUDE "maps/ScarletCity.asm"
 INCLUDE "maps/RedRockOutlook.asm"
 INCLUDE "maps/Route41.asm"
+INCLUDE "maps/BattleTowerOutside.asm"

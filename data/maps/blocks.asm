@@ -1034,9 +1034,6 @@ BattleTowerHallway_Blocks:
 BattleTowerElevator_Blocks:
 	INCBIN "maps/BattleTowerElevator.blk"
 
-BattleTowerOutside_Blocks:
-	INCBIN "maps/BattleTowerOutside.blk"
-
 BetaBlank_Blocks:
 	INCBIN "maps/unused/BetaBlank.blk"
 
@@ -1050,6 +1047,9 @@ RedRockIsle_Blocks:
 
 ScarletCity_Blocks:
 	INCBIN "maps/ScarletCity.blk"
+
+BattleTowerOutside_Blocks:
+	INCBIN "maps/BattleTowerOutside.blk"
 
 Route41_Blocks:
 	INCBIN "maps/Route41.blk"
