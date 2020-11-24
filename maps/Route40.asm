@@ -332,7 +332,7 @@ Route40SignText:
 	text "ROUTE 40"
 
 	para "RED ROCK"
-	line ISLE - "
+	line ISLE -"
 	cont "OLIVINE CITY"
 	done
 
