@@ -303,11 +303,11 @@ ROMX $7d
 	"Mobile News Data"
 ROMX $7e
 	"Crystal Events"
+	"Events"
 ROMX $7f
 	org $7de0
 	"Stadium 2 Checksums"
-ROMX $80
-	"Events"
+
 WRAM0
 	"Stack"
 	"Audio RAM"
