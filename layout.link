@@ -301,9 +301,9 @@ ROMX $7c
 	"Battle Tower Trainer Data"
 ROMX $7d
 	"Mobile News Data"
+	"Events"
 ROMX $7e
 	"Crystal Events"
-	"Events"
 ROMX $7f
 	org $7de0
 	"Stadium 2 Checksums"
