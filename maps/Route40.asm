@@ -331,15 +331,13 @@ MonicaNotMondayText:
 Route40SignText:
 	text "ROUTE 40"
 
-	para "SCARLET CITY -"
-	line "OLIVINE CITY"
+	para "RED ROCK"
+	line ISLE - "
+	cont "OLIVINE CITY"
 	done
 
 Route40_MapEvents:
 	db 0, 0 ; filler
-
-	def_warp_events
-	warp_event  9,  5, ROUTE_40_BATTLE_TOWER_GATE, 1
 
 	def_coord_events
 

@@ -497,5 +497,6 @@ ENDM
 
 	map_const RED_ROCK_ISLE, 10, 18
 	map_const SCARLET_CITY, 20, 18
+	map_const RED_ROCK_OUTLOOK, 24, 18
 
 NUM_MAP_GROUPS EQU const_value ; 26
