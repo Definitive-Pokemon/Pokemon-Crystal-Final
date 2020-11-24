@@ -307,6 +307,8 @@ ROMX $7e
 ROMX $7f
 	org $7de0
 	"Stadium 2 Checksums"
+ROMX $80
+	"Map Blocks 4"
 WRAM0
 	"Stack"
 	"Audio RAM"
