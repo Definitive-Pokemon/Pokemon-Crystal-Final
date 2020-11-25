@@ -236,7 +236,7 @@ ScarletCity_MapEvents:
 	def_object_events
 	object_event 27, 30, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityLassScript, -1
 	object_event 17,  7, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityBeauty1Script, -1
-	object_event 25,  6, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, , 0, OBJECTTYPE_SCRIPT, 0, ScarletCitySailorScript, -1
+	object_event 25,  6, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCitySailorScript, -1
 	object_event 27,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ScarletCitySuperNerdScript, -1
 	object_event 24, 20, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityPokefanF1Script, -1
 	object_event 11, 21, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityPokefanF2Script, -1
