@@ -18,7 +18,7 @@ ScarletCity_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .Flypoint
 
 .Flypoint:
-	setflag ENGINE_FLYPOINT_SCARLET_CITY
+	setflag ENGINE_FLYPOINT_SCARLET
 	return
 
 ScarletCityLassScript:
