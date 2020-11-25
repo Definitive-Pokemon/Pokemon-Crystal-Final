@@ -708,3 +708,4 @@ ENDM
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
 	map_attributes ScarletMart, SCARLET_MART, $00, 0
 	map_attributes ScarletPokecenter1F, SCARLET_POKECENTER_1F, $00, 0
+	map_attributes WhirlCupColosseum, WHIRL_CUP_COLOSSEUM, $00, 0
