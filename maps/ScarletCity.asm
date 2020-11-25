@@ -1,9 +1,220 @@
 	object_const_def
+	const SCARLETCITY_LASS
+	const SCARLETCITY_BEAUTY1
+	const SCARLETCITY_SAILOR
+	const SCARLETCITY_SUPER_NERD
+	const SCARLETCITY_POKEFAN_F1
+	const SCARLETCITY_POKEFAN_F2
+	const SCARLETCITY_POKEFAN_M1
+	const SCARLETCITY_STANDING_YOUNGSTER
+	const SCARLETCITY_POKEFAN_M2
+	const SCARLETCITY_BEAUTY2
+	
 
 ScarletCity_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, . Flypoint
+
+.Flypoint:
+	setflag ENGINE_FLYPOINT_SCARLET_CITY
+	return
+
+ScarletCityLassScript:
+	jumptextfaceplayer ScarletCityLassText
+
+ScarletCityBeauty1Script:
+	jumptextfaceplayer ScarletCityBeauty1Text
+
+ScarletCitySailorScript:
+	jumptextfaceplayer ScarletCitySailorText
+
+ScarletCitySuperNerdScript:
+	jumptextfaceplayer ScarletCitySuperNerdText
+
+ScarletCityPokefanF1Script:
+	jumptextfaceplayer ScarletCityPokefanF1Text
+
+ScarletCityPokefanF2Script:
+	jumptextfaceplayer ScarletCityPokefanF2Text
+
+ScarletCityPokefanM1Script:
+	jumptextfaceplayer ScarletCityPokefanM1Text
+
+ScarletCityStandingYoungsterScript:
+	jumptextfaceplayer ScarletCityStandingYoungsterText
+
+ScarletCityPokefanM2Script:
+	jumptextfaceplayer ScarletCityPokefanM2Text
+
+ScarletCityBeauty2Script:
+	jumptextfaceplayer ScarletCityBeauty2Text
+
+ScarletCityLassText:
+	text "We recently moved"
+	line "here."
+
+	para "This city is so"
+	line "nice to live"
+	cont "in!"
+
+	para "Lots of flowers,"
+	line "and trees and"
+
+	para "the fresh air"
+	line "of the sea."
+	done
+
+ScarletCityBeauty1Text:
+	text "Are you gonna"
+	line "take on the"
+	cont "BATTLE TOWER?"
+
+	para "Better be careful,"
+	line "because I'm going"
+
+	para "to smash"
+	line " everyone who"
+	cont "gets in my way!"
+	done
+
+ScarletCitySailorText:
+	text "I sailed all the"
+	line "way to RED ROCK"
+
+	para "to challenge the"
+	line "toughest TRAINERS"
+	cont "in this here tower!"
+
+	text "You think you stand"
+	line "a chance?"
+
+	text "Bwahahahaha!"
+	done
+
+ScarletCitySuperNerdText:
+	text "All those people"
+	line "come together"
+	cont "just to battle."
+
+	para "Me? I just come"
+	line "here to enjoy the"
+	cont "view of the sea."
+	done
+
+ScarletCityPokefanF1Text:
+	text "What do you"
+	line "want?"
+
+	para "I'm just taking"
+	line "a little stroll."
+
+	para "If you're bored,"
+	line "go take a look"
+
+	para "at the RED ROCK"
+	line "LABORATORY."
+
+	para "They raise all"
+	line "sorts of ancient"
+	cont "#MON there."
+	done
+
+ScarletCityPokefanF2Text:
+	text "They say the"
+	line "crater to the"
+
+	para "west has been"
+	line "formed by the"
+
+	para "impact of a"
+	line "large meteor."
+
+	para "I'd stay away"
+	line "from such a"
+
+	para "dangerous place,"
+	line "if I were you."
+	done
+
+ScarletCityPokefanM1Text:
+	text "This city was built"
+	line "around three years"
+	cont "ago."
+
+	para "From what I heard,"
+	line "it's thanks to the"
+
+	para "continued support"
+	line "of the SCIENTIST"
+
+	para "GUILD that this"
+	line "place has held up"
+	cont "so well."
+	done
+
+ScarletCityStandingYoungsterText:
+	text "Ah! The BATTLE"
+	line "TOWER!"
+
+	para "Three years ago,"
+	line "a trainer named"
+
+	para "RED came to"
+	line "these islands,"
+
+	para "and inspired its"
+	line "inhabitants to"
+
+	para "reach for greater"
+	line "heights."
+
+	para "With funding from"
+	line "the SCIENTIST"
+
+	para "GUILD, the people"
+	line "managed to build"
+
+	para "this magnificent"
+	line "structure."
+	done
+
+ScarletCityPokefanM2Text:
+	text "Hey, you're a"
+	line "TRAINER, right?"
+
+	para "If you haven't"
+	line "yet, you should"
+
+	para "check out the"
+	line "WHIRL CUP"
+	cont "competition!"
+
+	para "TRAINERS"
+	line "challenge the"
+
+	para "MASTERS of the"
+	line "COLOSSEUMS"
+
+	para "scattered across"
+	line "the WHIRL ISLANDS."
+
+	para "The winner usually"
+	line "gets a nifty reward"
+	cont "for their efforts!"
+	done
+
+ScarletCityBeauty2Text:
+	text "I'm gonna"
+	line "challenge the"
+
+	para "MASTER of this"
+	line "COLOSSEUM,"
+
+	para "and I'll win,"
+	line "no sweat!"
+	done
 
 ScarletCity_MapEvents:
 	db 0, 0 ; filler
@@ -23,3 +234,13 @@ ScarletCity_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 27, 30, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityLassScript, -1
+	object_event 17,  7, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityBeauty1Script, -1
+	object_event 25,  6, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, , 0, OBJECTTYPE_SCRIPT, 0, ScarletCitySailorScript, -1
+	object_event 27,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ScarletCitySuperNerdScript, -1
+	object_event 24, 20, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityPokefanF1Script, -1
+	object_event 11, 21, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityPokefanF2Script, -1
+	object_event 34, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityPokefanM1Script, -1
+	object_event 22,  8, SPRITE_STANDING_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ScarletCityStandingYoungsterScript, -1
+	object_event  6, 20, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityPokefanM2Script, -1
+	object_event 13, 17, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityBeauty2Script, -1
