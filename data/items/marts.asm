@@ -400,7 +400,7 @@ MartUnderground:
 	db REVIVAL_HERB
 	db -1 ; end
 MartScarlet:
-	db 9 ; # items
+	db 10 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
 	db SUPER_POTION
