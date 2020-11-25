@@ -137,9 +137,11 @@ ScarletCityPokefanF2Text:
 	done
 
 ScarletCityPokefanM1Text:
-	text "This city was built"
-	line "around three years"
-	cont "ago."
+	text "This city was"
+	line "built around"
+
+	para "three years"
+	line "ago."
 
 	para "From what I heard,"
 	line "it's thanks to the"
@@ -182,12 +184,11 @@ ScarletCityPokefanM2Text:
 	text "Hey, you're a"
 	line "TRAINER, right?"
 
-	para "If you haven't"
-	line "yet, you should"
+	para "If you haven't yet,"
+	line "you should check"
 
-	para "check out the"
-	line "WHIRL CUP"
-	cont "competition!"
+	para "out the WHIRL"
+	line "CUP competition!"
 
 	para "TRAINERS challenge"
 	line "the MASTERS of"
@@ -205,10 +206,10 @@ ScarletCityPokefanM2Text:
 
 ScarletCityBeauty2Text:
 	text "I'm gonna challenge"
-	line " the MASTER of this"
+	line "the MASTER of this"
 
 	para "COLOSSEUM, and I'll"
-	line " win, no sweat!"
+	line "win, no sweat!"
 	done
 
 ScarletCity_MapEvents:
