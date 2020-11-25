@@ -87,10 +87,10 @@ ScarletCitySailorText:
 	line "toughest TRAINERS"
 	cont "in this here tower!"
 
-	text "You think you stand"
+	para "You think you stand"
 	line "a chance?"
 
-	text "Bwahahahaha!"
+	para "Bwahahahaha!"
 	done
 
 ScarletCitySuperNerdText:
