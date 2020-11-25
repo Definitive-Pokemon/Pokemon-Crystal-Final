@@ -195,6 +195,8 @@ CherrygroveGymSpeechHouse_Blocks:
 GuideGentsHouse_Blocks:
 CherrygroveEvolutionSpeechHouse_Blocks:
 Route30BerryHouse_Blocks:
+ScarletHouse1_Blocks:
+ScarletHouse2_Blocks:
 	INCBIN "maps/House1.blk"
 
 SafariZoneFuchsiaGateBeta_Blocks:
@@ -443,6 +445,7 @@ EcruteakLugiaSpeechHouse_Blocks:
 EcruteakItemfinderHouse_Blocks:
 VioletNicknameSpeechHouse_Blocks:
 VioletKylesHouse_Blocks:
+ScarletOldHouse_Blocks:
 	INCBIN "maps/House2.blk"
 
 BetaUnionCave_Blocks:
