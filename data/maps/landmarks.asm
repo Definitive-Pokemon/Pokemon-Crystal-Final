@@ -40,6 +40,7 @@ Landmarks:
 	landmark  28,  80, RedRockIsleName
 	landmark  20,  84, ScarletCityName
 	landmark 16,  84, RedRockOutlookName
+	landmark 12,  84, SearingCraterName
 	landmark  20,  96, Route41Name
 	landmark  20, 100, WhirlIslandsName
 	landmark  12, 100, CianwoodCityName
@@ -211,3 +212,4 @@ SpecialMapName:      db "SPECIAL@"
 RedRockIsleName:      db "RED ROCK¯ISLE@"
 ScarletCityName:      db "SCARLET¯CITY@"
 RedRockOutlookName:      db "RED ROCK¯OUTLOOK@"
+SearingCraterName:      db "SEARING CRATER@"

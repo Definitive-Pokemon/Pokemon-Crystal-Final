@@ -1062,5 +1062,14 @@ RedRockOutlook_Blocks:
 WhirlCupColosseum_Blocks:
 	INCBIN "maps/WhirlCupColosseum.blk"
 
+RedRockLab_Blocks:
+	INCBIN "maps/RedRockLab.blk"
+
+SearingCrater1F_Blocks:
+	INCBIN "maps/SearingCrater1F.blk"
+
+SearingCraterB1F_Blocks:
+	INCBIN "maps/SearingCraterB1F.blk"
+
 Route41_Blocks:
 	INCBIN "maps/Route41.blk"

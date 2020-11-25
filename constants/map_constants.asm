@@ -504,5 +504,8 @@ ENDM
 	map_const SCARLET_HOUSE_1, 4, 4 ; 13
 	map_const SCARLET_HOUSE_2, 4, 4 ; 14
 	map_const SCARLET_OLD_HOUSE, 4, 4 ; 15
+	map_const RED_ROCK_LAB, 8, 4 ; 16
+	map_const SEARING_CRATER_1F, 15, 15 ; 17
+	map_const SEARING_CRATER_B1F, 7, 7 ; 18
 
 NUM_MAP_GROUPS EQU const_value ; 26
