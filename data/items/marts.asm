@@ -409,7 +409,6 @@ MartScarlet:
 	db PARLYZ_HEAL
 	db AWAKENING
 	db BURN_HEAL
-	db ICE_HEAL
 	db SUPER_REPEL
 	db BLUESKY_MAIL
 	db -1 ; end
