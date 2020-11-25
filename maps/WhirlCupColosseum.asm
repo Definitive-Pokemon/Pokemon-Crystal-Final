@@ -11,3 +11,9 @@ WhirlCupColosseum_MapEvents:
 	def_warp_events
 	warp_event  8, 17, SCARLET_CITY, 4 ; 1
 	warp_event  9, 17, SCARLET_CITY, 4 ; 2
+
+	def_coord_events
+
+	def_bg_events
+
+	def_object_events

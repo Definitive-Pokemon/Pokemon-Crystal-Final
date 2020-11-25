@@ -7,3 +7,9 @@ RedRockIsle_MapScripts:
 
 RedRockIsle_MapEvents:
 	db 0, 0 ; filler
+
+	def_coord_events
+
+	def_bg_events
+
+	def_object_events

@@ -17,3 +17,9 @@ ScarletCity_MapEvents:
 	warp_event 21, 25, SCARLET_HOUSE_2, 1 ; 6
 	warp_event 17, 21, SCARLET_OLD_HOUSE, 1 ; 7
 	warp_event 27, 27, RED_ROCK_LAB, 1 ; 8
+
+	def_coord_events
+
+	def_bg_events
+
+	def_object_events
