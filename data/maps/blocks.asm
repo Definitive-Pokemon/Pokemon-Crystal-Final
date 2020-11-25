@@ -1053,8 +1053,11 @@ RedRockIsle_Blocks:
 ScarletCity_Blocks:
 	INCBIN "maps/ScarletCity.blk"
 
-Route41_Blocks:
-	INCBIN "maps/Route41.blk"
-
 RedRockOutlook_Blocks:
 	INCBIN "maps/RedRockOutlook.blk"
+
+WhirlCupColosseum_Blocks:
+	INCBIN "maps/WhirlCupColosseum.blk"
+
+Route41_Blocks:
+	INCBIN "maps/Route41.blk"

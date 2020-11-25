@@ -12,3 +12,4 @@ ScarletCity_MapEvents:
 	warp_event 21, 15, SCARLET_MART, 1 ; 1
 	warp_event 27, 15, SCARLET_POKECENTER_1F, 1 ; 2
 	warp_event 23,  5, ROUTE_40_BATTLE_TOWER_GATE, 1 ; 3
+	warp_event 14, 15, WHIRL_CUP_COLOSSEUM, 1 ; 4

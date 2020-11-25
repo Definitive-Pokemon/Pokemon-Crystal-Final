@@ -31,7 +31,7 @@
 	tilecoll WATER_21, WATER_21, WALL, WALL ; 1e
 	tilecoll WALL, WALL, WALL, WATER ; 1f
 	tilecoll WALL, FLOOR, WATER, WARP_CARPET_DOWN ; 20
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 21
+	tilecoll FLOOR, WALL, FLOOR, WALL ; 21
 	tilecoll BUOY, BUOY, BUOY, WATER ; 22
 	tilecoll BUOY, BUOY, WATER, BUOY ; 23
 	tilecoll BUOY, BUOY, WATER, WATER ; 24

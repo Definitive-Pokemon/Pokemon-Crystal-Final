@@ -500,5 +500,6 @@ ENDM
 	map_const BATTLE_TOWER_BATTLE_ROOM, 4,  4 ; 9
 	map_const BATTLE_TOWER_ELEVATOR, 2,  2 ; 10
 	map_const BATTLE_TOWER_HALLWAY, 11,  2 ; 11
+	map_const WHIRL_CUP_COLOSSEUM, 9, 9 ; 12
 
 NUM_MAP_GROUPS EQU const_value ; 26

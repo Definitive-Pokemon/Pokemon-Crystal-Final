@@ -208,10 +208,10 @@ ENDM
 	connection north, Route40, ROUTE_40, 0
 	connection west, ScarletCity, SCARLET_CITY, 9
 
-	map_attributes ScarletCity, SCARLET_CITY, $05, SOUTH | EAST | WEST
+	map_attributes ScarletCity, SCARLET_CITY, $05, SOUTH | WEST | EAST
 	connection south, Route41, ROUTE_41, -13
-	connection east, RedRockIsle, RED_ROCK_ISLE, -9
 	connection west, RedRockOutlook, RED_ROCK_OUTLOOK, 0
+	connection east, RedRockIsle, RED_ROCK_ISLE, -9
 
 	map_attributes RedRockOutlook, RED_ROCK_OUTLOOK, $35, EAST
 	connection east, ScarletCity, SCARLET_CITY, 0
