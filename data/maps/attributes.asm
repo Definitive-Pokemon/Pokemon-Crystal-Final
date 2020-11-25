@@ -213,7 +213,7 @@ ENDM
 	connection east, RedRockIsle, RED_ROCK_ISLE, -9
 	connection west, RedRockOutlook, RED_ROCK_OUTLOOK, 0
 
-	map_attributes RedRockOutlook, RED_ROCK_OUTLOOK, $05, EAST
+	map_attributes RedRockOutlook, RED_ROCK_OUTLOOK, $35, EAST
 	connection east, ScarletCity, SCARLET_CITY, 0
 
 	map_attributes Route41, ROUTE_41, $35, NORTH | WEST
@@ -706,3 +706,5 @@ ENDM
 	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
+	map_attributes ScarletMart, SCARLET_MART, $00, 0
+	map_attributes ScarletPokecenter1F, SCARLET_POKECENTER_1F, $00, 0

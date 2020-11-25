@@ -495,8 +495,10 @@ ENDM
 
 	newgroup
 
-	map_const RED_ROCK_ISLE, 10, 18
-	map_const SCARLET_CITY, 20, 18
-	map_const RED_ROCK_OUTLOOK, 24, 18
+	map_const RED_ROCK_ISLE, 10, 18 ;  1
+	map_const SCARLET_CITY, 20, 18 ;  2
+	map_const RED_ROCK_OUTLOOK, 24, 18 ;  3
+	map_const SCARLET_MART, 6,  4 ;  4
+	map_const SCARLET_POKECENTER_1F, 5,  4 ;  5
 
 NUM_MAP_GROUPS EQU const_value ; 26

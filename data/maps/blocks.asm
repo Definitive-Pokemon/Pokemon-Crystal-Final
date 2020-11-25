@@ -329,6 +329,7 @@ LavenderMart_Blocks:
 ViridianMart_Blocks:
 SaffronMart_Blocks:
 CherrygroveMart_Blocks:
+ScarletMart_Blocks
 	INCBIN "maps/Mart.blk"
 
 Route10North_Blocks:
@@ -358,6 +359,7 @@ CianwoodPokecenter1F_Blocks:
 ViridianPokecenter1F_Blocks:
 SaffronPokecenter1F_Blocks:
 CherrygrovePokecenter1F_Blocks:
+ScarletPokecenter1F_Blocks:
 	INCBIN "maps/Pokecenter1F.blk"
 
 BetaPewterMuseumOfScience1F_Blocks:
