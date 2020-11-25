@@ -52,12 +52,11 @@ ScarletCityBeauty2Script:
 	jumptextfaceplayer ScarletCityBeauty2Text
 
 ScarletCityLassText:
-	text "We recently moved"
-	line "here."
+	text "We recently"
+	line "moved here."
 
 	para "This city is so"
-	line "nice to live"
-	cont "in!"
+	line "nice to live in!"
 
 	para "Lots of flowers,"
 	line "and trees and"
@@ -74,9 +73,9 @@ ScarletCityBeauty1Text:
 	para "Better be careful,"
 	line "because I'm going"
 
-	para "to smash"
-	line " everyone who"
-	cont "gets in my way!"
+	para "to smash everyone"
+	line "who gets in my"
+	cont "way!"
 	done
 
 ScarletCitySailorText:
@@ -85,10 +84,10 @@ ScarletCitySailorText:
 
 	para "to challenge the"
 	line "toughest TRAINERS"
-	cont "in this here tower!"
+	cont "in this tower!"
 
-	para "You think you stand"
-	line "a chance?"
+	para "You think you"
+	line "stand a chance?"
 
 	para "Bwahahahaha!"
 	done
@@ -104,11 +103,10 @@ ScarletCitySuperNerdText:
 	done
 
 ScarletCityPokefanF1Text:
-	text "What do you"
-	line "want?"
+	text "What do you want?"
 
-	para "I'm just taking"
-	line "a little stroll."
+	para "I'm just taking a"
+	line "little stroll."
 
 	para "If you're bored,"
 	line "go take a look"
@@ -131,11 +129,11 @@ ScarletCityPokefanF2Text:
 	para "impact of a"
 	line "large meteor."
 
-	para "I'd stay away"
-	line "from such a"
+	para "I'd stay away from"
+	line "such a dangerous"
 
-	para "dangerous place,"
-	line "if I were you."
+	para "place, if I were"
+	line "you."
 	done
 
 ScarletCityPokefanM1Text:
@@ -191,29 +189,26 @@ ScarletCityPokefanM2Text:
 	line "WHIRL CUP"
 	cont "competition!"
 
-	para "TRAINERS"
-	line "challenge the"
-
-	para "MASTERS of the"
-	line "COLOSSEUMS"
+	para "TRAINERS challenge"
+	line "the MASTERS of"
+	cont "the COLOSSEUMS"
 
 	para "scattered across"
 	line "the WHIRL ISLANDS."
 
 	para "The winner usually"
-	line "gets a nifty reward"
-	cont "for their efforts!"
+	line "gets a nifty"
+
+	para "reward for their"
+	line "efforts!"
 	done
 
 ScarletCityBeauty2Text:
-	text "I'm gonna"
-	line "challenge the"
+	text "I'm gonna challenge"
+	line " the MASTER of this"
 
-	para "MASTER of this"
-	line "COLOSSEUM,"
-
-	para "and I'll win,"
-	line "no sweat!"
+	para "COLOSSEUM, and I'll"
+	line " win, no sweat!"
 	done
 
 ScarletCity_MapEvents:
@@ -238,9 +233,9 @@ ScarletCity_MapEvents:
 	object_event 17,  7, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityBeauty1Script, -1
 	object_event 25,  6, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCitySailorScript, -1
 	object_event 27,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ScarletCitySuperNerdScript, -1
-	object_event 24, 20, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityPokefanF1Script, -1
+	object_event 24, 20, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityPokefanF1Script, -1
 	object_event 11, 21, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityPokefanF2Script, -1
 	object_event 34, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityPokefanM1Script, -1
 	object_event 22,  8, SPRITE_STANDING_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ScarletCityStandingYoungsterScript, -1
-	object_event  6, 20, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityPokefanM2Script, -1
+	object_event  6, 20, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityPokefanM2Script, -1
 	object_event 13, 17, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityBeauty2Script, -1
