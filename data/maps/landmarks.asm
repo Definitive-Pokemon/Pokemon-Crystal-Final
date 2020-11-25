@@ -40,7 +40,7 @@ Landmarks:
 	landmark  28,  80, RedRockIsleName
 	landmark  20,  84, ScarletCityName
 	landmark 16,  84, RedRockOutlookName
-	landmark  20,  92, Route41Name
+	landmark  20,  96, Route41Name
 	landmark  20, 100, WhirlIslandsName
 	landmark  12, 100, CianwoodCityName
 	landmark  92,  44, Route42Name

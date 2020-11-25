@@ -36,8 +36,8 @@
 	const LANDMARK_RED_ROCK_ISLE          ; 1f
 	const LANDMARK_SCARLET_CITY          ; 20
 	const LANDMARK_RED_ROCK_OUTLOOK         ; 21
-	const LANDMARK_WHIRL_ISLANDS     ; 22
-	const LANDMARK_ROUTE_41          ; 23
+	const LANDMARK_ROUTE_41          ; 22
+	const LANDMARK_WHIRL_ISLANDS     ; 23
 	const LANDMARK_CIANWOOD_CITY     ; 24
 	const LANDMARK_ROUTE_42          ; 25
 	const LANDMARK_MT_MORTAR         ; 26
