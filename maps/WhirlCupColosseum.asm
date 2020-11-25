@@ -1,11 +1,11 @@
 	object_const_def
 
-ScarletCity_MapScripts:
+WhirlCupColosseum_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
-ScarletCity_MapEvents:
+WhirlCupColosseum_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
