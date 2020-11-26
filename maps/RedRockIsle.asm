@@ -12,7 +12,7 @@ RedRockScarletSign:
 	jumptext RedRockScarletSignText
 
 RedRockIsleLava:
-	itemball LAVA_COOKIE
+	itemball POKE_DOLL
 
 RedRockIsleFire:
 	itemball FIRE_STONE
@@ -34,7 +34,7 @@ RedRockIsle_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 4, 6, BGEVENT_READ, RedRockIsleSign
+	bg_event 4, 6, BGEVENT_READ, RedRockSign
 	bg_event 8, 24, BGEVENT_READ, RedRockScarletSign
 
 	def_object_events

@@ -55,7 +55,7 @@ ScarletCitySign:
 	jumptext ScarletCitySignText
 
 ScarletGymSign:
-	jumptext ScarletGymText
+	jumptext ScarletGymSignText
 
 BattleTowerSign:
 	jumptext BattleTowerSignText

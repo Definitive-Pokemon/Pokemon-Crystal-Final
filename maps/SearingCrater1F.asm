@@ -6,13 +6,13 @@ SearingCrater1F_MapScripts:
 	def_callbacks
 
 SearingCraterMoon:
-	itemball Moon_STONE
+	itemball MOON_STONE
 
 SearingCraterHyper:
 	itemball HYPER_POTION
 
 SearingCraterRoot:
-	itemball BIG_ROOT
+	itemball ENERGY_ROOT
 
 SearingCrater1F_MapEvents:
 	db 0, 0 ; filler
