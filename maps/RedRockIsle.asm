@@ -5,12 +5,6 @@ RedRockIsle_MapScripts:
 
 	def_callbacks
 
-RedRockIsleDoll:
-	itemball POKE_DOLL
-
-RedRockIsleFire:
-	itemball FIRE_STONE
-
 RedRockIsle_MapEvents:
 	db 0, 0 ; filler
 
@@ -19,5 +13,4 @@ RedRockIsle_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 12,  30, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RedRockIsleDoll, EVENT_RED_ROCK_ISLE_DOLL
-	object_event 4,  15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RedRockIsleFire, EVENT_RED_ROCK_ISLE_FIRE
+
