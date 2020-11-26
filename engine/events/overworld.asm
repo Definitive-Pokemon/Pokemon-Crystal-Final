@@ -1537,32 +1537,14 @@ UseRockSmashText:
 AskRockSmashScript:
 	callasm HasRockSmash
 	ifequal 1, .no
-
-	farcall RegionCheck
-	ld a, e
-	and a
-	jr nz, .kantoCheckOWRockSmashAble
-	ld de, ENGINE_ZEPHYRBADGE
-	farcall CheckBadge
-	jr c, .no
-
-.tryToOWRockSmash
+	callasm RockSmashBadgeCheck
+	ifequal 1, .no
 	opentext
 	writetext AskRockSmashText
 	yesorno
 	iftrue RockSmashScript
 	closetext
 	end
-
-.kantoCheckOWRockSmashAble
-	checkflag ENGINE_FLYPOINT_VERMILION
-	and a
-	jr z, .tryToOWRockSmash
-	ld de, ENGINE_BOULDERBADGE
-	farcall CheckBadge
-	jr c, .no
-	jr .tryToOWRockSmash
-
 .no
 	jumptext MaySmashText
 
@@ -1584,6 +1566,34 @@ HasRockSmash:
 .yes
 	xor a
 	jr .done
+.done
+	ld [wScriptVar], a
+	ret
+
+RockSmashBadgeCheck:
+	farcall RegionCheck
+	ld a, e
+	and a
+	jr nz, .kantoCheckOWRockSmashAble
+	ld de, ENGINE_ZEPHYRBADGE
+	farcall CheckBadge
+	jr c, .incorrect_badge
+	jr .pass
+
+.kantoCheckOWRockSmashAble
+	checkflag ENGINE_FLYPOINT_VERMILION
+	and a
+	jr z, .pass
+	ld de, ENGINE_BOULDERBADGE
+	farcall CheckBadge
+	jr c, .incorrect_badge
+	jr .pass
+
+.incorrect_badge
+	ld a, 1
+	jr .done
+.pass
+	xor a
 .done
 	ld [wScriptVar], a
 	ret
