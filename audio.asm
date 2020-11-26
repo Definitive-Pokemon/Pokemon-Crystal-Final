@@ -138,6 +138,9 @@ INCLUDE "audio/music/lugiabattle.asm"
 INCLUDE "audio/music/hoohbattle.asm"
 INCLUDE "audio/music/celebibattle.asm"
 INCLUDE "audio/music/altomare.asm"
+
+
+SECTION "Custom Music 2", ROMX
 INCLUDE "audio/music/virbankgym.asm"
 INCLUDE "audio/music/marinetube.asm"
 
