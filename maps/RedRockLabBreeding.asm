@@ -5,6 +5,9 @@ RedRockLabBreeding_MapScripts:
 
 	def_callbacks
 
+RedRockLabBreedingWater:
+	itemball WATER_STONE
+
 RedRockLabBreeding_MapEvents:
 	db 0, 0 ; filler
 
@@ -16,3 +19,4 @@ RedRockLabBreeding_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 1,  18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RedRockLabBreedingWater, EVENT_RED_ROCK_LAB_BREEDING_WATER

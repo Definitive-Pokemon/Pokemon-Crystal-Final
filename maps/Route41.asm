@@ -129,8 +129,14 @@ Route41Rock:
 ; unused
 	jumpstd SmashRockScript
 
+WhirlIslandsSign:
+	jumptext WhirlIslandsSignText
+
 Route41HiddenMaxEther:
 	hiddenitem MAX_ETHER, EVENT_ROUTE_41_HIDDEN_MAX_ETHER
+
+Route41MaxRepel:
+	itemball MAX_REPEL
 
 SwimmermCharlieSeenText:
 	text "The water's warm"
@@ -339,6 +345,19 @@ SwimmerfWendyAfterBattleText:
 	line "it's scary."
 	done
 
+WhirlIslandsSignText:
+	text "Warning!"
+
+	para "WHIRLPOOLS"
+	line "tend to appear"
+
+	para "in the waters from"
+	line "time to time."
+
+	para "Be extra careful"
+	line "when swimming."
+	done
+
 Route41_MapEvents:
 	db 0, 0 ; filler
 
@@ -352,6 +371,7 @@ Route41_MapEvents:
 
 	def_bg_events
 	bg_event  9, 51, BGEVENT_ITEM, Route41HiddenMaxEther
+	bg_event 30, 6, BGEVENT_READ, WhirlIslandsSign
 
 	def_object_events
 	object_event 32, 22, SPRITE_OLIVINE_RIVAL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermCharlie, -1
@@ -364,3 +384,4 @@ Route41_MapEvents:
 	object_event 27, 50, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfDenise, -1
 	object_event 44, 44, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerfKara, -1
 	object_event  9, 66, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerSwimmerfWendy, -1
+	object_event 36,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route41MaxRepel, EVENT_ROUTE_41_MAX_REPEL

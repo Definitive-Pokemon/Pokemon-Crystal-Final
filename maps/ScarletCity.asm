@@ -51,6 +51,21 @@ ScarletCityPokefanM2Script:
 ScarletCityBeauty2Script:
 	jumptextfaceplayer ScarletCityBeauty2Text
 
+ScarletCitySign:
+	jumptext ScarletCitySignText
+
+ScarletGymSign:
+	jumptext ScarletGymText
+
+BattleTowerSign:
+	jumptext BattleTowerSignText
+
+LabSign:
+	jumptext LabSignText
+
+OutlookSign:
+	jumptext OutlookSignText
+
 ScarletCityLassText:
 	text "We recently"
 	line "moved here."
@@ -212,6 +227,49 @@ ScarletCityBeauty2Text:
 	line "win, no sweat!"
 	done
 
+ScarletCitySignText:
+	text "SCARLET CITY"
+
+	para "A Crimson Mark"
+	line "of Legacy!"
+	done
+
+ScarletGymSignText:
+	text "SCARLET CITY"
+	line "COLOSSEUM"
+	cont "of WATER"
+
+	para "MASTER: WHAYNE"
+
+	para "Admirer of the"
+	line "Cold Depths"
+	done
+
+BattleTowerSignText:
+	text "BATTLE TOWER"
+	line "straight ahead!"
+	done
+
+LabSignText:
+	text "RED ROCK ISLE"
+	line "PRESERVATION"
+	cont "LABORATORY"
+
+	para "Preservation of"
+	line "ancient #MON"
+
+	para "is our highest"
+	line "priority!"
+
+	para "- SCIENTIST GUILD"
+	done
+
+OutlookSignText:
+	text "RED ROCK"
+	line "OUTLOOK"
+	cont "ahead"
+	done
+
 ScarletCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -228,6 +286,11 @@ ScarletCity_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 7, 11, BGEVENT_READ, ScarletCitySign
+	bg_event 16, 16, BGEVENT_READ, ScarletGymSign
+	bg_event  25,  7, BGEVENT_READ, BattleTowerSign
+	bg_event 31,  27, BGEVENT_READ, LabSign
+	bg_event 3, 21, BGEVENT_READ, OutlookSign
 
 	def_object_events
 	object_event 27, 30, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityLassScript, -1

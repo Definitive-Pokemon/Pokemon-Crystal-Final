@@ -5,6 +5,15 @@ SearingCrater1F_MapScripts:
 
 	def_callbacks
 
+SearingCraterMoon:
+	itemball Moon_STONE
+
+SearingCraterHyper:
+	itemball HYPER_POTION
+
+SearingCraterRoot:
+	itemball BIG_ROOT
+
 SearingCrater1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -17,3 +26,6 @@ SearingCrater1F_MapEvents:
 	def_bg_events
 
 	def_object_events
+	object_event 21,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SearingCraterMoon, EVENT_SEARING_CRATER_MOON
+	object_event 2,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SearingCraterHyper, EVENT_SEARING_CRATER_HYPER
+	object_event 5,  13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SearingCraterRoot, EVENT_SEARING_CRATER_ROOT
