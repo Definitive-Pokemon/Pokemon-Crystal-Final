@@ -713,5 +713,6 @@ ENDM
 	map_attributes ScarletHouse2, SCARLET_HOUSE_2, $00, 0
 	map_attributes ScarletOldHouse, SCARLET_OLD_HOUSE, $00, 0
 	map_attributes RedRockLab, RED_ROCK_LAB, $00, 0
+	map_attributes RedRockLabBreeding, RED_ROCK_LAB_BREEDING, $00, 0
 	map_attributes SearingCrater1F, SEARING_CRATER_1F, $00, 0
 	map_attributes SearingCraterB1F, SEARING_CRATER_B1F, $00, 0
