@@ -1,4 +1,5 @@
 	object_const_def
+	const REDROCKOUTLOOK_POKE_BALL1
 
 RedRockOutlook_MapScripts:
 	def_scene_scripts

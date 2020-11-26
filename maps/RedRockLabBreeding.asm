@@ -1,4 +1,5 @@
 	object_const_def
+	const REDROCKLABBREEDING_POKE_BALL1
 
 RedRockLabBreeding_MapScripts:
 	def_scene_scripts

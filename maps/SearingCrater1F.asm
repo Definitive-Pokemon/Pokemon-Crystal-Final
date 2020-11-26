@@ -1,4 +1,7 @@
 	object_const_def
+	const SEARINGCRATER1F_POKE_BALL1
+	const SEARINGCRATER1F_POKE_BALL2
+	const SEARINGCRATER1F_POKE_BALL3
 
 SearingCrater1F_MapScripts:
 	def_scene_scripts

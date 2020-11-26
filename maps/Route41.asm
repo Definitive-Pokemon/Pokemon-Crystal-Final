@@ -9,6 +9,7 @@
 	const ROUTE41_SWIMMER_GIRL3
 	const ROUTE41_SWIMMER_GIRL4
 	const ROUTE41_SWIMMER_GIRL5
+	const ROUTE41_POKE_BALL1
 
 Route41_MapScripts:
 	def_scene_scripts
