@@ -137,6 +137,9 @@ INCLUDE "audio/music/redbattle.asm"
 INCLUDE "audio/music/lugiabattle.asm"
 INCLUDE "audio/music/hoohbattle.asm"
 INCLUDE "audio/music/celebibattle.asm"
+INCLUDE "audio/music/altomare.asm"
+INCLUDE "audio/music/virbankgym.asm"
+INCLUDE "audio/music/marinetube.asm"
 
 
 SECTION "Altered Songs", ROMX

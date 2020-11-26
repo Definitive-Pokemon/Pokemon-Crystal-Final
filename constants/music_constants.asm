@@ -144,6 +144,9 @@
 	const MUSIC_ROUTE_37_NIGHT ;89
 	const MUSIC_LAKE_OF_RAGE_NIGHT ;8A
 	const MUSIC_KANTO_WILD_BATTLE_NIGHT ;8B
+	const MUSIC_ALTO_MARE ;8C
+	const MUSIC_VIRBANK_GYM ;8D
+	const MUSIC_MARINE_TUBE ;8E
 
 ; GetMapMusic picks music for these values (see home/map.asm)
 MUSIC_MAHOGANY_MART EQU $fc

@@ -143,3 +143,6 @@ Music:
 	dba Music_Route37Night
 	dba Music_LakeOfRageNight
 	dba Music_KantoWildBattleNight
+	dba Music_AltoMare
+	dba Music_VirbankGym
+	dba Music_MarineTube
