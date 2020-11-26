@@ -236,8 +236,7 @@ ScarletCitySignText:
 
 ScarletGymSignText:
 	text "SCARLET CITY"
-	line "COLOSSEUM"
-	cont "of WATER"
+	line "WATER COLOSSEUM"
 
 	para "MASTER: WHAYNE"
 
@@ -265,9 +264,8 @@ LabSignText:
 	done
 
 OutlookSignText:
-	text "RED ROCK"
-	line "OUTLOOK"
-	cont "ahead"
+	text "RED ROCK OUTLOOK"
+	line "ahead"
 	done
 
 ScarletCity_MapEvents:
