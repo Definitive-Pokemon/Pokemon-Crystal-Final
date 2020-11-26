@@ -1065,14 +1065,15 @@ WhirlCupColosseum_Blocks:
 RedRockLab_Blocks:
 	INCBIN "maps/RedRockLab.blk"
 
-RedRockLabBreeding_Blocks:
-	INCBIN "maps/RedRockLabBreeding.blk"
 
 SearingCrater1F_Blocks:
 	INCBIN "maps/SearingCrater1F.blk"
 
 SearingCraterB1F_Blocks:
 	INCBIN "maps/SearingCraterB1F.blk"
+
+RedRockLabBreeding_Blocks:
+	INCBIN "maps/RedRockLabBreeding.blk"
 
 Route41_Blocks:
 	INCBIN "maps/Route41.blk"
