@@ -14,7 +14,7 @@ ScarletHouse1BeautyScript:
 	jumptextfaceplayer ScarletHouse1BeautyText
 
 ScarletHouse1BlackBeltText:
-	text: "Darn it!"
+	text "Darn it!"
 
 	para "I keep losing at the"
 	line "very end of the"
