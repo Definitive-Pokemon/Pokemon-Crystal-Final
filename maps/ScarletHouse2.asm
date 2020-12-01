@@ -18,7 +18,7 @@ ScarletHouse2TwinScript:
 	jumptextfaceplayer ScarletHouse2TwinText
 
 ScarletHouse2FisherText:
-	text: "At night, the"
+	text "At night, the"
 	line "waves hitting"
 
 	para "the shore cause"
