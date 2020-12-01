@@ -14,23 +14,23 @@ ScarletOldHouseGrannyText:
 	text "Before this city"
 	line "was built, this"
 
-	para "house was the"
-	line "only one standing"
-	cont "here."
+	para "house was the only"
+	line " one standing here."
 
 	para "It's been inhabited"
 	line "by a line of"
 
-	para "protectors of"
-	line "the WHIRL ISLANDS."
+	para "protectors of the"
+	line "WHIRL ISLANDS."
 
 	para "I am the latest"
 	line "of this line."
 
-	para "And I still protect"
+	para "I still protect"
 	line "these islands."
 
-	para "So don't provoke me."
+	para "So don't provoke"
+	line "me."
 	done
 
 ScarletOldHouse_MapEvents:

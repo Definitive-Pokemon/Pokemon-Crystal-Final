@@ -42,8 +42,8 @@ ScarletHouse2TeacherText:
 	done
 
 ScarletHouse2TwinText:
-	text "I wonder when"
-	line "big sis is coming"
+	text "I wonder when big"
+	line "sis is coming"
 	cont "home…"
 
 	para "She spends so"

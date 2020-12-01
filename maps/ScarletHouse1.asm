@@ -16,19 +16,21 @@ ScarletHouse1BeautyScript:
 ScarletHouse1BlackBeltText:
 	text "Darn it!"
 
-	para "I keep losing at the"
-	line "very end of the"
-	cont "BATTLE TOWER."
+	para "I keep losing at"
+	line "the very end of"
+	cont "the BATTLE TOWER."
 
-	para "I hate having to start"
-	line "all over again!"
+	para "I hate having to"
+	line "start all over"
+	cont "again!"
 
 	para "It's just not fair!"
 	done
 
 ScarletHouse1BeautyText:
-	text "Instead of complaining"
-	line "about his losses,"
+	text "Instead of"
+	line "complaining about"
+	cont "his losses,"
 
 	para "how about he took"
 	line "some more time"
