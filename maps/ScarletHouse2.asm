@@ -11,7 +11,7 @@ ScarletHouse2_MapScripts:
 ScarletHouse2FisherScript:
 	jumptextfaceplayer ScarletHouse2FisherText
 
-ScarletHouse2TeacerScript:
+ScarletHouse2TeacherScript:
 	jumptextfaceplayer ScarletHouse2TeacherText
 
 ScarletHouse2TwinScript:
