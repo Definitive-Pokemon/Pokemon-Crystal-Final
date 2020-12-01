@@ -168,7 +168,6 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_KABUTO
 	const SPRITE_ARTICUNO
 	const SPRITE_ZAPDOS
-	const SPRITE_MOLTRES
 
 ; special GetMonSprite values (see engine/overworld/overworld.asm)
 	const_next $e0
