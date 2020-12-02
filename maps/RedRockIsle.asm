@@ -3,7 +3,6 @@
 	const REDROCKISLE_ROCK2
 	const REDROCKISLE_ROCK3
 	const REDROCKISLE_ROCK4
-	const REDROCKISLE_ROCK5
 
 RedRockIsle_MapScripts:
 	def_scene_scripts
@@ -47,11 +46,10 @@ RedRockIsle_MapEvents:
 	bg_event 4, 6, BGEVENT_READ, RedRockSign
 	bg_event 8, 24, BGEVENT_READ, RedRockScarletSign
 	bg_event 12, 30, BGEVENT_ITEM, RedRockIsleHiddenLeafStone
-	bg_event  4, 15, BGEVENT_ITEM, RedRockIsleHiddenNugget
+	bg_event 14, 12, BGEVENT_ITEM, RedRockIsleHiddenNugget
 
 	def_object_events
-	object_event 12,  30, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockIsleRock, -1
-	object_event  4, 15, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockIsleRock, -1
+	object_event  6, 15, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockIsleRock, -1
 	object_event 15, 20, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockIsleRock, -1
 	object_event 14, 12, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockIsleRock, -1
 	object_event  8,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockIsleRock, -1
