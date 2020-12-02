@@ -376,7 +376,7 @@ Route41_MapEvents:
 	def_bg_events
 	bg_event  9, 51, BGEVENT_ITEM, Route41HiddenMaxEther
 	bg_event 30, 6, BGEVENT_READ, WhirlIslandsSign
-	bg_event 36,  4, BGEVENT_ITEM, Route40HiddenMaxRepel
+	bg_event 36,  4, BGEVENT_ITEM, Route41HiddenMaxRepel
 
 	def_object_events
 	object_event 32, 22, SPRITE_OLIVINE_RIVAL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermCharlie, -1

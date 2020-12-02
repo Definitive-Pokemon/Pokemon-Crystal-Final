@@ -15,6 +15,9 @@ RedRockOutlook_MapScripts:
 CraterSign:
 	jumptext CraterSignText
 
+RedRockOutlookRock:
+	jumpstd SmashRockScript
+
 RedRockOutlookHiddenFireStone:
 	hiddenitem FIRE_STONE, EVENT_RED_ROCK_OUTLOOK_HIDDEN_FIRE_STONE
 
