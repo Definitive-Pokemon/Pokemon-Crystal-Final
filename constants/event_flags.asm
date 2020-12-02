@@ -1466,8 +1466,10 @@
 	const EVENT_SEARING_CRATER_MOON
 	const EVENT_SEARING_CRATER_HYPER
 	const EVENT_SEARING_CRATER_ROOT
+	const EVENT_BEAT_WHAYNE
+	const EVENT_SCIENTIST_4_MOVED
 
-; Unused: next 39 events
+; Unused: next 37 events
 
 	const_next 2048
 NUM_EVENTS EQU const_value ; 800
