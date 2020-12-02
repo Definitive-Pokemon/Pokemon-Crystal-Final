@@ -17,13 +17,13 @@ ScarletPokecenter1FNurseScript:
 	jumpstd PokecenterNurseScript
 
 ScarletPokecenter1FFishingGuruScript:
-	jumpstd ScarletPokecenter1FFishingGuruText
+	jumptextfaceplayer ScarletPokecenter1FFishingGuruText
 
 ScarletPokecenter1FCooltrainerMScript:
-	jumpstd ScarletPokecenter1FCooltrainerMText
+	jumptextfaceplayer ScarletPokecenter1FCooltrainerMText
 
 ScarletPokecenter1FSailorScript:
-	jumpstd ScarletPokecenter1FSailorText
+	jumptextfaceplayer ScarletPokecenter1FSailorText
 
 ScarletPokecenter1FFishingGuruText:
 	text "Occasionally, I see"
