@@ -95,7 +95,7 @@ PlayBattleMusic:
 
 	ld de, MUSIC_RED_BATTLE
 	cp RED
-	jr z, .done
+	jp z, .done
 
 	ld de, MUSIC_GYM_LEADER_BATTLE_PRISM
 	cp WHAYNE
