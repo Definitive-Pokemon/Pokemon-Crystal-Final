@@ -136,9 +136,6 @@ Route41Rock:
 WhirlIslandsSign:
 	jumptext WhirlIslandsSignText
 
-Route41Rock:
-	jumpstd SmashRockScript
-
 Route41HiddenMaxEther:
 	hiddenitem MAX_ETHER, EVENT_ROUTE_41_HIDDEN_MAX_ETHER
 
