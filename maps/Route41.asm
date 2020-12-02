@@ -9,7 +9,10 @@
 	const ROUTE41_SWIMMER_GIRL3
 	const ROUTE41_SWIMMER_GIRL4
 	const ROUTE41_SWIMMER_GIRL5
-	const ROUTE41_POKE_BALL1
+	const ROUTE41_ROCK1
+	const ROUTE41_ROCK2
+	const ROUTE41_ROCK3
+	const ROUTE41_ROCK4
 
 Route41_MapScripts:
 	def_scene_scripts
@@ -133,11 +136,14 @@ Route41Rock:
 WhirlIslandsSign:
 	jumptext WhirlIslandsSignText
 
+Route41Rock:
+	jumpstd SmashRockScript
+
 Route41HiddenMaxEther:
 	hiddenitem MAX_ETHER, EVENT_ROUTE_41_HIDDEN_MAX_ETHER
 
-Route41MaxRepel:
-	itemball MAX_REPEL
+Route41HiddenMaxRepel:
+	hiddenitem MAX_REPEL, EVENT_ROUTE_41_HIDDEN_MAX_REPEL
 
 SwimmermCharlieSeenText:
 	text "The water's warm"
@@ -373,6 +379,7 @@ Route41_MapEvents:
 	def_bg_events
 	bg_event  9, 51, BGEVENT_ITEM, Route41HiddenMaxEther
 	bg_event 30, 6, BGEVENT_READ, WhirlIslandsSign
+	bg_event 36,  4, BGEVENT_ITEM, Route40HiddenMaxRepel
 
 	def_object_events
 	object_event 32, 22, SPRITE_OLIVINE_RIVAL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermCharlie, -1
@@ -385,4 +392,7 @@ Route41_MapEvents:
 	object_event 27, 50, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfDenise, -1
 	object_event 44, 44, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerfKara, -1
 	object_event  9, 66, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerSwimmerfWendy, -1
-	object_event 36,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route41MaxRepel, EVENT_ROUTE_41_MAX_REPEL
+	object_event 36,  4, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route41Rock, -1
+	object_event 30, 10, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route41Rock, -1
+	object_event 39,  9, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route41Rock, -1
+	object_event 34,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route41Rock, -1

@@ -9,7 +9,7 @@ SearingCraterB1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  7, 11, SEARING_CRATER_1F, 2
+	warp_event  7, 12, SEARING_CRATER_1F, 2
 
 	def_coord_events
 

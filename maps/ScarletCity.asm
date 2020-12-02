@@ -1,14 +1,14 @@
 	object_const_def
 	const SCARLETCITY_LASS
-	const SCARLETCITY_COOLTRAINER_F1
-	const SCARLETCITY_GRAMPS
+	const SCARLETCITY_BEAUTY1
+	const SCARLETCITY_SAILOR
 	const SCARLETCITY_SUPER_NERD
-	const SCARLETCITY_COOLTRAINER_F2
-	const SCARLETCITY_COOLTRAINER_F3
+	const SCARLETCITY_POKEFAN_F1
+	const SCARLETCITY_POKEFAN_F2
 	const SCARLETCITY_POKEFAN_M1
-	const SCARLETCITY_YOUNGSTER
+	const SCARLETCITY_STANDING_YOUNGSTER
 	const SCARLETCITY_POKEFAN_M2
-	const SCARLETCITY_COOLTRAINER_F4
+	const SCARLETCITY_BEAUTY2
 	
 
 ScarletCity_MapScripts:
@@ -24,32 +24,32 @@ ScarletCity_MapScripts:
 ScarletCityLassScript:
 	jumptextfaceplayer ScarletCityLassText
 
-ScarletCityCooltrainerF1Script:
-	jumptextfaceplayer ScarletCityCooltrainerF1Text
+ScarletCityBeauty1Script:
+	jumptextfaceplayer ScarletCityBeauty1Text
 
-ScarletCityGrampsScript:
-	jumptextfaceplayer ScarletCityGrampsText
+ScarletCitySailorScript:
+	jumptextfaceplayer ScarletCitySailorText
 
 ScarletCitySuperNerdScript:
 	jumptextfaceplayer ScarletCitySuperNerdText
 
-ScarletCityCooltrainerF2Script:
-	jumptextfaceplayer ScarletCityCooltrainerF2Text
+ScarletCityPokefanF1Script:
+	jumptextfaceplayer ScarletCityPokefanF1Text
 
-ScarletCityCooltrainerF3Script:
-	jumptextfaceplayer ScarletCityCooltrainerF3Text
+ScarletCityPokefanF2Script:
+	jumptextfaceplayer ScarletCityPokefanF2Text
 
 ScarletCityPokefanM1Script:
 	jumptextfaceplayer ScarletCityPokefanM1Text
 
-ScarletCityYoungsterScript:
-	jumptextfaceplayer ScarletCityYoungsterText
+ScarletCityStandingYoungsterScript:
+	jumptextfaceplayer ScarletCityStandingYoungsterText
 
 ScarletCityPokefanM2Script:
 	jumptextfaceplayer ScarletCityPokefanM2Text
 
-ScarletCityCooltrainerF4Script:
-	jumptextfaceplayer ScarletCityCooltrainerF4Text
+ScarletCityBeauty2Script:
+	jumptextfaceplayer ScarletCityBeauty2Text
 
 ScarletCitySign:
 	jumptext ScarletCitySignText
@@ -80,7 +80,7 @@ ScarletCityLassText:
 	line "of the sea."
 	done
 
-ScarletCityCooltrainerF1Text:
+ScarletCityBeauty1Text:
 	text "Are you gonna"
 	line "take on the"
 	cont "BATTLE TOWER?"
@@ -93,9 +93,9 @@ ScarletCityCooltrainerF1Text:
 	cont "way!"
 	done
 
-ScarletCityGrampsText:
-	text "I came all the way"
-	line "to RED ROCK"
+ScarletCitySailorText:
+	text "I sailed all the"
+	line "way to RED ROCK"
 
 	para "to challenge the"
 	line "toughest TRAINERS"
@@ -117,7 +117,7 @@ ScarletCitySuperNerdText:
 	cont "view of the sea."
 	done
 
-ScarletCityCooltrainerF2Text:
+ScarletCityPokefanF1Text:
 	text "What do you want?"
 
 	para "I'm just taking a"
@@ -134,7 +134,7 @@ ScarletCityCooltrainerF2Text:
 	cont "#MON there."
 	done
 
-ScarletCityCooltrainerF3Text:
+ScarletCityPokefanF2Text:
 	text "They say the"
 	line "crater to the"
 
@@ -169,7 +169,7 @@ ScarletCityPokefanM1Text:
 	cont "so well."
 	done
 
-ScarletCityYoungsterText:
+ScarletCityStandingYoungsterText:
 	text "Ah! The BATTLE"
 	line "TOWER!"
 
@@ -219,7 +219,7 @@ ScarletCityPokefanM2Text:
 	line "efforts!"
 	done
 
-ScarletCityCooltrainerF4Text:
+ScarletCityBeauty2Text:
 	text "I'm gonna challenge"
 	line "the MASTER of this"
 
@@ -290,14 +290,14 @@ ScarletCity_MapEvents:
 	bg_event 31,  27, BGEVENT_READ, LabSign
 	bg_event 3, 21, BGEVENT_READ, OutlookSign
 
-	def_object_events
-	object_event 27, 30, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ScarletCityLassScript, -1
-	object_event 17,  7, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ScarletCityCooltrainerF1Script, -1
-	object_event 25,  6, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityGrampsScript, -1
+		def_object_events
+	object_event 27, 30, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityLassScript, -1
+	object_event 17,  7, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityBeauty1Script, -1
+	object_event 25,  6, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCitySailorScript, -1
 	object_event 27,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ScarletCitySuperNerdScript, -1
-	object_event 24, 20, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityCooltrainerF2Script, -1
-	object_event 11, 21, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityCooltrainerF3Script, -1
+	object_event 24, 20, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityPokefanF1Script, -1
+	object_event 11, 21, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityPokefanF2Script, -1
 	object_event 34, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityPokefanM1Script, -1
-	object_event 22,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ScarletCityYoungsterScript, -1
+	object_event 22,  8, SPRITE_STANDING_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ScarletCityStandingYoungsterScript, -1
 	object_event  6, 20, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityPokefanM2Script, -1
-	object_event 13, 17, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ScarletCityCooltrainerF4Script, -1
+	object_event 13, 17, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ScarletCityBeauty2Script, -1
