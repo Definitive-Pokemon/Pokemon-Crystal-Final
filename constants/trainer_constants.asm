@@ -727,8 +727,8 @@ KRIS EQU __trainer_class__
 	const WHAYNE1
 	const WHAYNE2
 
-	trainerclass BLAKE
-	const BLAKE1
+	trainerclass DIO
+	const DIO1
 
 	trainerclass FAUNE
 	const FAUNE1

@@ -70,5 +70,5 @@ TrainerGroups:
 	dw GruntFGroup
 	dw MysticalmanGroup
 	dw WhayneGroup
-	dw BlakeGroup
+	dw DioGroup
 	dw FauneGroup
