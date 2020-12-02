@@ -97,6 +97,14 @@ PlayBattleMusic:
 	cp RED
 	jr z, .done
 
+	ld de, MUSIC_GYM_LEADER_BATTLE_PRISM
+	cp WHAYNE
+	jr z, .done
+	cp DIO
+	jr z, .done
+	cp FAUNE
+	jr z, .done
+
 	; They should have included EXECUTIVEM, EXECUTIVEF, and SCIENTIST too...
 	ld de, MUSIC_ROCKET_BATTLE
 	cp GRUNTM
@@ -121,14 +129,6 @@ PlayBattleMusic:
 	cp BRUNO
 	jr z, .done
 	cp KAREN
-	jr z, .done
-
-	ld de, MUSIC_GYM_LEADER_BATTLE_PRISM
-	cp WHAYNE
-	jr z, .done
-	cp DIO
-	jr z, .done
-	cp FAUNE
 	jr z, .done
 
 	; IsGymLeader also counts CHAMPION, RED, and the Kanto gym leaders
