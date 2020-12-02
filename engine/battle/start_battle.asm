@@ -91,7 +91,7 @@ PlayBattleMusic:
 .trainermusic
 	ld de, MUSIC_CHAMPION_BATTLE
 	cp CHAMPION
-	jr z, .done
+	jp z, .done
 
 	ld de, MUSIC_RED_BATTLE
 	cp RED
