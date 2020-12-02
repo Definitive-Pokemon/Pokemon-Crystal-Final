@@ -35,7 +35,7 @@ RedRockLabScientist4Script:
 	waitbutton
 	closetext
 	applymovement REDROCKLAB_SCIENTIST4, Scientist4Movement
-	setflag EVENT_SCIENTIST_4_MOVED
+	setevent EVENT_SCIENTIST_4_MOVED
 	end
 
 .GoOn:
