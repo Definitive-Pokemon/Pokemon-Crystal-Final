@@ -123,6 +123,14 @@ PlayBattleMusic:
 	cp KAREN
 	jr z, .done
 
+	ld de, MUSIC_GYM_LEADER_BATTLE_PRISM
+	cp WHAYNE
+	jr z, .done
+	cp DIO
+	jr z, .done
+	cp FAUNE
+	jr z, .done
+
 	; IsGymLeader also counts CHAMPION, RED, and the Kanto gym leaders
 	; but they have been taken care of before this
 	ld de, MUSIC_JOHTO_GYM_LEADER_BATTLE

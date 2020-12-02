@@ -146,3 +146,4 @@ Music:
 	dba Music_AltoMare
 	dba Music_VirbankGym
 	dba Music_MarineTube
+	dba Music_GymLeaderBattlePrism

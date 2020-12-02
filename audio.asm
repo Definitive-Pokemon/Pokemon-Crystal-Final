@@ -167,6 +167,7 @@ INCLUDE "audio/music/celadoncity.asm"
 INCLUDE "audio/music/pallettown.asm"
 INCLUDE "audio/music/azaleatown.asm"
 INCLUDE "audio/music/cherrygrovecity.asm"
+INCLUDE "audio/music/gymleaderbattleprism.asm"
 
 
 SECTION "Sound Effects", ROMX

@@ -147,6 +147,7 @@
 	const MUSIC_ALTO_MARE ;8C
 	const MUSIC_VIRBANK_GYM ;8D
 	const MUSIC_MARINE_TUBE ;8E
+	const MUSIC_GYM_LEADER_BATTLE_PRISM ;8F
 
 ; GetMapMusic picks music for these values (see home/map.asm)
 MUSIC_MAHOGANY_MART EQU $fc
