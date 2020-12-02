@@ -44,9 +44,6 @@ TeacherSpriteGFX::             INCBIN "gfx/sprites/teacher.2bpp"
 BeautySpriteGFX::              INCBIN "gfx/sprites/beauty.2bpp"
 SuperNerdSpriteGFX::           INCBIN "gfx/sprites/super_nerd.2bpp"
 RockerSpriteGFX::              INCBIN "gfx/sprites/rocker.2bpp"
-WhayneSpriteGFX::          INCBIN "gfx/sprites/whayne.2bpp"
-DioSpriteGFX::          INCBIN "gfx/sprites/dio.2bpp"
-FauneSpriteGFX::          INCBIN "gfx/sprites/faune.2bpp"
 
 
 SECTION "Sprites 2", ROMX
@@ -109,3 +106,9 @@ SuicuneSpriteGFX::             INCBIN "gfx/sprites/suicune.2bpp"
 EnteiSpriteGFX::               INCBIN "gfx/sprites/entei.2bpp"
 RaikouSpriteGFX::              INCBIN "gfx/sprites/raikou.2bpp"
 StandingYoungsterSpriteGFX::   INCBIN "gfx/sprites/standing_youngster.2bpp"
+
+SECTION "Sprites 3", ROMX
+
+WhayneSpriteGFX::          INCBIN "gfx/sprites/whayne.2bpp"
+DioSpriteGFX::          INCBIN "gfx/sprites/dio.2bpp"
+FauneSpriteGFX::          INCBIN "gfx/sprites/faune.2bpp"
