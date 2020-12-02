@@ -44,6 +44,9 @@ TeacherSpriteGFX::             INCBIN "gfx/sprites/teacher.2bpp"
 BeautySpriteGFX::              INCBIN "gfx/sprites/beauty.2bpp"
 SuperNerdSpriteGFX::           INCBIN "gfx/sprites/super_nerd.2bpp"
 RockerSpriteGFX::              INCBIN "gfx/sprites/rocker.2bpp"
+WhayneSpriteGFX::          INCBIN "gfx/sprites/whayne.2bpp"
+DioSpriteGFX::          INCBIN "gfx/sprites/dio.2bpp"
+FauneSpriteGFX::          INCBIN "gfx/sprites/faune.2bpp"
 
 
 SECTION "Sprites 2", ROMX
