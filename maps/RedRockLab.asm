@@ -34,7 +34,7 @@ RedRockLabScientist4Script:
 	setflag EVENT_SCIENTIST_4_MOVED
 	end
 
-MovementData_Scientist4Movement
+Scientist4Movement:
 	step RIGHT
 	step RIGHT
 	step RIGHT
