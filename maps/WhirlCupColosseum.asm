@@ -67,8 +67,9 @@ WhayneIntroText:
 	line "getting yourself"
 	cont "into."
 
-	para "It is time for you"
-	line "to learn your place."
+	para "It is time for"
+	line "you to learn"
+	cont "your place."
 	done
 
 WhayneWinLossText:
