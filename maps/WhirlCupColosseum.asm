@@ -89,23 +89,20 @@ BeatWhayneText:
 	done
 
 WhayneWinText:
-	text "I think you deserve"
-	line "a reward for your"
-	cont "efforts."
+	text "I believe you"
+	line "deserve a reward"
+	cont "for your efforts."
 
 	para "Speak to the"
 	line "SCIENTIST watching"
 
 	para "over the BREEDING"
 	line "GROUNDS of the"
-	cont "Red Rock Lab."
+	cont "RED ROCK LAB."
 
 	para "He will reward you"
 	line "handsomely."
 	done
-
-	
-
 
 WhirlCupColosseum_MapEvents:
 	db 0, 0 ; filler

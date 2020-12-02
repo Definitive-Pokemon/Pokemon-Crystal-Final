@@ -44,6 +44,7 @@ Scientist4Movement:
 	step UP
 	step UP
 	turn_head DOWN
+	step_end
 
 RedRockLabScientist1Text:
 	text "This machine?"
@@ -103,7 +104,19 @@ RedRockLabScientist4Text:
 	done
 
 RedRockLabScientist4AllowText:
-	text "test"
+	text "You beat MASTER"
+	line "WHAYNE?!"
+
+	para "Incredible!"
+
+	para "You deserve a"
+	line "reward indeed!"
+
+	para "Head down the"
+	line "stairs to witness"
+
+	para "something"
+	line "amazing!"
 	done
 
 RedRockLab_MapEvents:
