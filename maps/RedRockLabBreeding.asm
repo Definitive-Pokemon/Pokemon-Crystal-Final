@@ -17,7 +17,7 @@ RedRockLabBreeding_MapScripts:
 RedRockLabBreedingScientistScript:
 	faceplayer
 	opentext
-	checkflag EVENT_GOT_FOSSIL
+	checkevent EVENT_GOT_FOSSIL
 	iftrue .AlreadyGot
 	writetext RedRockLabBreedingScientistText
 	yesorno
@@ -145,9 +145,11 @@ RedRockLabBreedingScientistYayText:
 
 RedRockLabBreedingKabutoText:
 	text "KABUTO: Idaaa!"
+	done
 
 RedRockLabBreedingOmanyteText:
 	text "OMANYTE: Omaaa!"
+	done
 
 RedRockLabBreedingWater:
 	itemball WATER_STONE
@@ -165,7 +167,7 @@ RedRockLabBreeding_MapEvents:
 	def_object_events
 	object_event  0, 11, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabBreedingScientistScript, -1
 	object_event 20, 17, SPRITE_KABUTO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabBreedingKabutoScript, -1
-	object_event  2, 13, SPRITE_KABUTO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabBreedingKabutoScript, -1
+	object_event 12,  5, SPRITE_KABUTO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabBreedingKabutoScript, -1
 	object_event 11, 19, SPRITE_KABUTO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabBreedingKabutoScript, -1
 	object_event  8, 12, SPRITE_KABUTO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabBreedingKabutoScript, -1
 	object_event 12, 11, SPRITE_OMANYTE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RedRockLabBreedingOmanyteScript, -1
