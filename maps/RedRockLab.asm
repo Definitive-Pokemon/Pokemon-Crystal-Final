@@ -53,7 +53,6 @@ Scientist4Movement:
 	step UP
 	step UP
 	step UP
-	turn_head DOWN
 	step_end
 
 RedRockLabScientist1Text:
@@ -149,4 +148,4 @@ RedRockLab_MapEvents:
 	object_event  4,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabScientist1Script, -1
 	object_event  4,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabScientist2Script, -1
 	object_event  9,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabScientist3Script, -1
-	object_event 10,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabScientist4Script, -1
+	object_event 10,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabScientist4Script, EVENT_SCIENTIST_4_MOVED
