@@ -1,5 +1,5 @@
 	object_const_def
-	const WHIRLCUPCOLOSSEUM WHAYNE
+	const WHIRLCUPCOLOSSEUM_WHAYNE
 
 WhirlCupColosseum_MapScripts:
 	def_scene_scripts
