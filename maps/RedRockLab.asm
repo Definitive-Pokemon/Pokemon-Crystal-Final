@@ -85,9 +85,9 @@ RedRockLabScientist3Text:
 	cont "to TRAINERS."
 
 	para "This, in turn,"
-	line "allows us to con-"
+	line "allows us to"
 
-	para "tinue to raise"
+	para "continue to raise"
 	line "these #MON."
 
 	para "It's real charity"

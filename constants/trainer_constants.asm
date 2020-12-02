@@ -723,4 +723,14 @@ KRIS EQU __trainer_class__
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
 
+	trainerclass WHAYNE
+	const WHAYNE1
+	const WHAYNE2
+
+	trainerclass BLAKE
+	const BLAKE
+
+	trainerclass FAUNE
+	const FAUNE
+
 NUM_TRAINER_CLASSES EQU __trainer_class__
