@@ -56,7 +56,10 @@ RedRockLabBreedingScientistScript:
 	end
 
 .AlreadyGot:
-	jumptextfaceplayer RedRockLabBreedingScientistYayText
+	writetext RedRockLabBreedingScientistYayText
+	waitbutton
+	closetext
+	end
 
 .NoRoom:
 	writetext RedRockLabBreedingScientistFullText
