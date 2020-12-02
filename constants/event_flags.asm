@@ -1469,8 +1469,9 @@
 	const EVENT_BEAT_WHAYNE
 	const EVENT_SCIENTIST_4_MOVED
 	const EVENT_ACCESS_TO_WHIRL
+	const EVENT_GOT_FOSSIL
 
-; Unused: next 36 events
+; Unused: next 35 events
 
 	const_next 2048
 NUM_EVENTS EQU const_value ; 800
