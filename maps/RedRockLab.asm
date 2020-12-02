@@ -46,19 +46,54 @@ Scientist4Movement:
 	turn_head DOWN
 
 RedRockLabScientist1Text:
-	text "test"
+	text "This machine?"
+
+	para "It restores #-"
+	line "MON FOSSILS!"
+
+	para "We bring back"
+	line "#MON from"
+	cont "the past!"
+
+	para "Amazing, isn't it?"
 	done
 
 RedRockLabScientist2Text:
-	text "test"
+	text "We managed to"
+	line "breed with the #-"
+
+	para "MON we received"
+	line "from TRAINER RED."
+
+	para "FOSSILS are in-"
+	line "credibly rare."
+
+	para "But with our breeding"
+	line "program, we barely"
+	cont "even need them!"
 	done
 
 RedRockLabScientist3Text:
-	text "test"
+	text "We sure manage"
+	line "to make a lot of"
+
+	para "money selling"
+	line "FOSSIL #MON"
+	cont "to TRAINERS."
+
+	para "This, in turn,"
+	line "allows us to con"
+
+	para "tinue to raise"
+	line "these #MON."
 	done
 
 RedRockLabScientist4Text:
-	text "test"
+	text "I'm very sorry,"
+	line "but I can't allow"
+
+	para "access to the"
+	line "BREEDING GROUNDS."
 	done
 
 RedRockLabScientist4AllowText:
@@ -78,7 +113,7 @@ RedRockLab_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  1,  1, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabScientist1Script, -1
-	object_event  2,  1, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabScientist2Script, -1
-	object_event  3,  1, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabScientist3Script, -1
-	object_event  4,  1, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabScientist4Script, -1
+	object_event  4,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabScientist1Script, -1
+	object_event  4,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabScientist2Script, -1
+	object_event  9,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabScientist3Script, -1
+	object_event 10,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabScientist4Script, -1
