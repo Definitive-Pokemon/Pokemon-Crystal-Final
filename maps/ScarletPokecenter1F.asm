@@ -26,14 +26,16 @@ ScarletPokecenter1FSailorScript:
 	jumptextfaceplayer ScarletPokecenter1FSailorText
 
 ScarletPokecenter1FFishingGuruText:
-	text "Occasionally, I see"
-	line "ships sailing past"
+	text "Occasionally, I"
+	line "see ships sailing"
 
-	para "this island, heading"
-	line "towards CIANWOOD."
+	para "past this island,"
+	line "heading towards"
+	cont "CIANWOOD."
 
-	para "I think they stock up"
-	line "on medicine there."
+	para "I think they stock"
+	line "up on medicine"
+	cont "there."
 	done
 
 ScarletPokecenter1FCooltrainerMText:
