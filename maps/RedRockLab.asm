@@ -21,6 +21,8 @@ RedRockLabScientist3Script:
 RedRockLabScientist4Script:
 	faceplayer
 	opentext
+	checkevent EVENT_SCIENTIST_4_MOVED
+	iftrue .GoOn
 	checkevent EVENT_BEAT_WHAYNE
 	iftrue .Allow
 	writetext RedRockLabScientist4Text
@@ -30,8 +32,16 @@ RedRockLabScientist4Script:
 
 .Allow:
 	writetext RedRockLabScientist4AllowText
+	waitbutton
+	closetext
 	applymovement REDROCKLAB_SCIENTIST4, Scientist4Movement
 	setflag EVENT_SCIENTIST_4_MOVED
+	end
+
+.GoOn:
+	writetext RedRockLabScientist4GoOnText
+	waitbutton
+	closetext
 	end
 
 Scientist4Movement:
@@ -117,6 +127,10 @@ RedRockLabScientist4AllowText:
 
 	para "something"
 	line "amazing!"
+	done
+
+RedRockLabScientist4GoOnText:
+	text "Go on!"
 	done
 
 RedRockLab_MapEvents:
