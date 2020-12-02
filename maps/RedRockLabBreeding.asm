@@ -164,12 +164,12 @@ RedRockLabBreeding_MapEvents:
 
 	def_object_events
 	object_event  0, 11, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabBreedingScientistScript, -1
-	object_event 20, 17, SPRITE_KABUTO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_POKEMON, 0, RedRockLabBreedingKabutoScript, -1
-	object_event  2, 13, SPRITE_KABUTO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_POKEMON, 0, RedRockLabBreedingKabutoScript, -1
-	object_event 11, 19, SPRITE_KABUTO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_POKEMON, 0, RedRockLabBreedingKabutoScript, -1
-	object_event  8, 12, SPRITE_KABUTO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_POKEMON, 0, RedRockLabBreedingKabutoScript, -1
-	object_event 12, 11, SPRITE_OMANYTE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_POKEMON, 0, RedRockLabBreedingOmanyteScript, -1
-	object_event  3, 18, SPRITE_OMANYTE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_POKEMON, 0, RedRockLabBreedingOmanyteScript, -1
-	object_event 14, 13, SPRITE_OMANYTE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_POKEMON, 0, RedRockLabBreedingOmanyteScript, -1
+	object_event 20, 17, SPRITE_KABUTO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabBreedingKabutoScript, -1
+	object_event  2, 13, SPRITE_KABUTO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabBreedingKabutoScript, -1
+	object_event 11, 19, SPRITE_KABUTO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabBreedingKabutoScript, -1
+	object_event  8, 12, SPRITE_KABUTO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockLabBreedingKabutoScript, -1
+	object_event 12, 11, SPRITE_OMANYTE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RedRockLabBreedingOmanyteScript, -1
+	object_event  3, 18, SPRITE_OMANYTE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RedRockLabBreedingOmanyteScript, -1
+	object_event 14, 13, SPRITE_OMANYTE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RedRockLabBreedingOmanyteScript, -1
 	object_event 1,  18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RedRockLabBreedingWater, EVENT_RED_ROCK_LAB_BREEDING_WATER
 	
