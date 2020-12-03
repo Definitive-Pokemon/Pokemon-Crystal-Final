@@ -1,29 +1,29 @@
 	object_const_def
-	const WHIRLCUPCOLOSSEUM_WHAYNE
-	const WHIRLCUPCOLOSSEUM_GYM_GUIDE
+	const SCARLETCOLOSSEUM_WHAYNE
+	const SCARLETCOLOSSEUM_GYM_GUIDE
 
-WhirlCupColosseum_MapScripts:
+ScarletColosseum_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
-WhirlCupColosseumGymGuideScript:
+ScarletColosseumGymGuideScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_WHAYNE
-	iftrue .WhirlCupColosseumGymGuideWinScript
-	writetext WhirlCupColosseumGymGuideText
+	iftrue .ScarletColosseumGymGuideWinScript
+	writetext ScarletColosseumGymGuideText
 	waitbutton
 	closetext
 	end
 
-.WhirlCupColosseumGymGuideWinScript:
-	writetext WhirlCupColosseumGymGuideWinText
+.ScarletColosseumGymGuideWinScript:
+	writetext ScarletColosseumGymGuideWinText
 	waitbutton
 	closetext
 	end
 
-WhirlCupColosseumWhayneScript:
+ScarletColosseumWhayneScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_WHAYNE
@@ -66,24 +66,24 @@ WhirlCupColosseumWhayneScript:
 	closetext
 	end
 
-WhirlCupColosseumStatue:
+ScarletColosseumStatue:
 	opentext
 	checkevent EVENT_BEAT_WHAYNE
 	iftrue .Beaten
-	writetext WhirlCupColosseumStatueText
+	writetext ScarletColosseumStatueText
 	waitbutton
 	closetext
 	end
 
 .Beaten:
-	writetext WhirlCupColosseumStatueWinText
+	writetext ScarletColosseumStatueWinText
 	waitbutton
 	closetext
 	end
 
-WhirlCupColosseumGymGuideText:
+ScarletColosseumGymGuideText:
 	text "Welcome to the"
-	line "WATER COLOSSEUM,"
+	line "COLOSSEUM,"
 
 	para "part of the WHIRL"
 	line "CUP COMPETITION."
@@ -108,7 +108,7 @@ WhirlCupColosseumGymGuideText:
 	line "easy, kid."
 	done
 
-WhirlCupColosseumGymGuideWinText:
+ScarletColosseumGymGuideWinText:
 	text "You actually"
 	line "did it!"
 
@@ -116,14 +116,14 @@ WhirlCupColosseumGymGuideWinText:
 	line "to be a legend."
 	done
 
-WhirlCupColosseumStatueText:
+ScarletColosseumStatueText:
 	text "SCARLET CITY"
 	line "COLOSSEUM"
 
 	para "MASTER: WHAYNE"
 	done
 
-WhirlCupColosseumStatueWinText:
+ScarletColosseumStatueWinText:
 	text "SCARLET CITY"
 	line "COLOSSEUM"
 
@@ -188,7 +188,7 @@ WhayneWinText:
 	line "handsomely."
 	done
 
-WhirlCupColosseum_MapEvents:
+ScarletColosseum_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
@@ -198,9 +198,9 @@ WhirlCupColosseum_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 10, 15, BGEVENT_READ, WhirlCupColosseumStatue
-	bg_event  7, 15, BGEVENT_READ, WhirlCupColosseumStatue
+	bg_event 10, 15, BGEVENT_READ, ScarletColosseumStatue
+	bg_event  7, 15, BGEVENT_READ, ScarletColosseumStatue
 
 	def_object_events
-	object_event  8,  3, SPRITE_WHAYNE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WhirlCupColosseumWhayneScript, -1
-	object_event 11, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WhirlCupColosseumGymGuideScript, -1
+	object_event  8,  3, SPRITE_WHAYNE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ScarletColosseumWhayneScript, -1
+	object_event 11, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ScarletColosseumGymGuideScript, -1
