@@ -95,7 +95,7 @@ WhirlCupColosseumGymGuideText:
 	line "is that, though"
 
 	para "this place is"
-	line "based around the
+	line "based around the"
 
 	para "water-type, its"
 	line "MASTER uses a"
