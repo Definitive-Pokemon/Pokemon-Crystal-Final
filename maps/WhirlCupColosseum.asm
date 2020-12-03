@@ -66,7 +66,7 @@ WhirlCupColosseumWhayneScript:
 	closetext
 	end
 
-VioletGymStatue:
+WhirlCupColosseumStatue:
 	checkevent EVENT_BEAT_WHAYNE
 	iftrue .Beaten
 	jumpstd GymStatue1Script
