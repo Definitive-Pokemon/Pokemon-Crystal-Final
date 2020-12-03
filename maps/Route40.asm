@@ -198,7 +198,7 @@ SwimmermRandallAfterBattleText:
 
 SwimmerfElaineSeenText:
 	text "Are you going to"
-	line "CIANWOOD?"
+	line "RED ROCK?"
 
 	para "How about a quick"
 	line "battle first?"
@@ -239,6 +239,12 @@ Route40Lass1Text:
 
 	para "CIANWOOD is across"
 	line "the sea."
+
+	para "To get there, you"
+	line "have to get past"
+
+	para "RED ROCK ISLE"
+	line "first, though."
 	done
 
 Route40PokefanMText:

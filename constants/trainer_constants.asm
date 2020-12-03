@@ -416,6 +416,7 @@ KRIS EQU __trainer_class__
 	const JAMES
 	const LEWIS
 	const PARKER
+	const EDWIN
 
 	trainerclass SWIMMERF ; 27
 	const ELAINE
@@ -452,6 +453,7 @@ KRIS EQU __trainer_class__
 	const HUEY2
 	const HUEY3
 	const HUEY4
+	const BARRON
 
 	trainerclass SUPER_NERD ; 29
 	const STAN
@@ -468,6 +470,7 @@ KRIS EQU __trainer_class__
 	const NORTON
 	const HUGH
 	const MARKUS
+	const MARTIEN
 
 	trainerclass RIVAL2 ; 2a
 	const RIVAL2_1_CHIKORITA

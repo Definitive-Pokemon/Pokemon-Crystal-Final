@@ -91,17 +91,18 @@ WhirlCupColosseumGymGuideText:
 	para "You've come to me"
 	line "for some advice?"
 
-	para "All I can say is that,"
-	line "though this place is"
+	para "All I can say"
+	line "is that, though"
 
-	para "based around the"
-	line "water-type, its"
+	para "this place is"
+	line "based around the
 
-	para "MASTER uses a"
-	line "varied team of no"
+	para "water-type, its"
+	line "MASTER uses a"
 
-	para "less than five"
-	line "#MON."
+	para "varied team of no"
+	line "less than five"
+	cont "#MON."
 
 	para "This won't be"
 	line "easy, kid."

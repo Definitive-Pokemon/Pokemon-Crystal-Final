@@ -2107,6 +2107,11 @@ SwimmerMGroup:
 	db 46, SEADRA
 	db -1 ; end
 
+	; SWIMMER M (22)
+	db "EDWIN@", TRAINERTYPE_NORMAL
+	db 25, OCTILLERY
+	db -1 ; end
+
 SwimmerFGroup:
 	; SWIMMERF (1)
 	db "ELAINE@", TRAINERTYPE_NORMAL
@@ -2297,6 +2302,12 @@ SailorGroup:
 	db 52, POLIWRATH,  SURF, STRENGTH, ICE_PUNCH, SUBMISSION
 	db -1 ; end
 
+	; SAILOR (14)
+	db "BARRON@", TRAINERTYPE_NORMAL
+	db 22, SLOWBRO
+	db 23, SLOWKING
+	db -1 ; end
+
 SuperNerdGroup:
 	; SUPER_NERD (1)
 	db "STAN@", TRAINERTYPE_NORMAL
@@ -2380,6 +2391,12 @@ SuperNerdGroup:
 	; SUPER_NERD (14)
 	db "MARKUS@", TRAINERTYPE_MOVES
 	db 19, SLOWPOKE,   CURSE, WATER_GUN, GROWL, STRENGTH
+	db -1 ; end
+
+	; SUPER_NERD (15)
+	db "MARTIEN@", TRAINERTYPE_NORMAL
+	db 21 PORYGON
+	db 22, PORYGON2
 	db -1 ; end
 
 Rival2Group:
