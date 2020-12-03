@@ -1,10 +1,27 @@
 	object_const_def
 	const WHIRLCUPCOLOSSEUM_WHAYNE
+	const WHIRLCUPCOLOSSEUM_GYM_GUIDE
 
 WhirlCupColosseum_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+
+WhirlCupColosseumGymGuideScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_WHAYNE
+	iftrue .WhirlCupColosseumGymGuideWinScript
+	writetext WhirlCupColosseumGymGuideText
+	waitbutton
+	closetext
+	end
+
+.WhirlCupColosseumGymGuideWinScript:
+	writetext WhirlCupColosseumGymGuideWinText
+	waitbutton
+	closetext
+	end
 
 WhirlCupColosseumWhayneScript:
 	faceplayer
@@ -48,6 +65,46 @@ WhirlCupColosseumWhayneScript:
 	waitbutton
 	closetext
 	end
+
+VioletGymStatue:
+	checkevent EVENT_BEAT_WHAYNE
+	iftrue .Beaten
+	jumpstd GymStatue1Script
+.Beaten:
+	gettrainername STRING_BUFFER_4, WHAYNE, WHAYNE1
+	jumpstd GymStatue2Script
+
+WhirlCupColosseumGymGuideText:
+	text "Welcome to the"
+	line "WATER COLOSSEUM,"
+
+	para "part of the WHIRL"
+	line "CUP COMPETITION."
+
+	para "You've come to me"
+	line "for some advice?"
+
+	para "All I can say is that,"
+	line "though this place is"
+
+	para "based around the"
+	line "water-type, its"
+
+	para "MASTER uses a"
+	line "varied team of no"
+
+	para "less than five"
+	line "#MON."
+
+	para "This won't be"
+	line "easy, kid."
+	done
+
+WhirlCupColosseumGymGuideWinText:
+	text "You actually did it!"
+	line "You're on your way"
+	cont "to be a legend."
+	done
 
 WhayneIntroText:
 	text "And who…"
@@ -114,6 +171,9 @@ WhirlCupColosseum_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 10, 15, BGEVENT_READ, WhirlCupColosseumStatue
+	bg_event  7, 15, BGEVENT_READ, WhirlCupColosseumStatue
 
 	def_object_events
 	object_event  8,  3, SPRITE_WHAYNE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WhirlCupColosseumWhayneScript, -1
+	object_event 11, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WhirlCupColosseumGymGuideScript, -1
