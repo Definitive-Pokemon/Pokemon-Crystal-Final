@@ -2395,7 +2395,7 @@ SuperNerdGroup:
 
 	; SUPER_NERD (15)
 	db "MARTIEN@", TRAINERTYPE_NORMAL
-	db 21 PORYGON
+	db 21, PORYGON
 	db 22, PORYGON2
 	db -1 ; end
 
