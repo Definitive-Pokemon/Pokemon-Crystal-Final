@@ -12,7 +12,7 @@ RedRockIsle_MapScripts:
 
 	def_callbacks
 
-TrainerSwimmermEDWIN:
+TrainerSwimmermEdwin:
 	trainer SWIMMERM, EDWIN, EVENT_BEAT_SWIMMERM_EDWIN, SwimmermEdwinSeenText, SwimmermEdwinBeatenText, 0, .Script
 
 .Script:
@@ -23,7 +23,7 @@ TrainerSwimmermEDWIN:
 	closetext
 	end
 
-TrainerSailorBARRON:
+TrainerSailorBarron:
 	trainer SAILOR, BARRON, EVENT_BEAT_SAILOR_BARRON, SailorBarronSeenText, SailorBarronBeatenText, 0, .Script
 
 .Script:
@@ -34,7 +34,7 @@ TrainerSailorBARRON:
 	closetext
 	end
 
-TrainerSuperNerdMARTIEN:
+TrainerSuperNerdMartien:
 	trainer SUPER_NERD, MARTIEN, EVENT_BEAT_SUPER_NERD_MARTIEN, SuperNerdMartienSeenText, SuperNerdMartienBeatenText, 0, .Script
 
 .Script:
