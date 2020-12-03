@@ -1059,7 +1059,7 @@ ScarletCity_Blocks:
 RedRockOutlook_Blocks:
 	INCBIN "maps/RedRockOutlook.blk"
 
-WhirlCupColosseum_Blocks:
+ScarletColosseum_Blocks:
 	INCBIN "maps/ScarletColosseum.blk"
 
 RedRockLab_Blocks:
