@@ -67,12 +67,19 @@ WhirlCupColosseumWhayneScript:
 	end
 
 WhirlCupColosseumStatue:
+	opentext
 	checkevent EVENT_BEAT_WHAYNE
 	iftrue .Beaten
-	jumpstd GymStatue1Script
+	writetext WhirlCupColosseumStatueText
+	waitbutton
+	closetext
+	end
+
 .Beaten:
-	gettrainername STRING_BUFFER_4, WHAYNE, WHAYNE1
-	jumpstd GymStatue2Script
+	writetext WhirlCupColosseumStatueWinText
+	waitbutton
+	closetext
+	end
 
 WhirlCupColosseumGymGuideText:
 	text "Welcome to the"
@@ -101,9 +108,28 @@ WhirlCupColosseumGymGuideText:
 	done
 
 WhirlCupColosseumGymGuideWinText:
-	text "You actually did it!"
-	line "You're on your way"
-	cont "to be a legend."
+	text "You actually"
+	line "did it!"
+
+	para "You're on your way"
+	line "to be a legend."
+	done
+
+WhirlCupColosseumStatueText:
+	text "SCARLET CITY"
+	line "COLOSSEUM"
+
+	para "MASTER: WHAYNE"
+	done
+
+WhirlCupColosseumStatueWinText:
+	text "SCARLET CITY"
+	line "COLOSSEUM"
+
+	para "MASTER: WHAYNE"
+
+	para "WINNING TRAINERS:"
+	line "<PLAYER>"
 	done
 
 WhayneIntroText:

@@ -236,7 +236,7 @@ ScarletCitySignText:
 
 ScarletGymSignText:
 	text "SCARLET CITY"
-	line "WATER COLOSSEUM"
+	line "COLOSSEUM"
 
 	para "MASTER: WHAYNE"
 

@@ -1060,7 +1060,7 @@ RedRockOutlook_Blocks:
 	INCBIN "maps/RedRockOutlook.blk"
 
 WhirlCupColosseum_Blocks:
-	INCBIN "maps/WhirlCupColosseum.blk"
+	INCBIN "maps/ScarletColosseum.blk"
 
 RedRockLab_Blocks:
 	INCBIN "maps/RedRockLab.blk"

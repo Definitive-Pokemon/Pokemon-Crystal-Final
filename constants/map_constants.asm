@@ -500,7 +500,7 @@ ENDM
 	map_const SCARLET_POKECENTER_1F, 5,  4 ;  5
 	map_const ROUTE_40_BATTLE_TOWER_GATE, 5,  4 ; 6
 	map_const BATTLE_TOWER_OUTSIDE, 10, 14 ; 7
-	map_const WHIRL_CUP_COLOSSEUM, 9, 9 ; 12
+	map_const SCARLET_COLOSSEUM, 9, 9 ; 12
 	map_const SCARLET_HOUSE_1, 4, 4 ; 13
 	map_const SCARLET_HOUSE_2, 4, 4 ; 14
 	map_const SCARLET_OLD_HOUSE, 4, 4 ; 15
