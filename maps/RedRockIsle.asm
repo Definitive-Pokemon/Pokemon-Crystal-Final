@@ -6,6 +6,7 @@
 	const REDROCKISLE_ROCK2
 	const REDROCKISLE_ROCK3
 	const REDROCKISLE_ROCK4
+	const POKEFAN_M
 
 RedRockIsle_MapScripts:
 	def_scene_scripts
@@ -44,6 +45,9 @@ TrainerSuperNerdMartien:
 	waitbutton
 	closetext
 	end
+
+ApoeScript:
+	jumptext RedRockSignText
 
 RedRockSign:
 	jumptext RedRockSignText
@@ -151,3 +155,4 @@ RedRockIsle_MapEvents:
 	object_event 15, 20, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockIsleRock, -1
 	object_event 14, 12, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockIsleRock, -1
 	object_event  8,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockIsleRock, -1
+	object_event  3, 26, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ApoeScript, -1
