@@ -416,7 +416,6 @@ KRIS EQU __trainer_class__
 	const JAMES
 	const LEWIS
 	const PARKER
-	const EDWIN
 
 	trainerclass SWIMMERF ; 27
 	const ELAINE
@@ -438,6 +437,7 @@ KRIS EQU __trainer_class__
 	const NIKKI
 	const DIANA
 	const BRIANA
+	const GABRIELLA
 
 	trainerclass SAILOR ; 28
 	const EUGENE

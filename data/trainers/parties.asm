@@ -2107,11 +2107,6 @@ SwimmerMGroup:
 	db 46, SEADRA
 	db -1 ; end
 
-	; SWIMMER M (22)
-	db "EDWIN@", TRAINERTYPE_NORMAL
-	db 25, OCTILLERY
-	db -1 ; end
-
 SwimmerFGroup:
 	; SWIMMERF (1)
 	db "ELAINE@", TRAINERTYPE_NORMAL
@@ -2219,6 +2214,11 @@ SwimmerFGroup:
 	db "BRIANA@", TRAINERTYPE_NORMAL
 	db 46, SEAKING
 	db 46, SEAKING
+	db -1 ; end
+
+	; SWIMMERF (22)
+	db "GABRIELLA@", TRAINERTYPE_NORMAL
+	db 25, OCTILLERY
 	db -1 ; end
 
 SailorGroup:

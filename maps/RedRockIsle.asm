@@ -3,7 +3,7 @@
 	const REDROCKISLE_ROCK2
 	const REDROCKISLE_ROCK3
 	const REDROCKISLE_ROCK4
-	const REDROCKISLE_SWIMMER_GUY
+	const REDROCKISLE_SWIMMER_GIRL
 	const REDROCKISLE_SAILOR
 	const REDROCKISLE_SUPER_NERD
 
@@ -27,13 +27,13 @@ RedRockIsleHiddenLeafStone
 RedRockIsleHiddenNugget
 	hiddenitem NUGGET, EVENT_RED_ROCK_ISLE_HIDDEN_NUGGET
 
-TrainerSwimmermEdwin:
-	trainer SWIMMERM, EDWIN, EVENT_BEAT_SWIMMERM_EDWIN, SwimmermEdwinSeenText, SwimmermEdwinBeatenText, 0, .Script
+TrainerSwimmerfGabriella:
+	trainer SWIMMERF, GABRIELLA, EVENT_BEAT_SWIMMERF_GABRIELLA, SwimmerfGabriellaSeenText, SwimmerfGabriellaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext SwimmermEdwinAfterBattleText
+	writetext SwimmerfGabriellaAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -71,16 +71,16 @@ RedRockScarletSignText:
 	para "SCARLET CITY"
 	done
 
-SwimmermEdwinSeenText:
+SwimmerfGabriellaSeenText:
 	text "We're not done"
 	line "swimming yet!"
 	done
 
-SwimmermEdwinBeatenText:
+SwimmerfGabriellaBeatenText:
 	text "Phew, I'm done…"
 	done
 
-SwimmermEdwinAfterBattleText:
+SwimmerfGabriellaAfterBattleText:
 	text "I'll let you go,"
 	line "but come back"
 
@@ -148,6 +148,6 @@ RedRockIsle_MapEvents:
 	object_event 15, 20, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockIsleRock, -1
 	object_event 14, 12, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockIsleRock, -1
 	object_event  8,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockIsleRock, -1
-	object_event 16,  3, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermEdwin, -1
+	object_event 16,  3, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfGabriella, -1
 	object_event 10, 20, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerSailorBarron, -1
 	object_event 13, 25, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerSuperNerdMartien, -1
