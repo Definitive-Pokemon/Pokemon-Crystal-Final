@@ -1,17 +1,31 @@
 	object_const_def
-	const REDROCKISLE_SWIMMER_GUY
-	const REDROCKISLE_SAILOR
-	const REDROCKISLE_SUPER_NERD
 	const REDROCKISLE_ROCK1
 	const REDROCKISLE_ROCK2
 	const REDROCKISLE_ROCK3
 	const REDROCKISLE_ROCK4
-	const POKEFAN_M
+	const REDROCKISLE_SWIMMER_GUY
+	const REDROCKISLE_SAILOR
+	const REDROCKISLE_SUPER_NERD
 
 RedRockIsle_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+
+RedRockSign:
+	jumptext RedRockSignText
+
+RedRockScarletSign:
+	jumptext RedRockScarletSignText
+
+RedRockIsleRock:
+	jumpstd SmashRockScript
+
+RedRockIsleHiddenLeafStone
+	hiddenitem LEAF_STONE, EVENT_RED_ROCK_ISLE_HIDDEN_LEAF_STONE
+
+RedRockIsleHiddenNugget
+	hiddenitem NUGGET, EVENT_RED_ROCK_ISLE_HIDDEN_NUGGET
 
 TrainerSwimmermEdwin:
 	trainer SWIMMERM, EDWIN, EVENT_BEAT_SWIMMERM_EDWIN, SwimmermEdwinSeenText, SwimmermEdwinBeatenText, 0, .Script
@@ -46,23 +60,16 @@ TrainerSuperNerdMartien:
 	closetext
 	end
 
-ApoeScript:
-	jumptext RedRockSignText
+RedRockSignText:
+	text "Welcome to"
+	line "RED ROCK ISLE"
+	done
 
-RedRockSign:
-	jumptext RedRockSignText
+RedRockScarletSignText:
+	text "RED ROCK ISLE"
 
-RedRockScarletSign:
-	jumptext RedRockScarletSignText
-
-RedRockIsleRock:
-	jumpstd SmashRockScript
-
-RedRockIsleHiddenLeafStone
-	hiddenitem LEAF_STONE, EVENT_RED_ROCK_ISLE_HIDDEN_LEAF_STONE
-
-RedRockIsleHiddenNugget
-	hiddenitem NUGGET, EVENT_RED_ROCK_ISLE_HIDDEN_NUGGET
+	para "SCARLET CITY"
+	done
 
 SwimmermEdwinSeenText:
 	text "We're not done"
@@ -123,17 +130,6 @@ SuperNerdMartienAfterBattleText:
 	line "its MASTER."
 	done
 
-RedRockSignText:
-	text "Welcome to"
-	line "RED ROCK ISLE"
-	done
-
-RedRockScarletSignText:
-	text "RED ROCK ISLE"
-
-	para "SCARLET CITY"
-	done
-
 RedRockIsle_MapEvents:
 	db 0, 0 ; filler
 
@@ -148,11 +144,10 @@ RedRockIsle_MapEvents:
 	bg_event 14, 12, BGEVENT_ITEM, RedRockIsleHiddenNugget
 
 	def_object_events
-	object_event 16,  3, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, 1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermEdwin, -1
-	object_event 10, 20, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, 1, 0, OBJECTTYPE_TRAINER, 4, TrainerSailorBarron, -1
-	object_event 13, 25, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, 1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerSuperNerdMartien, -1
 	object_event  6, 15, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockIsleRock, -1
 	object_event 15, 20, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockIsleRock, -1
 	object_event 14, 12, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockIsleRock, -1
 	object_event  8,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedRockIsleRock, -1
-	object_event  3, 26, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ApoeScript, -1
+	object_event 16,  3, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, 1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermEdwin, -1
+	object_event 10, 20, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, 1, 0, OBJECTTYPE_TRAINER, 4, TrainerSailorBarron, -1
+	object_event 13, 25, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, 1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerSuperNerdMartien, -1
