@@ -43,6 +43,7 @@ SearingCraterScientistScript:
 	applymovement SEARINGCRATER1F_ROCKET1, RocketMovement3
 	setevent EVENT_SEARING_CRATER_ROCKET
 	applymovement SEARINGCRATER1F_SCIENTIST1, ScientistMovement3
+	turnobject SEARINGCRATER1F_SCIENTIST1, UP
 	end
 
 .SearingCraterScientistTalkScript:
@@ -83,7 +84,6 @@ RocketMovement3:
 
 ScientistMovement3:
 	slow_step RIGHT
-	turn_head UP
 	step_end
 
 SearingCraterRocketText:
@@ -197,4 +197,4 @@ SearingCrater1F_MapEvents:
 	object_event 15,  8, SPRITE_SCIENTIST,	SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SearingCraterScientistScript, 0
 	object_event 21,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SearingCraterMoon, EVENT_SEARING_CRATER_MOON
 	object_event 2,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SearingCraterHyper, EVENT_SEARING_CRATER_HYPER
-	object_event 5,  13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SearingCraterRoot, EVENT_SEARING_CRATER_ROOT
+	object_event  6, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SearingCraterRoot, EVENT_SEARING_CRATER_ROOT
