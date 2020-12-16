@@ -35,6 +35,7 @@ RedRockLabScientist4Script:
 	waitbutton
 	closetext
 	applymovement REDROCKLAB_SCIENTIST4, Scientist4Movement
+	turnobject REDROCKLAB_SCIENTIST4, DOWN
 	setevent EVENT_SCIENTIST_4_MOVED
 	end
 
@@ -55,7 +56,6 @@ Scientist4Movement:
 	step UP
 	step UP
 	turn_head DOWN
-	fix_facing
 	step_end
 
 RedRockLabScientist1Text:

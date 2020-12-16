@@ -43,6 +43,7 @@ SearingCraterScientistScript:
 	applymovement SEARINGCRATER1F_ROCKET1, RocketMovement3
 	setevent EVENT_SEARING_CRATER_ROCKET
 	applymovement SEARINGCRATER1F_SCIENTIST1, ScientistMovement3
+	turnobject SEARINGCRATER1F_SCIENTIST1, UP
 	end
 
 .SearingCraterScientistTalkScript:
@@ -63,6 +64,7 @@ SearingCraterRoot:
 	itemball ENERGY_ROOT
 
 RocketMovement1:
+	turn_head RIGHT
 	fix_facing
 	big_step LEFT
 	remove_fixed_facing
@@ -83,7 +85,6 @@ RocketMovement3:
 ScientistMovement3:
 	slow_step RIGHT
 	turn_head UP
-	fix_facing
 	step_end
 
 SearingCraterRocketText:
@@ -153,8 +154,8 @@ SearingCraterScientistText:
 	para "Clearly, he had"
 	line "set his sights on"
 
-	para "the legendary #-"
-	line "MON MOLTRES."
+	para "the legendary bird"
+	line "named MOLTRES."
 
 	para "Luckily, I was"
 	line "just doing my"
