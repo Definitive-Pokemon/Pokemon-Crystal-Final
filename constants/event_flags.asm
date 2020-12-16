@@ -1473,8 +1473,9 @@
 	const EVENT_BEAT_SWIMMERF_GABRIELLA
 	const EVENT_BEAT_SAILOR_BARRON
 	const EVENT_BEAT_SUPER_NERD_MARTIEN
+	const EVENT_SEARING_CRATER_ROCKET
 
-; Unused: next 32 events
+; Unused: next 31 events
 
 	const_next 2048
 NUM_EVENTS EQU const_value ; 800

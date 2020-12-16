@@ -39,6 +39,7 @@ RedRockLabScientist4Script:
 	end
 
 .GoOn:
+	faceplayer
 	writetext RedRockLabScientist4GoOnText
 	waitbutton
 	closetext
@@ -53,6 +54,8 @@ Scientist4Movement:
 	step UP
 	step UP
 	step UP
+	turn_head DOWN
+	fix_facing
 	step_end
 
 RedRockLabScientist1Text:
