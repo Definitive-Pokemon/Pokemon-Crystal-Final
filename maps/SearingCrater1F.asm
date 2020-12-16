@@ -73,10 +73,10 @@ ScientistMovement2:
 	step_end
 
 RocketMovement3:
-	step_LEFT
-	step_LEFT
-	step_LEFT
-	step_LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
 	hide_object
 	step_end
 
