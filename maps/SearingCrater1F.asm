@@ -43,7 +43,6 @@ SearingCraterScientistScript:
 	applymovement SEARINGCRATER1F_ROCKET1, RocketMovement3
 	setevent EVENT_SEARING_CRATER_ROCKET
 	applymovement SEARINGCRATER1F_SCIENTIST1, ScientistMovement3
-	turnobject SEARINGCRATER1F_SCIENTIST1, UP
 	end
 
 .SearingCraterScientistTalkScript:
