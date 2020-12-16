@@ -158,7 +158,7 @@ JohtoWaterWildMons:
 	db 20, TENTACRUEL
 	db 20, MANTINE
 
-	map_id SEARING_CRATER
+	map_id SEARING_CRATER_1F
 	db 2 percent ; encounter rate
 	db 15, WOOPER
 	db 20, GRIMER
