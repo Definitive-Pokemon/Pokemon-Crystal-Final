@@ -11,6 +11,7 @@
 	const CIANWOODCITY_POKEFAN_F
 	const CIANWOODCITY_EUSINE
 	const CIANWOODCITY_SUICUNE
+	const CIANWOODCITY_BIG_ONIX
 
 CianwoodCity_MapScripts:
 	def_scene_scripts
@@ -148,6 +149,28 @@ CianwoodCityHiddenRevive:
 
 CianwoodCityHiddenMaxEther:
 	hiddenitem MAX_ETHER, EVENT_CIANWOOD_CITY_HIDDEN_MAX_ETHER
+
+ShinyOnix:
+	opentext
+	special SnorlaxAwake
+	iftrue .Awake
+	writetext ShinyOnixSleepingText
+	waitbutton
+	closetext
+	end
+
+.Awake:
+	writetext RadioNearShinyOnixText
+	pause 15
+	cry ONIX
+	closetext
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadwildmon ONIX, 50
+	startbattle
+	disappear CIANWOODCITY_BIG_ONIX
+	setevent EVENT_FOUGHT_ONIX
+	reloadmapafterbattle
+	end
 
 CianwoodCitySuicuneApproachMovement:
 	set_sliding
@@ -379,6 +402,21 @@ CianwoodPokeSeerSignText:
 	line "AHEAD"
 	done
 
+ShinyOnixSleepingText:
+	text "This ONIX is fast"
+	line "asleep…"
+	done
+
+RadioNearShinyOnixText:
+	text "The #GEAR was"
+	line "placed near the"
+	cont "resting ONIX…"
+
+	para "…"
+
+	para "ONIX woke up!"
+	done
+
 CianwoodCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -386,7 +424,7 @@ CianwoodCity_MapEvents:
 	warp_event 17, 41, MANIAS_HOUSE, 1
 	warp_event  8, 43, CIANWOOD_GYM, 1
 	warp_event 23, 43, CIANWOOD_POKECENTER_1F, 1
-	warp_event 15, 47, CIANWOOD_PHARMACY, 1
+	warp_event 15, 45, CIANWOOD_PHARMACY, 1
 	warp_event  9, 31, CIANWOOD_PHOTO_STUDIO, 1
 	warp_event 15, 37, CIANWOOD_LUGIA_SPEECH_HOUSE, 1
 	warp_event  5, 17, POKE_SEERS_HOUSE, 1
@@ -417,3 +455,4 @@ CianwoodCity_MapEvents:
 	object_event 10, 46, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityChucksWife, -1
 	object_event 11, 21, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CIANWOOD_CITY_EUSINE
 	object_event 10, 14, SPRITE_SUICUNE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SAW_SUICUNE_AT_CIANWOOD_CITY
+	object_event 15, 48, SPRITE_BIG_ONIX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ShinyOnix, EVENT_ONIX_GONE

@@ -1474,8 +1474,10 @@
 	const EVENT_BEAT_SAILOR_BARRON
 	const EVENT_BEAT_SUPER_NERD_MARTIEN
 	const EVENT_SEARING_CRATER_ROCKET
+	const EVENT_FOUGHT_ONIX
+	const EVENT_ONIX_GONE
 
-; Unused: next 31 events
+; Unused: next 30 events
 
 	const_next 2048
 NUM_EVENTS EQU const_value ; 800

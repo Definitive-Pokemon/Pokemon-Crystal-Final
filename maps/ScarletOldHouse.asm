@@ -15,7 +15,7 @@ ScarletOldHouseGrannyText:
 	line "was built, this"
 
 	para "house was the only"
-	line " one standing here."
+	line "one standing here."
 
 	para "It's been inhabited"
 	line "by a line of"
