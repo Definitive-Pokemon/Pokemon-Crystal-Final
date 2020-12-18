@@ -1,7 +1,7 @@
 	object_const_def
-	const BATTLETOWEROUTSIDE_YOUNGSTER
-	const BATTLETOWEROUTSIDE_COOLTRAINER_F
-	const BATTLETOWEROUTSIDE_GRAMPS
+	const BATTLETOWEROUTSIDE_STANDING_YOUNGSTER
+	const BATTLETOWEROUTSIDE_BEAUTY
+	const BATTLETOWEROUTSIDE_SAILOR
 	const BATTLETOWEROUTSIDE_LASS
 
 BattleTowerOutside_MapScripts:
@@ -21,11 +21,11 @@ BattleTowerOutside_MapScripts:
 BattleTowerOutsideYoungsterScript:
 	jumptextfaceplayer BattleTowerOutsideYoungsterText
 
-BattleTowerOutsideCooltrainerFScript:
-	jumptextfaceplayer BattleTowerOutsideCooltrainerFText
+BattleTowerOutsideBeautyScript:
+	jumptextfaceplayer BattleTowerOutsideBeautyText
 
-BattleTowerOutsideGrampsScript:
-	jumptextfaceplayer BattleTowerOutsideGrampsText
+BattleTowerOutsideSailorScript:
+	jumptextfaceplayer BattleTowerOutsideSailorText
 
 BattleTowerOutsideSign:
 	jumptext BattleTowerOutsideSignText
@@ -63,7 +63,7 @@ BattleTowerOutsideYoungsterText:
 	cont "in there!"
 	done
 
-BattleTowerOutsideCooltrainerFText_NotYetOpen:
+BattleTowerOutsideBeautyText_NotYetOpen:
 ; unreferenced
 	text "What on earth do"
 	line "they do here?"
@@ -75,7 +75,7 @@ BattleTowerOutsideCooltrainerFText_NotYetOpen:
 	line "#MON battles."
 	done
 
-BattleTowerOutsideCooltrainerFText:
+BattleTowerOutsideBeautyText:
 	text "You can use only"
 	line "three #MON."
 
@@ -86,7 +86,7 @@ BattleTowerOutsideCooltrainerFText:
 	line "battle…"
 	done
 
-BattleTowerOutsideGrampsText_Mobile:
+BattleTowerOutsideSailorText_Mobile:
 ; unreferenced
 	text "Ehehehe…"
 	line "I sneaked out of"
@@ -97,7 +97,7 @@ BattleTowerOutsideGrampsText_Mobile:
 	cont "a LEADER!"
 	done
 
-BattleTowerOutsideGrampsText:
+BattleTowerOutsideSailorText:
 	text "Hehehe, I snuck"
 	line "out from work."
 
@@ -146,7 +146,7 @@ BattleTowerOutside_MapEvents:
 	bg_event 10, 14, BGEVENT_READ, BattleTowerOutsideSign
 
 	def_object_events
-	object_event  6, 16, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BattleTowerOutsideYoungsterScript, -1
-	object_event 12, 15, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BattleTowerOutsideCooltrainerFScript, -1
-	object_event 11, 18, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BattleTowerOutsideGrampsScript, EVENT_BATTLE_TOWER_OUTSIDE_SAILOR
+	object_event  6, 16, SPRITE_STANDING_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BattleTowerOutsideYoungsterScript, -1
+	object_event 12, 15, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BattleTowerOutsideBeautyScript, -1
+	object_event 11, 18, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BattleTowerOutsideSailorScript, EVENT_BATTLE_TOWER_OUTSIDE_SAILOR
 	object_event  0,  0, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
