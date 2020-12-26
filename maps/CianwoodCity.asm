@@ -164,7 +164,7 @@ ShinyOnix:
 	pause 15
 	cry ONIX
 	closetext
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
 	loadwildmon ONIX, 50
 	startbattle
 	disappear CIANWOODCITY_BIG_ONIX
