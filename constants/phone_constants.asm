@@ -8,9 +8,6 @@
 	const PHONE_SCHOOLBOY_JACK
 	const PHONE_POKEFAN_BEVERLY
 	const PHONE_SAILOR_HUEY
-	const_skip
-	const_skip
-	const_skip
 	const PHONE_COOLTRAINERM_GAVEN
 	const PHONE_COOLTRAINERF_BETH
 	const PHONE_BIRDKEEPER_JOSE
@@ -25,7 +22,6 @@
 	const PHONE_JUGGLER_IRWIN
 	const PHONE_BUG_CATCHER_ARNIE
 	const PHONE_SCHOOLBOY_ALAN
-	const_skip
 	const PHONE_LASS_DANA
 	const PHONE_SCHOOLBOY_CHAD
 	const PHONE_POKEFANM_DEREK
@@ -67,5 +63,8 @@
 	const_skip ; high PHONE_CONTACT_SCRIPT2_ADDR byte
 PHONE_CONTACT_SIZE EQU const_value
 
-; maximum number of pokegear contacts
+; original contact list max size, kept for legacy
 CONTACT_LIST_SIZE EQU 10
+
+; custom contact list size override (amount of bytes for the flag list)
+CONTACT_LIST_FLAG_NUMBER EQU 5

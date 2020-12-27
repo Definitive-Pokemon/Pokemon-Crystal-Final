@@ -108,7 +108,6 @@ ROMX $24
 	"bank24"
 ROMX $25
 	"Maps"
-	"Events"
 ROMX $26
 	"Map Scripts 11"
 ROMX $27
@@ -193,7 +192,6 @@ ROMX $49
 	"Unown Pic Pointers"
 	"Pics 2"
 ROMX $4a
-	"Trainer Pic Pointers"
 	"Pics 3"
 ROMX $4b
 	"Pics 4"
@@ -285,6 +283,7 @@ ROMX $71
 	"Text 3"
 ROMX $72
 	"Miscellaneous Text"
+	"Trainer Pic Pointers"
 ROMX $73
 	"Pokedex Entries 129-192"
 ROMX $74
@@ -302,11 +301,13 @@ ROMX $7c
 	"Battle Tower Trainer Data"
 ROMX $7d
 	"Mobile News Data"
+	"Events"
 ROMX $7e
 	"Crystal Events"
 ROMX $7f
 	org $7de0
 	"Stadium 2 Checksums"
+
 WRAM0
 	"Stack"
 	"Audio RAM"

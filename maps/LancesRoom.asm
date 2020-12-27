@@ -130,12 +130,12 @@ LancesRoomLanceScript:
 	warpfacing UP, HALL_OF_FAME, 4, 13
 	end
 
-LancesRoomLanceScript_Rematch
+LancesRoomLanceScript_Rematch:
 	loadtrainer CHAMPION, LANCE2
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
-	setevent EVENT_BEAT_CHAMPION_LANCE
+	setevent EVENT_BEAT_E4_REMATCH
 	opentext
 	writetext LanceBattleAfterText
 	waitbutton

@@ -92,6 +92,7 @@ const_value = -1
 	const SPAWN_CIANWOOD
 	const SPAWN_GOLDENROD
 	const SPAWN_OLIVINE
+	const SPAWN_SCARLET
 	const SPAWN_ECRUTEAK
 	const SPAWN_MAHOGANY
 	const SPAWN_LAKE_OF_RAGE

@@ -540,7 +540,7 @@ wBattleScriptBufferAddress:: dw
 
 wTurnEnded:: db
 
-	ds 1
+wIsConfusionDamage:: db
 
 wPlayerStats::
 wPlayerAttack:: dw
@@ -826,7 +826,7 @@ NEXTU
 ; pokegear
 wPokegearPhoneLoadNameBuffer:: db
 wPokegearPhoneCursorPosition:: db
-wPokegearPhoneScrollPosition:: db
+wPokegearPhoneScrollPosition:: db ; now stores the lowest phonenumber displayed in the top of the screen
 wPokegearPhoneSelectedPerson:: db
 wPokegearPhoneSubmenuCursor:: db
 wPokegearMapCursorObjectPointer:: dw
@@ -1958,9 +1958,10 @@ wJumpStdScriptBuffer:: ds 3
 NEXTU
 ; phone script data
 wCheckedTime:: db
-wPhoneListIndex:: db
+wPhoneListIndex:: db ; repurposed to hold current number, instead of registered pokegear number index
 wNumAvailableCallers:: db
-wAvailableCallers:: ds CONTACT_LIST_SIZE
+wAvailableCallers:: ds CONTACT_LIST_SIZE ; first offset is flag bit
+; second offset is temporary phonenumber
 
 NEXTU
 ; phone caller contact
@@ -2007,7 +2008,7 @@ wBallsPocketCursor::    db
 wTMHMPocketCursor::     db
 
 wPCItemsScrollPosition::        db
-wPartyMenuScrollPosition::      db ; unused
+wPartyMenuScrollPosition::      db ; used to store the current amount of contacts registered to the player.
 wItemsPocketScrollPosition::    db
 wKeyItemsPocketScrollPosition:: db
 wBallsPocketScrollPosition::    db

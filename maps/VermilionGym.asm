@@ -13,6 +13,8 @@ VermilionGym_MapScripts:
 VermilionGymSurgeScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_BLUE
+	iftrue .Rematch
 	checkflag ENGINE_THUNDERBADGE
 	iftrue .FightDone
 	writetext LtSurgeIntroText
@@ -38,6 +40,25 @@ VermilionGymSurgeScript:
 
 .FightDone:
 	writetext LtSurgeFightDoneText
+	waitbutton
+	closetext
+	end
+
+.Rematch:
+	writetext LtSurgeRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext LtSurgeRematchYesBattleText
+	waitbutton
+	closetext
+	winlosstext LtSurgeRematchOverText, 0
+	loadtrainer LT_SURGE, LT_SURGE2
+	startbattle
+	reloadmapafterbattle
+	end
+
+.NoBattle
+	writetext LtSurgeRematchNoBattleText
 	waitbutton
 	closetext
 	end
@@ -157,6 +178,32 @@ LtSurgeFightDoneText:
 
 	para "My #MON and I"
 	line "are still at it!"
+	done
+
+LtSurgeRematchIntroText:
+	text "Hey! Let's battle"
+	line "again!"
+	done
+
+LtSurgeRematchYesBattleText:
+	text "This is gonna be"
+	line "an electrifying"
+	cont "battle!"
+	done
+
+LtSurgeRematchNoBattleText:
+	text "Oh no! How disap-"
+	line "pointing!"
+	done
+
+LtSurgeRematchOverText:
+	text "Oh no!"
+
+	para "You are very"
+	line "strong!"
+
+	para "But I will repay"
+	line "my debt someday."
 	done
 
 GentlemanGregorySeenText:

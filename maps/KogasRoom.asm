@@ -73,7 +73,7 @@ KogaScript_AfterBattle:
 	closetext
 	end
 
-KogaScript_Rematch
+KogaScript_Rematch:
 	loadtrainer KOGA, KOGA2
 	startbattle
 	reloadmapafterbattle

@@ -67,9 +67,6 @@ ViridianPokecenter2FBeta_Blocks:
 SaffronPokecenter2FBeta_Blocks:
 	INCBIN "maps/Pokecenter2F.blk"
 
-Route41_Blocks:
-	INCBIN "maps/Route41.blk"
-
 Route33_Blocks:
 	INCBIN "maps/Route33.blk"
 
@@ -198,6 +195,8 @@ CherrygroveGymSpeechHouse_Blocks:
 GuideGentsHouse_Blocks:
 CherrygroveEvolutionSpeechHouse_Blocks:
 Route30BerryHouse_Blocks:
+ScarletHouse1_Blocks:
+ScarletHouse2_Blocks:
 	INCBIN "maps/House1.blk"
 
 SafariZoneFuchsiaGateBeta_Blocks:
@@ -332,6 +331,7 @@ LavenderMart_Blocks:
 ViridianMart_Blocks:
 SaffronMart_Blocks:
 CherrygroveMart_Blocks:
+ScarletMart_Blocks
 	INCBIN "maps/Mart.blk"
 
 Route10North_Blocks:
@@ -361,6 +361,7 @@ CianwoodPokecenter1F_Blocks:
 ViridianPokecenter1F_Blocks:
 SaffronPokecenter1F_Blocks:
 CherrygrovePokecenter1F_Blocks:
+ScarletPokecenter1F_Blocks:
 	INCBIN "maps/Pokecenter1F.blk"
 
 BetaPewterMuseumOfScience1F_Blocks:
@@ -444,6 +445,7 @@ EcruteakLugiaSpeechHouse_Blocks:
 EcruteakItemfinderHouse_Blocks:
 VioletNicknameSpeechHouse_Blocks:
 VioletKylesHouse_Blocks:
+ScarletOldHouse_Blocks:
 	INCBIN "maps/House2.blk"
 
 BetaUnionCave_Blocks:
@@ -1045,3 +1047,33 @@ BetaBlank_Blocks:
 
 GoldenrodDeptStoreRoof_Blocks:
 	INCBIN "maps/GoldenrodDeptStoreRoof.blk"
+
+SECTION "Map Blocks 4", ROMX
+
+RedRockIsle_Blocks:
+	INCBIN "maps/RedRockIsle.blk"
+
+ScarletCity_Blocks:
+	INCBIN "maps/ScarletCity.blk"
+
+RedRockOutlook_Blocks:
+	INCBIN "maps/RedRockOutlook.blk"
+
+ScarletColosseum_Blocks:
+	INCBIN "maps/ScarletColosseum.blk"
+
+RedRockLab_Blocks:
+	INCBIN "maps/RedRockLab.blk"
+
+
+SearingCrater1F_Blocks:
+	INCBIN "maps/SearingCrater1F.blk"
+
+SearingCraterB1F_Blocks:
+	INCBIN "maps/SearingCraterB1F.blk"
+
+RedRockLabBreeding_Blocks:
+	INCBIN "maps/RedRockLabBreeding.blk"
+
+Route41_Blocks:
+	INCBIN "maps/Route41.blk"

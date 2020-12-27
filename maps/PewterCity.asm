@@ -26,6 +26,15 @@ PewterCityGrampsScript:
 	opentext
 	checkevent EVENT_GOT_SILVER_WING
 	iftrue .GotSilverWing
+	setval ARTICUNO
+	special FindPartyMonThatSpecies
+	iffalse .NoSilverForYou
+	setval ZAPDOS
+	special FindPartyMonThatSpecies
+	iffalse .NoSilverForYou
+	setval MOLTRES
+	special FindPartyMonThatSpecies
+	iffalse .NoSilverForYou
 	writetext PewterCityGrampsText
 	promptbutton
 	verbosegiveitem SILVER_WING
@@ -38,6 +47,12 @@ PewterCityGrampsScript:
 	waitbutton
 	closetext
 	end
+
+.NoSilverForYou:
+	writetext PewterCityGrampsText_NoSilver
+	waitbutton
+	closetext
+	end	
 
 PewterCitySign:
 	jumptext PewterCitySignText
@@ -84,6 +99,34 @@ PewterCityBugCatcherText:
 	done
 
 PewterCityGrampsText:
+	text "Gasp…"
+
+	para "Those are the"
+	line "legendary bird"
+	cont "#MON of Kanto!"
+
+	para "They look so"
+	line "spectacular!"
+
+	para "I can almost sense"
+	line "their power!"
+
+	para "A promise is a"
+	line "promise."
+
+	para "Here you go!"
+	done
+
+PewterCityGrampsText_GotSilverWing:
+	text "Going to new, un-"
+	line "known places and"
+	cont "seeing new people…"
+
+	para "Those are the joys"
+	line "of travel."
+	done
+
+PewterCityGrampsText_NoSilver:
 	text "Ah, you came all"
 	line "the way out here"
 	cont "from JOHTO?"
@@ -100,18 +143,28 @@ PewterCityGrampsText:
 	para "like as a young"
 	line "man."
 
-	para "Here. I want you"
-	line "to have this item"
-	cont "I found in JOHTO."
-	done
+	para "Have you heard"
+	line "of the legendary"
+	cont "bird #MON"
 
-PewterCityGrampsText_GotSilverWing:
-	text "Going to new, un-"
-	line "known places and"
-	cont "seeing new people…"
+	para "ARTICUNO, ZAPDOS,"
+	line "and MOLTRES?"
 
-	para "Those are the joys"
-	line "of travel."
+	para "They are said to"
+	line "have roamed KANTO"
+	cont "since long ago."
+
+	para "This SILVER WING"
+	line "is said to be con-"
+
+	para "nected to those"
+	line "#MON."
+
+	para "If you can show me"
+	line "all three of them,"
+
+	para "consider this item"
+	line "yours."
 	done
 
 PewterCitySignText:

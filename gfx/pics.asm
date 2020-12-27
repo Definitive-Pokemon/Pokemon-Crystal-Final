@@ -783,6 +783,9 @@ INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
 
 SECTION "Pics 20", ROMX
 
+WhaynePic:          INCBIN "gfx/trainers/whayne.2bpp.lz"
+DioPic:          INCBIN "gfx/trainers/dio.2bpp.lz"
+FaunePic:          INCBIN "gfx/trainers/faune.2bpp.lz"
 SECTION "Pics 21", ROMX
 
 SECTION "Pics 22", ROMX

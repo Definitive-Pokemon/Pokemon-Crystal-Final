@@ -17,6 +17,8 @@ Oak:
 	opentext
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue .CheckPokedex
+	checkevent EVENT_BEAT_E4_REMATCH
+	iftrue .OpenMtSilver
 	checkevent EVENT_TALKED_TO_OAK_IN_KANTO
 	iftrue .CheckBadges
 	writetext OakWelcomeKantoText
@@ -24,7 +26,7 @@ Oak:
 	setevent EVENT_TALKED_TO_OAK_IN_KANTO
 .CheckBadges:
 	readvar VAR_BADGES
-	ifequal NUM_BADGES, .OpenMtSilver
+	ifequal NUM_BADGES, .BeatBlue
 	ifequal NUM_JOHTO_BADGES, .Complain
 	sjump .AhGood
 
@@ -36,6 +38,11 @@ Oak:
 	waitbutton
 	closetext
 	end
+
+.BeatBlue
+	writetext OakIndigoText
+	promptbutton
+	sjump .CheckPokedex	
 
 .OpenMtSilver:
 	writetext OakOpenMtSilverText
@@ -104,13 +111,48 @@ OakLabGoodbyeText:
 	cont "come visit again."
 	done
 
+OakIndigoText:
+	text "OAK: I see that"
+	line "you've collected"
+
+	para "the BADGES of"
+	line "GYMS in KANTO."
+	cont "Well done!"
+
+	para "This means that"
+	line "you can challenge"
+
+	para "a tougher version"
+	line "of the #MON"
+	cont "LEAGUE!"
+
+	para "This version is"
+	line "designed for trai-"
+	cont "ners from KANTO."
+
+	para "The ELITE FOUR and"
+	line "LANCE will be"
+
+	para "using much tougher"
+	line "#MON this time!"
+
+	para "Just head through"
+	line "ROUTE 23 to reach"
+	cont "VICTORY ROAD."
+	done
+
 OakOpenMtSilverText:
 	text "OAK: Wow! That's"
 	line "excellent!"
 
-	para "You collected the"
-	line "BADGES of GYMS in"
-	cont "KANTO. Well done!"
+	para "You conquered the"
+	line "#MON LEAGUE"
+
+	para "challenge designed"
+	line "designed specially"
+
+	para "for TRAINERS from"
+	line "KANTO!"
 
 	para "I was right in my"
 	line "assessment of you."

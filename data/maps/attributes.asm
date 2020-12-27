@@ -114,7 +114,7 @@ ENDM
 	connection east, Route33, ROUTE_33, 0
 
 	map_attributes CianwoodCity, CIANWOOD_CITY, $35, EAST
-	connection east, Route41, ROUTE_41, 0
+	connection east, Route41, ROUTE_41, -8
 
 	map_attributes GoldenrodCity, GOLDENROD_CITY, $35, NORTH | SOUTH
 	connection north, Route35, ROUTE_35, 5
@@ -201,12 +201,24 @@ ENDM
 	connection east, Route38, ROUTE_38, 0
 
 	map_attributes Route40, ROUTE_40, $35, SOUTH | EAST
-	connection south, Route41, ROUTE_41, -15
+	connection south, RedRockIsle, RED_ROCK_ISLE, 0
 	connection east, OlivineCity, OLIVINE_CITY, -9
 
+	map_attributes RedRockIsle, RED_ROCK_ISLE, $35, NORTH | WEST
+	connection north, Route40, ROUTE_40, 0
+	connection west, ScarletCity, SCARLET_CITY, 9
+
+	map_attributes ScarletCity, SCARLET_CITY, $05, SOUTH | WEST | EAST
+	connection south, Route41, ROUTE_41, -13
+	connection west, RedRockOutlook, RED_ROCK_OUTLOOK, 0
+	connection east, RedRockIsle, RED_ROCK_ISLE, -9
+
+	map_attributes RedRockOutlook, RED_ROCK_OUTLOOK, $35, EAST
+	connection east, ScarletCity, SCARLET_CITY, 0
+
 	map_attributes Route41, ROUTE_41, $35, NORTH | WEST
-	connection north, Route40, ROUTE_40, 15
-	connection west, CianwoodCity, CIANWOOD_CITY, 0
+	connection north, ScarletCity, SCARLET_CITY, 13
+	connection west, CianwoodCity, CIANWOOD_CITY, 8
 
 	map_attributes Route42, ROUTE_42, $05, WEST | EAST
 	connection west, EcruteakCity, ECRUTEAK_CITY, -9
@@ -694,3 +706,13 @@ ENDM
 	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
+	map_attributes ScarletMart, SCARLET_MART, $00, 0
+	map_attributes ScarletPokecenter1F, SCARLET_POKECENTER_1F, $00, 0
+	map_attributes ScarletColosseum, SCARLET_COLOSSEUM, $00, 0
+	map_attributes ScarletHouse1, SCARLET_HOUSE_1, $00, 0
+	map_attributes ScarletHouse2, SCARLET_HOUSE_2, $00, 0
+	map_attributes ScarletOldHouse, SCARLET_OLD_HOUSE, $00, 0
+	map_attributes RedRockLab, RED_ROCK_LAB, $00, 0
+	map_attributes SearingCrater1F, SEARING_CRATER_1F, $00, 0
+	map_attributes SearingCraterB1F, SEARING_CRATER_B1F, $00, 0
+	map_attributes RedRockLabBreeding, RED_ROCK_LAB_BREEDING, $00, 0

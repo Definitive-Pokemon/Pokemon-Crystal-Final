@@ -21,6 +21,8 @@ GoldenrodGym_MapScripts:
 
 GoldenrodGymWhitneyScript:
 	faceplayer
+	checkevent EVENT_BEAT_BLUE
+	iftrue .Rematch
 	checkevent EVENT_BEAT_WHITNEY
 	iftrue .FightDone
 	opentext
@@ -76,6 +78,25 @@ GoldenrodGymWhitneyScript:
 	writetext WhitneyGoodCryText
 	waitbutton
 .NoRoomForAttract:
+	closetext
+	end
+
+.Rematch:
+	writetext WhitneyRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext WhitneyRematchYesBattleText
+	waitbutton
+	closetext
+	winlosstext WhitneyRematchOverText, 0
+	loadtrainer WHITNEY, WHITNEY2
+	startbattle
+	reloadmapafterbattle
+	end
+
+.NoBattle
+	writetext WhitneyRematchNoBattleText
+	waitbutton
 	closetext
 	end
 
@@ -266,6 +287,27 @@ WhitneyGoodCryText:
 
 	para "Come for a visit"
 	line "again! Bye-bye!"
+	done
+
+WhitneyRematchIntroText:
+	text "You wanna fight"
+	line "me again, hm?"
+	done
+
+WhitneyRematchYesBattleText:
+	text "Are you ready?"
+	done
+
+WhitneyRematchNoBattleText:
+	text "Don't be so mean."
+	done
+
+WhitneyRematchOverText:
+	text "You really are"
+	line "strong!"
+
+	para "But I won't lose"
+	line "next time!"
 	done
 
 LassCarrieSeenText:

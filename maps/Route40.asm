@@ -198,7 +198,7 @@ SwimmermRandallAfterBattleText:
 
 SwimmerfElaineSeenText:
 	text "Are you going to"
-	line "CIANWOOD?"
+	line "RED ROCK?"
 
 	para "How about a quick"
 	line "battle first?"
@@ -239,6 +239,12 @@ Route40Lass1Text:
 
 	para "CIANWOOD is across"
 	line "the sea."
+
+	para "To get there, you"
+	line "have to get past"
+
+	para "RED ROCK ISLE"
+	line "first, though."
 	done
 
 Route40PokefanMText:
@@ -331,15 +337,15 @@ MonicaNotMondayText:
 Route40SignText:
 	text "ROUTE 40"
 
-	para "CIANWOOD CITY -"
-	line "OLIVINE CITY"
+	para "RED ROCK"
+	line "ISLE -"
+	cont "OLIVINE CITY"
 	done
 
 Route40_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  9,  5, ROUTE_40_BATTLE_TOWER_GATE, 1
 
 	def_coord_events
 

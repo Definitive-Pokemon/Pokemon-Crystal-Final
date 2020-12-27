@@ -69,3 +69,6 @@ TrainerGroups:
 	dw OfficerGroup
 	dw GruntFGroup
 	dw MysticalmanGroup
+	dw WhayneGroup
+	dw DioGroup
+	dw FauneGroup

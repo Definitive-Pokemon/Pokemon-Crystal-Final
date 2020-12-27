@@ -16,23 +16,6 @@ FindFirstAliveMonAndStartBattle:
 	xor a
 	ldh [hMapAnims], a
 	call DelayFrame
-	ld b, PARTY_LENGTH
-	ld hl, wPartyMon1HP
-	ld de, PARTYMON_STRUCT_LENGTH - 1
-
-.loop
-	ld a, [hli]
-	or [hl]
-	jr nz, .okay
-	add hl, de
-	dec b
-	jr nz, .loop
-
-.okay
-	ld de, MON_LEVEL - MON_HP
-	add hl, de
-	ld a, [hl]
-	ld [wBattleMonLevel], a
 	predef DoBattleTransition
 	farcall _LoadBattleFontsHPBar
 	ld a, 1
@@ -99,15 +82,27 @@ PlayBattleMusic:
 
 .kantowild
 	ld de, MUSIC_KANTO_WILD_BATTLE
+	ld a, [wTimeOfDay]
+	cp NITE_F
+	jp nz, .done
+	ld de, MUSIC_KANTO_WILD_BATTLE_NIGHT
 	jp .done
 
 .trainermusic
 	ld de, MUSIC_CHAMPION_BATTLE
 	cp CHAMPION
-	jr z, .done
+	jp z, .done
 
 	ld de, MUSIC_RED_BATTLE
 	cp RED
+	jp z, .done
+
+	ld de, MUSIC_GYM_LEADER_BATTLE_PRISM
+	cp WHAYNE
+	jr z, .done
+	cp DIO
+	jr z, .done
+	cp FAUNE
 	jr z, .done
 
 	; They should have included EXECUTIVEM, EXECUTIVEF, and SCIENTIST too...

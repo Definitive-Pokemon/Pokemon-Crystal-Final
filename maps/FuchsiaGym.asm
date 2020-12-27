@@ -12,11 +12,33 @@ FuchsiaGym_MapScripts:
 	def_callbacks
 
 FuchsiaGymJanineScript:
-	checkflag ENGINE_SOULBADGE
-	iftrue .FightDone
-	applymovement FUCHSIAGYM_JANINE, Movement_NinjaSpin
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_BLUE
+	; Rematch script
+	iffalse .Regular
+	writetext JanineRematchIntroText
+	yesorno
+	iffalse .NoBattle
+	writetext JanineRematchYesBattleText
+	waitbutton
+	closetext
+	winlosstext JanineRematchOverText, 0
+	loadtrainer JANINE, JANINE2
+	startbattle
+	reloadmapafterbattle
+	end
+
+.NoBattle
+	writetext JanineRematchNoBattleText
+	waitbutton
+	closetext
+	end
+
+.Regular
+	checkflag ENGINE_SOULBADGE
+	iftrue .AfterBattle
+	applymovement FUCHSIAGYM_JANINE, Movement_NinjaSpin
 	writetext JanineText_DisappointYou
 	waitbutton
 	closetext
@@ -40,9 +62,7 @@ FuchsiaGymJanineScript:
 	waitsfx
 	setflag ENGINE_SOULBADGE
 	sjump .AfterBattle
-.FightDone:
-	faceplayer
-	opentext
+	
 .AfterBattle:
 	checkevent EVENT_GOT_TM06_TOXIC
 	iftrue .AfterTM
@@ -283,6 +303,29 @@ JanineText_ApplyMyself:
 	para "I want to become"
 	line "better than both"
 	cont "Father and you!"
+	done
+
+JanineRematchIntroText:
+	text "Are you sure you"
+	line "want to battle me"
+	cont "again?"
+	done
+
+JanineRematchYesBattleText:
+	text "I can't use my"
+	line "ninja technique,"
+
+	para "but I won't let"
+	line "you win!"
+	done
+
+JanineRematchNoBattleText:
+	text "That's a pity."
+	done
+
+JanineRematchOverText:
+	text "I lost today, but"
+	line "I'll win next time!"
 	done
 
 LassAliceBeforeText:

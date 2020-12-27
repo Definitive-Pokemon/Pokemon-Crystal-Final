@@ -16,12 +16,22 @@ CinnabarIslandBlue:
 	opentext
 	writetext CinnabarIslandBlueText
 	waitbutton
+	readvar VAR_BADGES
+	ifgreater 14, .Challenge
+	writetext CinnabarIslandBlueNoChallengeText
+	waitbutton
+	closetext
+	end
+
+.Challenge
+	writetext CinnabarIslandBlueChallengeText
+	waitbutton
 	closetext
 	playsound SFX_WARP_TO
 	applymovement CINNABARISLAND_BLUE, CinnabarIslandBlueTeleport
 	disappear CINNABARISLAND_BLUE
 	clearevent EVENT_VIRIDIAN_GYM_BLUE
-	end
+	end	
 
 CinnabarIslandGymSign:
 	jumptext CinnabarIslandGymSignText
@@ -98,13 +108,21 @@ CinnabarIslandBlueText:
 	para "If I see a strong"
 	line "opponent, it makes"
 	cont "me want to battle."
+	done
 
-	para "If you want to"
+CinnabarIslandBlueChallengeText:
+	text "If you want to"
 	line "battle me, come to"
 	cont "the VIRIDIAN GYM."
 
 	para "I'll take you on"
 	line "then."
+	done
+
+CinnabarIslandBlueNoChallengeText:
+	text "If you want to"
+	line "battle me, show me"
+	cont "more KANTO BADGES."
 	done
 
 CinnabarIslandGymSignText:

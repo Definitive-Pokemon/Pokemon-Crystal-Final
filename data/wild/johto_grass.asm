@@ -1487,6 +1487,60 @@ JohtoGrassWildMons:
 	db 18, MEOWTH
 	db 18, MEOWTH
 
+	map_id RED_ROCK_ISLE
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 18, SEEL
+	db 17, DODUO
+	db 17, KRABBY
+	db 17, RATTATA
+	db 19, RATICATE
+	db 17, STANTLER
+	db 18, STANTLER
+	; day
+	db 18, SEEL
+	db 17, DODUO
+	db 17, KRABBY
+	db 17, RATTATA
+	db 19, RATICATE
+	db 17, STANTLER
+	db 18, STANTLER
+	; nite
+	db 17, STARYU
+	db 17, RATTATA
+	db 18, NOCTOWL
+	db 18, STANTLER
+	db 19, RATICATE
+	db 18, MEOWTH
+	db 18, MEOWTH
+
+	map_id SEARING_CRATER_1F
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	; morn
+	db 18, SLUGMA
+	db 18, HOUNDOUR
+	db 19, KOFFING
+	db 18, WOOPER
+	db 19, MISDREAVUS
+	db 18, GASTLY
+	db 19, GASTLY
+	; day
+	db 18, SLUGMA
+	db 18, HOUNDOUR
+	db 19, KOFFING
+	db 18, WOOPER
+	db 19, MISDREAVUS
+	db 18, GASTLY
+	db 19, GASTLY
+	; nite
+	db 18, SLUGMA
+	db 18, HOUNDOUR
+	db 19, KOFFING
+	db 18, WOOPER
+	db 19, MISDREAVUS
+	db 18, GASTLY
+	db 19, GASTLY
+
 	map_id ROUTE_42
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn

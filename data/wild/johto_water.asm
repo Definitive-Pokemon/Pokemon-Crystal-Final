@@ -146,6 +146,24 @@ JohtoWaterWildMons:
 	db 15, TENTACOOL
 	db 20, TENTACRUEL
 
+	map_id RED_ROCK_ISLE
+	db 3 percent ; encounter rate
+	db 20, TENTACOOL
+	db 20, TENTACRUEL
+	db 20, MANTINE
+
+	map_id RED_ROCK_OUTLOOK
+	db 3 percent ; encounter rate
+	db 20, TENTACOOL
+	db 20, TENTACRUEL
+	db 20, MANTINE
+
+	map_id SEARING_CRATER_1F
+	db 2 percent ; encounter rate
+	db 15, WOOPER
+	db 20, GRIMER
+	db 20, QUAGSIRE
+
 	map_id ROUTE_41
 	db 3 percent ; encounter rate
 	db 20, TENTACOOL

@@ -120,3 +120,30 @@ Music:
 	dba Music_LugiaBattle
 	dba Music_HoOhBattle
 	dba Music_CelebiBattle
+	dba Music_NewBarkTownNight
+	dba Music_CherrygroveCityNight
+	dba Music_VioletCityNight
+	dba Music_AzaleaTownNight
+	dba Music_GoldenrodCityNight
+	dba Music_EcruteakCityNight
+	dba Music_PalletTownNight
+	dba Music_ViridianCityNight
+	dba Music_CeruleanCityNight
+	dba Music_VermilionCityNight
+	dba Music_CeladonCityNight
+	dba Music_LavenderTownNight
+	dba Music_Route1Night
+	dba Music_Route3Night
+	dba Music_Route12Night
+	dba Music_Route24Night
+	dba Music_Route26Night
+	dba Music_Route29Night
+	dba Music_Route30Night
+	dba Music_Route36Night
+	dba Music_Route37Night
+	dba Music_LakeOfRageNight
+	dba Music_KantoWildBattleNight
+	dba Music_AltoMare
+	dba Music_VirbankGym
+	dba Music_MarineTube
+	dba Music_GymLeaderBattlePrism
