@@ -1456,9 +1456,7 @@
 	const EVENT_RADIO_TOWER_5F_ULTRA_BALL
 	const EVENT_DARK_CAVE_VIOLET_ENTRANCE_DIRE_HIT
 	const EVENT_BATTLE_TOWER_OUTSIDE_SAILOR
-; Custom event flags here
-	const EVENT_CENTRAL_KANTO_ROCKET_BEATEN
-; Unused: next 47 events
+; Unused: next 48 events
 
 	const_next 2048
 NUM_EVENTS EQU const_value ; 800

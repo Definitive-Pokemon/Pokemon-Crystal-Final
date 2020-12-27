@@ -9,54 +9,27 @@ Route7SaffronGate_MapScripts:
 Route7SaffronGuardScript:
 	faceplayer
 	opentext
-	checkevent EVENT_CENTRAL_KANTO_ROCKET_BEATEN
-	iftrue .Normal
+	checkevent EVENT_RETURNED_MACHINE_PART
+	iftrue .ReturnedPart
 	writetext Route7SaffronGuardPowerPlantText
 	waitbutton
 	closetext
 	end
 
-.Normal:
+.ReturnedPart:
 	writetext Route7SaffronGuardSeriousText
 	waitbutton
 	closetext
 	end
 
 Route7SaffronGuardPowerPlantText:
-	text "SILPH CO. has"
-	line "received our"
+	text "Did you hear about"
+	line "the accident at"
+	cont "the POWER PLANT?"
 
-	para "permission to"
-	line "install people"
-
-	para "in front of the"
-	line "gates to the city."
-
-	para "I guess they're"
-	line "afraid of people"
-
-	para "stealing their"
-	line "latest project."
-
-	para "I can't blame them,"
-	line "after what"
-
-	para "happened three"
-	line "years ago."
-
-	para "TEAM ROCKET"
-	line "attempted to"
-
-	para "steal the formula"
-	line "of SILPH's MASTER"
-	cont "BALL."
-
-	para "They were stopped"
-	line "by a boy with a"
-	cont "red hat."
-
-	para "Miraculous,"
-	line "isn't it?"
+	para "It's located in"
+	line "the East, close to"
+	cont "LAVENDER TOWN."
 	done
 
 Route7SaffronGuardSeriousText:
@@ -64,10 +37,7 @@ Route7SaffronGuardSeriousText:
 	line "job seriously."
 
 	para "Hey! You have a"
-	line "#DEX, just"
-
-	para "like the boy with"
-	line "the red hat."
+	line "#DEX."
 
 	para "OK. You can go"
 	line "through."

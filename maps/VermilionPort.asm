@@ -19,14 +19,7 @@ VermilionPort_MapScripts:
 	end
 
 .FlyPoint:
-	checkflag ENGINE_FLYPOINT_VERMILION
-	and a
-	jr z, .kantoFirstArrival
-	endcallback
-
-.kantoFirstArrival
 	setflag ENGINE_FLYPOINT_VERMILION
-	clearflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	endcallback
 
 .LeaveFastShipScript:

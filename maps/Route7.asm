@@ -9,9 +9,6 @@ Route7UndergroundPathSign:
 Route7LockedDoor:
 	jumptext Route7LockedDoorText
 
-Route7SilphEmployeeScript:
-	jumptextfaceplayer Route7SilphEmployeeText
-
 Route7UndergroundPathSignText:
 	text "What's this flyer?"
 
@@ -35,14 +32,6 @@ Route7LockedDoorText:
 	text "It's locked…"
 	done
 
-Route7SilphEmployeeText:
-	text "Scram!"
-
-	para "Don't you know"
-	line "you're not allowed"
-	cont "to leave the city?"
-	done
-
 Route7_MapEvents:
 	db 0, 0 ; filler
 
@@ -57,4 +46,3 @@ Route7_MapEvents:
 	bg_event  6,  9, BGEVENT_READ, Route7LockedDoor
 
 	def_object_events
-	object_event  9,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route7SilphEmployeeScript, EVENT_CENTRAL_KANTO_ROCKET_BEATEN

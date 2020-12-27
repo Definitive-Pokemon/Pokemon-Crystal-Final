@@ -21,15 +21,15 @@ SaffronCity_MapScripts:
 SaffronCityLass1Script:
 	faceplayer
 	opentext
-	checkevent EVENT_CENTRAL_KANTO_ROCKET_BEATEN
-	iftrue .BeatRocketSaffron
+	checkevent EVENT_RETURNED_MACHINE_PART
+	iftrue .ReturnedMachinePart
 	writetext SaffronCityLass1Text
 	waitbutton
 	closetext
 	end
 
-.BeatRocketSaffron:
-	writetext SaffronCityLass1Text_BeatRocketSaffron
+.ReturnedMachinePart:
+	writetext SaffronCityLass1Text_ReturnedMachinePart
 	waitbutton
 	closetext
 	end
@@ -37,15 +37,15 @@ SaffronCityLass1Script:
 SaffronCityPokefanMScript:
 	faceplayer
 	opentext
-	checkevent EVENT_CENTRAL_KANTO_ROCKET_BEATEN
-	iftrue .BeatRocketSaffron
+	checkevent EVENT_RETURNED_MACHINE_PART
+	iftrue .ReturnedMachinePart
 	writetext SaffronCityPokefanMText
 	waitbutton
 	closetext
 	end
 
-.BeatRocketSaffron:
-	writetext SaffronCityPokefanMText_BeatRocketSaffron
+.ReturnedMachinePart:
+	writetext SaffronCityPokefanMText_ReturnedMachinePart
 	waitbutton
 	closetext
 	end
@@ -59,15 +59,15 @@ SaffronCityCooltrainerFScript:
 SaffronCityFisherScript:
 	faceplayer
 	opentext
-	checkevent EVENT_CENTRAL_KANTO_ROCKET_BEATEN
-	iftrue .BeatRocketSaffron
+	checkevent EVENT_RETURNED_MACHINE_PART
+	iftrue .ReturnedMachinePart
 	writetext SaffronCityFisherText
 	waitbutton
 	closetext
 	end
 
-.BeatRocketSaffron:
-	writetext SaffronCityFisherText_BeatRocketSaffron
+.ReturnedMachinePart:
+	writetext SaffronCityFisherText_ReturnedMachinePart
 	waitbutton
 	closetext
 	end
@@ -80,12 +80,6 @@ SaffronCityYoungster2Script:
 
 SaffronCityLass2Script:
 	jumptextfaceplayer SaffronCityLass2Text
-
-SaffronCitySilph1Script:
-	jumptextfaceplayer SaffronCitySilph1Text
-
-SaffronCitySilph2Script:
-	jumptextfaceplayer SaffronCitySilph2Text
 
 SaffronCitySign:
 	jumptext SaffronCitySignText
@@ -125,7 +119,7 @@ SaffronCityLass1Text:
 	line "It's confusing."
 	done
 
-SaffronCityLass1Text_BeatRocketSaffron:
+SaffronCityLass1Text_ReturnedMachinePart:
 	text "The COPYCAT girl"
 	line "looked unhappy."
 
@@ -138,11 +132,12 @@ SaffronCityPokefanMText:
 	text "You came out from"
 	line "JOHTO?"
 
-	para "How did you even"
-	line "get into the city?"
+	para "You can zip back"
+	line "home if the MAGNET"
+	cont "TRAIN's running."
 	done
 
-SaffronCityPokefanMText_BeatRocketSaffron:
+SaffronCityPokefanMText_ReturnedMachinePart:
 	text "You came out from"
 	line "JOHTO?"
 
@@ -181,14 +176,14 @@ SaffronCityCooltrainerFText:
 SaffronCityFisherText:
 	text "Chew… Chew…"
 
-	para "I hear SILPH. CO"
-	line "has some big plans"
-	cont "coming up."
+	para "I hear there's big"
+	line "trouble brewing at"
+	cont "the POWER PLANT."
 
 	para "Chew… Chew…"
 	done
 
-SaffronCityFisherText_BeatRocketSaffron:
+SaffronCityFisherText_ReturnedMachinePart:
 	text "Chew… Chew…"
 
 	para "I hear there was"
@@ -229,33 +224,6 @@ SaffronCityLass2Text:
 	para "city, but it's a"
 	line "bit embarrassing"
 	cont "too."
-	done
-
-SaffronCitySilph1Text:
-	text "Currently, the"
-	line "MAGNET TRAIN"
-
-	para "STATION is"
-	line "reserved for"
-
-	para "use by SILPH"
-	line "CO. only."
-
-	para "I'm sorry, but"
-	line "it's just how"
-	cont "things are."
-	done
-
-SaffronCitySilph2Text:
-	text "I'm sorry, but"
-	line "the GYM LEADER"
-
-	para "has been put under"
-	line "surveillance."
-
-	para "Why, you ask?"
-	line "That's none of"
-	cont "your business!"
 	done
 
 SaffronCitySignText:
@@ -336,5 +304,3 @@ SaffronCity_MapEvents:
 	object_event 15, 19, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronCityYoungster1Script, -1
 	object_event 35, 22, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityYoungster2Script, -1
 	object_event 19,  8, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronCityLass2Script, -1
-	object_event  8,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SaffronCitySilph1Script, EVENT_CENTRAL_KANTO_ROCKET_BEATEN
-	object_event 34,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SaffronCitySilph2Script, EVENT_CENTRAL_KANTO_ROCKET_BEATEN

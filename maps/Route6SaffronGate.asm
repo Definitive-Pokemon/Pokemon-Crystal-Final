@@ -13,38 +13,38 @@ Route6SaffronGate_MapScripts:
 Route6SaffronGuardScript:
 	faceplayer
 	opentext
-	checkevent EVENT_CENTRAL_KANTO_ROCKET_BEATEN
-	iftrue .Normal
+	checkevent EVENT_RETURNED_MACHINE_PART
+	iftrue .ReturnedPart
 	writetext Route6SaffronGuardWelcomeText
 	waitbutton
 	closetext
 	end
 
-.Normal:
+.ReturnedPart:
 	writetext Route6SaffronGuardMagnetTrainText
 	waitbutton
 	closetext
 	end
 
 Route6SaffronGuardWelcomeText:
-	text "Something strange"
-	line "is going on."
+	text "Welcome to SAFFRON"
+	line "CITY, home of the"
+	cont "MAGNET TRAIN!"
 
-	para "As soon as the"
-	line "problems at the" 
+	para "…That's what I'd"
+	line "normally say, but"
 
-	para "POWER PLANT were"
-	line "solved, employees"
+	para "the MAGNET TRAIN"
+	line "isn't running now."
 
-	para "from SILPH CO."
-	line "became active"
+	para "It's not getting"
+	line "any electricity"
 
-	para "like I've never"
-	line "seen before."
+	para "because there's"
+	line "something wrong"
 
-	para "It's as if they're"
-	line "planning something"
-	cont "big…"
+	para "with the POWER"
+	line "PLANT."
 	done
 
 Route6SaffronGuardMagnetTrainText:

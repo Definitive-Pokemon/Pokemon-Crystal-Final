@@ -130,29 +130,15 @@ CutFunction:
 	dw .FailCut
 
 .CheckAble:
-	farcall RegionCheck
-	ld a, e
-	cp $01
-	jr z, .kantoCheckAble
 	ld de, ENGINE_HIVEBADGE
 	call CheckBadge
-	jr c, .nobadge
-.tryCut
+	jr c, .nohivebadge
 	call CheckMapForSomethingToCut
 	jr c, .nothingtocut
 	ld a, $1
 	ret
 
-.kantoCheckAble
-	checkflag ENGINE_FLYPOINT_VERMILION
-	and a
-	jr z, .tryCut
-	ld de, ENGINE_CASCADEBADGE
-	call CheckBadge
-	jr c, .nobadge
-	jr .tryCut
-
-.nobadge
+.nohivebadge
 	ld a, $80
 	ret
 
@@ -295,6 +281,9 @@ FlashFunction:
 
 .CheckUseFlash:
 ; Flash
+	ld de, ENGINE_ZEPHYRBADGE
+	farcall CheckBadge
+	jr c, .nozephyrbadge
 	push hl
 	farcall SpecialAerodactylChamber
 	pop hl
@@ -312,6 +301,9 @@ FlashFunction:
 	ld a, $80
 	ret
 
+.nozephyrbadge
+	ld a, $80
+	ret
 
 UseFlash:
 	ld hl, Script_UseFlash
@@ -355,15 +347,9 @@ SurfFunction:
 	dw .AlreadySurfing
 
 .TrySurf:
-	farcall RegionCheck
-	ld a, e
-	cp $01
-	jr z, .kantoCheckSurfAble
 	ld de, ENGINE_FOGBADGE
 	call CheckBadge
 	jr c, .nofogbadge
-
-.continueTrySurf
 	ld hl, wBikeFlags
 	bit BIKEFLAGS_ALWAYS_ON_BIKE_F, [hl]
 	jr nz, .cannotsurf
@@ -391,15 +377,6 @@ SurfFunction:
 .cannotsurf
 	ld a, $2
 	ret
-
-.kantoCheckSurfAble
-	checkflag ENGINE_FLYPOINT_VERMILION
-	and a
-	jr z, .continueTrySurf
-	ld de, ENGINE_SOULBADGE
-	call CheckBadge
-	jr c, .nofogbadge
-	jr .continueTrySurf
 
 .DoSurf:
 	call GetSurfType
@@ -583,28 +560,13 @@ FlyFunction:
 
 .TryFly:
 ; Fly
-	farcall RegionCheck
-	ld a, e
-	cp $01
-	jr z, .kantoCheckFlyAble
 	ld de, ENGINE_STORMBADGE
 	call CheckBadge
 	jr c, .nostormbadge
-
-.flyMapCheck
 	call GetMapEnvironment
 	call CheckOutdoorMap
 	jr z, .outdoors
 	jr .indoors
-
-.kantoCheckFlyAble
-	checkflag ENGINE_FLYPOINT_VERMILION
-	and a
-	jr z, .flyMapCheck
-	ld de, ENGINE_THUNDERBADGE
-	call CheckBadge
-	jr c, .nostormbadge
-	jr .flyMapCheck
 
 .outdoors
 	xor a
@@ -678,14 +640,10 @@ WaterfallFunction:
 
 .TryWaterfall:
 ; Waterfall
-	farcall RegionCheck
-	ld a, e
-	and a
-	jr nz, .kantoCheckWaterfallAble
 	ld de, ENGINE_RISINGBADGE
-	jr .waterfallbadgecheck
-
-.continueTryWaterfall
+	farcall CheckBadge
+	ld a, $80
+	ret c
 	call CheckMapCanWaterfall
 	jr c, .failed
 	ld hl, Script_WaterfallFromMenu
@@ -697,20 +655,6 @@ WaterfallFunction:
 	call FieldMoveFailed
 	ld a, $80
 	ret
-
-.kantoCheckWaterfallAble
-	checkflag ENGINE_FLYPOINT_VERMILION
-	and a
-	jr z, .continueTryWaterfall
-	ld de, ENGINE_VOLCANOBADGE
-	jr c, .waterfallbadgecheck
-	jr .continueTryWaterfall
-
-.waterfallbadgecheck
-	farcall CheckBadge
-	ld a, $80
-	ret c
-	jr .continueTryWaterfall
 
 CheckMapCanWaterfall:
 	ld a, [wPlayerDirection]
@@ -766,15 +710,9 @@ TryWaterfallOW::
 	ld d, WATERFALL
 	call CheckPartyMove
 	jr c, .failed
-	farcall RegionCheck
-	ld a, e
-	and a
-	jp nz, .kantoCheckOWWaterfallAble
 	ld de, ENGINE_RISINGBADGE
 	call CheckEngineFlag
 	jr c, .failed
-
-.continueTryOWWaterfall
 	call CheckMapCanWaterfall
 	jr c, .failed
 	ld a, BANK(Script_AskWaterfall)
@@ -782,14 +720,6 @@ TryWaterfallOW::
 	call CallScript
 	scf
 	ret
-
-.kantoCheckOWWaterfallAble
-	checkflag ENGINE_FLYPOINT_VERMILION
-	and a
-	jp z, .continueTryOWWaterfall
-	ld de, ENGINE_VOLCANOBADGE
-	jr c, .failed
-	jp .continueTryOWWaterfall
 
 .failed
 	ld a, BANK(Script_CantDoWaterfall)
@@ -1036,20 +966,7 @@ StrengthFunction:
 
 .TryStrength:
 ; Strength
-	farcall RegionCheck
-	ld a, e
-	and a
-	jr nz, .kantoCheckStrengthAble
 	ld de, ENGINE_PLAINBADGE
-	call CheckBadge
-	jr c, .Failed
-	jr .UseStrength
-
-.kantoCheckStrengthAble
-	checkflag ENGINE_FLYPOINT_VERMILION
-	and a
-	jr z, .UseStrength
-	ld de, ENGINE_RAINBOWBADGE
 	call CheckBadge
 	jr c, .Failed
 	jr .UseStrength
@@ -1146,29 +1063,16 @@ TryStrengthOW:
 	call CheckPartyMove
 	jr c, .nope
 
-	farcall RegionCheck
-	ld a, e
-	and a
-	jr nz, .kantoCheckOWStrengthAble
 	ld de, ENGINE_PLAINBADGE
 	call CheckEngineFlag
 	jr c, .nope
 
-.tryContinueOWStrength
 	ld hl, wBikeFlags
 	bit BIKEFLAGS_STRENGTH_ACTIVE_F, [hl]
 	jr z, .already_using
 
 	ld a, 2
 	jr .done
-
-.kantoCheckOWStrengthAble
-	checkflag ENGINE_FLYPOINT_VERMILION
-	and a
-	jr z, .tryContinueOWStrength
-	ld de, ENGINE_VOLCANOBADGE
-	jr c, .nope
-	jr .tryContinueOWStrength
 
 .nope
 	ld a, 1
@@ -1198,15 +1102,9 @@ Jumptable_cdae:
 	dw .FailWhirlpool
 
 .TryWhirlpool:
-	farcall RegionCheck
-	ld a, e
-	and a
-	jr nz, .kantoCheckWhirpoolAble
 	ld de, ENGINE_GLACIERBADGE
 	call CheckBadge
 	jr c, .noglacierbadge
-
-.continueTryWhirpool
 	call TryWhirlpoolMenu
 	jr c, .failed
 	ld a, $1
@@ -1215,15 +1113,6 @@ Jumptable_cdae:
 .failed
 	ld a, $2
 	ret
-
-.kantoCheckWhirpoolAble
-	checkflag ENGINE_FLYPOINT_VERMILION
-	and a
-	jr z, .continueTryWhirpool
-	ld de, ENGINE_MARSHBADGE
-	call CheckBadge
-	jr c, .noglacierbadge
-	jr .continueTryWhirpool
 
 .noglacierbadge
 	ld a, $80
@@ -1431,14 +1320,6 @@ RockSmashFunction:
 	ret
 
 TryRockSmashFromMenu:
-	farcall RegionCheck
-	ld a, e
-	and a
-	jr nz, .kantoCheckRockSmashAble
-	ld de, ENGINE_ZEPHYRBADGE
-	farcall CheckBadge
-	jr c, .nozephyrbadge
-.tryToRockSmash
 	call GetFacingObject
 	jr c, .no_rock
 	ld a, d
@@ -1448,20 +1329,6 @@ TryRockSmashFromMenu:
 	ld hl, RockSmashFromMenuScript
 	call QueueScript
 	ld a, $81
-	ret
-
-.kantoCheckRockSmashAble
-	checkflag ENGINE_FLYPOINT_VERMILION
-	and a
-	jr z, .tryToRockSmash
-	ld de, ENGINE_BOULDERBADGE
-	farcall CheckBadge
-	jr c, .nozephyrbadge
-	jr .tryToRockSmash
-
-
-.nozephyrbadge
-	ld a, $80
 	ret
 
 .no_rock
@@ -1526,31 +1393,12 @@ AskRockSmashScript:
 	callasm HasRockSmash
 	ifequal 1, .no
 
-	farcall RegionCheck
-	ld a, e
-	and a
-	jr nz, .kantoCheckOWRockSmashAble
-	ld de, ENGINE_ZEPHYRBADGE
-	farcall CheckBadge
-	jr c, .no
-
-.tryToOWRockSmash
 	opentext
 	writetext AskRockSmashText
 	yesorno
 	iftrue RockSmashScript
 	closetext
 	end
-
-.kantoCheckOWRockSmashAble
-	checkflag ENGINE_FLYPOINT_VERMILION
-	and a
-	jr z, .tryToOWRockSmash
-	ld de, ENGINE_BOULDERBADGE
-	farcall CheckBadge
-	jr c, .no
-	jr .tryToOWRockSmash
-
 .no
 	jumptext MaySmashText
 
@@ -1918,30 +1766,15 @@ TryCutOW::
 	call CheckPartyMove
 	jr c, .cant_cut
 
-	farcall RegionCheck
-	ld a, e
-	and a
-	jr nz, .kantoOWCheckAble
-
 	ld de, ENGINE_HIVEBADGE
 	call CheckEngineFlag
 	jr c, .cant_cut
 
-.tryOWCut
 	ld a, BANK(AskCutScript)
 	ld hl, AskCutScript
 	call CallScript
 	scf
 	ret
-
-.kantoOWCheckAble
-	checkflag ENGINE_FLYPOINT_VERMILION
-	and a
-	jr z, .tryOWCut
-	ld de, ENGINE_CASCADEBADGE
-	call CheckBadge
-	jr c, .cant_cut
-	jr .tryOWCut
 
 .cant_cut
 	ld a, BANK(CantCutScript)

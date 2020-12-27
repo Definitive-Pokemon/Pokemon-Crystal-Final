@@ -7,43 +7,7 @@ Route5SaffronGate_MapScripts:
 	def_callbacks
 
 Route5SaffronGateOfficerScript:
-	faceplayer
-	opentext
-	checkevent EVENT_CENTRAL_KANTO_ROCKET_BEATEN
-	iftrue .Normal
-	writetext Route5SilverCameText
-	waitbutton
-	closetext
-	end
-
-.Normal
-	writetext Route5SaffronGateOfficerText
-	waitbutton
-	closetext
-	end
-
-Route5SilverCameText:
-	text "You're the second"
-	line "kid that comes"
-	cont "running through!"
-
-	para "Before you,"
-	line "the guards came"
-	cont "through,"
-
-	para "chased by a bunch"
-	line "of #MON and"
-	cont "a red-haired kid."
-
-	para "SILPH paid us a"
-	line "lot of money to"
-
-	para "stop people using"
-	line "these gates,"
-
-	para "but kids should"
-	line "be fine, right?"
-	done
+	jumptextfaceplayer Route5SaffronGateOfficerText
 
 Route5SaffronGateOfficerText:
 	text "You're from JOHTO,"

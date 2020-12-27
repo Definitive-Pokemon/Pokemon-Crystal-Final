@@ -137,28 +137,11 @@ MountMoonSilverTextAfter:
 
 	para "…Listen, <PLAYER>."
 
-	para "Did you see those"
-	line "SILPH employees"
+	para "One of these days"
+	line "I'm going to prove"
 
-	para "in front of the"
-	line "gates to SAFFRON?"
-
-	para "They seem to be"
-	line "up to no good."
-
-	para "People can't enter"
-	line "or leave the city."
-
-	para "I was planning"
-	line "to teach them"
-	cont "a lesson."
-
-	para "If you feel like"
-	line "helping out,"
-
-	para "head to the gate"
-	line "between ROUTE 5"
-	cont "and SAFFRON CITY."
+	para "how good I am by"
+	line "beating you."
 	done
 
 MountMoonSilverTextLoss:

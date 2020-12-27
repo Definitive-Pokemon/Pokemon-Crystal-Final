@@ -33,9 +33,6 @@ TrainerPokefanmAllan:
 Route6PokefanMScript:
 	jumptextfaceplayer Route6PokefanMText
 
-Route6SilphEmployeeScript:
-	jumptextfaceplayer Route6SilphEmployeeText
-
 Route6UndergroundPathSign:
 	jumptext Route6UndergroundPathSignText
 
@@ -92,15 +89,6 @@ PokefanmAllanAfterBattleText:
 	cont "your heart melt?"
 	done
 
-Route6SilphEmployeeText:
-	text "No one is allowed"
-	line "to enter or leave"
-	cont "SAFFRON CITY."
-
-	para "Better turn back"
-	line "while you can!"
-	done
-
 Route6_MapEvents:
 	db 0, 0 ; filler
 
@@ -117,4 +105,3 @@ Route6_MapEvents:
 	object_event 17,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 2, Route6PokefanMScript, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
 	object_event  9, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerPokefanmRex, -1
 	object_event 10, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerPokefanmAllan, -1
-	object_event  7,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route6SilphEmployeeScript, EVENT_CENTRAL_KANTO_ROCKET_BEATEN
