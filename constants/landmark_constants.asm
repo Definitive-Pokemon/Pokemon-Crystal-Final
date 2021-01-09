@@ -33,10 +33,10 @@
 	const LANDMARK_LIGHTHOUSE        ; 1c
 	const LANDMARK_BATTLE_TOWER      ; 1d
 	const LANDMARK_ROUTE_40          ; 1e
-	const LANDMARK_RED_ROCK_ISLE          ; 1f
-	const LANDMARK_SCARLET_CITY          ; 20
-	const LANDMARK_RED_ROCK_OUTLOOK         ; 21
-	const LANDMARK_SEARING_CRATER         ; 22
+	const LANDMARK_RED_ROCK_ISLE     ; 1f
+	const LANDMARK_SCARLET_CITY      ; 20
+	const LANDMARK_RED_ROCK_OUTLOOK  ; 21
+	const LANDMARK_SEARING_CRATER    ; 22
 	const LANDMARK_ROUTE_41          ; 23
 	const LANDMARK_WHIRL_ISLANDS     ; 24
 	const LANDMARK_CIANWOOD_CITY     ; 25
