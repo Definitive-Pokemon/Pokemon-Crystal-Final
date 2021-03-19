@@ -2,7 +2,7 @@
 
 This is a hack/mod to try and make a definitive version of Pokemon Crystal.
 To set up the repository, see [INSTALL.md](INSTALL.md).
-Final saves are not fully compatible with vanilla saves and the other way around. 
+>Final saves are not fully compatible with vanilla saves and the other way around. 
 
 # Features
  - Fixes all of the glitches/bugs in the original game, as listed by the pret team.
