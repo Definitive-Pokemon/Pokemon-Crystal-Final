@@ -413,7 +413,7 @@ ENDM
 	newgroup                                                      ; 22
 
 	map_const ROUTE_40,                                    10, 18 ;  1
-	map_const ROUTE_41,                                    25, 35 ;  2
+	map_const ROUTE_41,                                    25, 27 ;  2
 	map_const CIANWOOD_CITY,                               15, 27 ;  3
 	map_const MANIAS_HOUSE,                                 4,  4 ;  4
 	map_const CIANWOOD_GYM,                                 5,  9 ;  5
@@ -426,6 +426,8 @@ ENDM
 	map_const BATTLE_TOWER_BATTLE_ROOM, 4,  4 ; 12
 	map_const BATTLE_TOWER_ELEVATOR, 2,  2 ; 13
 	map_const BATTLE_TOWER_HALLWAY, 11,  2 ; 14
+	map_const ROUTE_40_BATTLE_TOWER_GATE, 5,  4 ; 15
+	map_const BATTLE_TOWER_OUTSIDE, 10, 14 ; 16
 
 	newgroup                                                      ; 23
 
@@ -498,8 +500,6 @@ ENDM
 	map_const RED_ROCK_OUTLOOK, 24, 18 ;  3
 	map_const SCARLET_MART, 6,  4 ;  4
 	map_const SCARLET_POKECENTER_1F, 5,  4 ;  5
-	map_const ROUTE_40_BATTLE_TOWER_GATE, 5,  4 ; 6
-	map_const BATTLE_TOWER_OUTSIDE, 10, 14 ; 7
 	map_const SCARLET_COLOSSEUM, 9, 9 ; 12
 	map_const SCARLET_HOUSE_1, 4, 4 ; 13
 	map_const SCARLET_HOUSE_2, 4, 4 ; 14
