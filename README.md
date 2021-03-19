@@ -15,14 +15,12 @@ Final saves are not fully compatible with vanilla saves and the other way around
    - Made some pokemon more widely available.
    - Increased the amount of pokemon available in the wild.
  - HM usage in Kanto proper now requires the respective Kanto badges.
- - A new area behind Cianwood city that is progressively unlocked throughtout the game.
- - New and unique music
+ - New and unique music (Day/Night variants, Kanto HGSS songs)
 
 # Status
-Interest in the project has been lost.
+Used as a base for the upcoming "Pokémon Stories" series of hacks. Pokémon Crystal Final is essentially complete. 
 
 ## Planned Features
  - Automatic patch creation in Github Workflow
  - Bike riding faster than running
- - Collecting all Unowns rewards
-   - Entei, Raikou and Suicune easier to catch
+
