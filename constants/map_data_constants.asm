@@ -91,7 +91,6 @@ const_value = -1
 	const SPAWN_AZALEA
 	const SPAWN_CIANWOOD
 	const SPAWN_GOLDENROD
-	const SPAWN_SCARLET
 	const SPAWN_OLIVINE
 	const SPAWN_ECRUTEAK
 	const SPAWN_MAHOGANY
@@ -111,7 +110,6 @@ JOHTO_FLYPOINT EQU const_value
 	const FLY_AZALEA
 	const FLY_GOLDENROD
 	const FLY_ECRUTEAK
-	const FLY_SCARLET
 	const FLY_OLIVINE
 	const FLY_CIANWOOD
 	const FLY_MAHOGANY
